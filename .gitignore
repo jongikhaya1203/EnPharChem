@@ -1,0 +1,11 @@
+# EnPharChem - Git Ignore
+.claude/
+test_db.php
+reset_admin.php
+setup_superuser.php
+database/create_settings.php
+database/migrate_control_panel.php
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
