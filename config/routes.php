@@ -119,6 +119,15 @@ return [
     'marketing/product-brochure' => ['controller' => 'MarketingDocsController', 'action' => 'productBrochure'],
     'marketing/seed-materials' => ['controller' => 'MarketingDocsController', 'action' => 'seedMaterials'],
 
+    // Training & Assessment
+    'training' => ['controller' => 'TrainingController', 'action' => 'courses'],
+    'training/course' => ['controller' => 'TrainingController', 'action' => 'courseDetail'],
+    'training/assessment' => ['controller' => 'TrainingController', 'action' => 'takeAssessment'],
+    'training/results' => ['controller' => 'TrainingController', 'action' => 'assessmentResults'],
+    'training/certificate' => ['controller' => 'TrainingController', 'action' => 'certificate'],
+    'training/my-certificates' => ['controller' => 'TrainingController', 'action' => 'myCertificates'],
+    'training/seed' => ['controller' => 'TrainingController', 'action' => 'seedTraining'],
+
     // Benchmark
     'benchmark' => ['controller' => 'BenchmarkController', 'action' => 'index'],
     'benchmark/pdf' => ['controller' => 'BenchmarkController', 'action' => 'pdf'],

@@ -9,6 +9,28 @@
 
 <h2 class="text-light mb-4"><i class="bi bi-mortarboard-fill me-2" style="color: var(--epc-accent);"></i>Training Material</h2>
 
+<!-- Seed & Public Training Links -->
+<div class="card border-0 mb-4" style="background: linear-gradient(135deg, rgba(13,110,253,0.15), rgba(13,202,240,0.10)); border: 1px solid rgba(13,202,240,0.2) !important;">
+    <div class="card-body">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-light mb-2"><i class="bi bi-database-fill-gear me-2 text-info"></i>Seed Complete Training Program</h5>
+                <p class="text-secondary mb-0 small">Load <strong class="text-light">60 courses</strong> (4 levels x 15 categories), <strong class="text-light">300+ lessons</strong>, and <strong class="text-light">600+ assessment questions</strong> with realistic engineering content. Includes automatic certificate generation for passing scores.</p>
+            </div>
+            <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                <form method="POST" action="/enpharchem/training/seed" class="d-inline">
+                    <button type="submit" class="btn btn-success me-2" onclick="this.innerHTML='<i class=\'bi bi-hourglass-split me-1\'></i>Seeding...'; this.disabled=true; this.form.submit();">
+                        <i class="bi bi-database-fill-gear me-1"></i>Seed Training Data
+                    </button>
+                </form>
+                <a href="/enpharchem/training" class="btn btn-outline-info">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>View Public Training
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Stats Row -->
 <div class="row g-3 mb-4">
     <div class="col-md-3 col-sm-6">
