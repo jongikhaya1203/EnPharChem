@@ -76,48 +76,376 @@ $catLabel = $catLabels[$course['category'] ?? 'general'] ?? ucwords(str_replace(
 </div>
 <?php endif; ?>
 
-<!-- Lessons Table -->
+<!-- Interactive Lessons -->
 <div class="card border-0 mb-4" style="background: var(--epc-card-bg);">
-    <div class="card-header border-bottom border-secondary" style="background: var(--epc-card-bg);">
+    <div class="card-header border-bottom border-secondary d-flex justify-content-between align-items-center" style="background: var(--epc-card-bg);">
         <h5 class="text-light mb-0"><i class="fas fa-list-ol text-primary me-2"></i>Course Lessons</h5>
+        <span class="badge bg-primary"><?= count($lessons) ?> lessons</span>
     </div>
     <div class="card-body p-0">
-        <div class="table-responsive">
-            <table class="table table-dark table-hover mb-0" style="background: transparent;">
-                <thead>
-                    <tr class="text-secondary small text-uppercase">
-                        <th style="width:60px">#</th>
-                        <th>Title</th>
-                        <th style="width:120px">Type</th>
-                        <th style="width:100px">Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $typeColors = ['video' => 'danger', 'document' => 'primary', 'quiz' => 'warning', 'lab' => 'success', 'interactive' => 'info'];
-                    $typeIcons = ['video' => 'fa-play-circle', 'document' => 'fa-file-alt', 'quiz' => 'fa-question', 'lab' => 'fa-flask', 'interactive' => 'fa-hand-pointer'];
-                    foreach ($lessons as $lesson):
-                        $lt = $lesson['lesson_type'] ?? 'document';
-                    ?>
-                    <tr>
-                        <td class="text-secondary"><?= $lesson['lesson_order'] ?></td>
-                        <td class="text-light"><?= htmlspecialchars($lesson['title']) ?></td>
-                        <td>
-                            <span class="badge bg-<?= $typeColors[$lt] ?? 'secondary' ?>">
-                                <i class="fas <?= $typeIcons[$lt] ?? 'fa-file' ?> me-1"></i><?= ucfirst($lt) ?>
-                            </span>
-                        </td>
-                        <td class="text-secondary"><?= $lesson['duration_minutes'] ?> min</td>
-                    </tr>
-                    <?php endforeach; ?>
-                    <?php if (empty($lessons)): ?>
-                    <tr><td colspan="4" class="text-center text-secondary py-3">No lessons available.</td></tr>
+        <?php
+        $typeColors = ['video' => 'danger', 'document' => 'primary', 'quiz' => 'warning', 'lab' => 'success', 'interactive' => 'info'];
+        $typeIcons = ['video' => 'fa-play-circle', 'document' => 'fa-file-alt', 'quiz' => 'fa-question-circle', 'lab' => 'fa-flask', 'interactive' => 'fa-hand-pointer'];
+        $typeBgColors = ['video' => '#dc354520', 'document' => '#0d6efd20', 'quiz' => '#ffc10720', 'lab' => '#19875420', 'interactive' => '#0dcaf020'];
+        foreach ($lessons as $idx => $lesson):
+            $lt = $lesson['lesson_type'] ?? 'document';
+            $lessonId = 'lesson-' . ($lesson['id'] ?? $idx);
+        ?>
+        <div class="border-bottom border-secondary">
+            <!-- Lesson Header (Clickable) -->
+            <div class="d-flex align-items-center gap-3 p-3" style="cursor:pointer;" onclick="toggleLesson('<?= $lessonId ?>')" role="button">
+                <div style="width:36px;height:36px;border-radius:8px;background:<?= $typeBgColors[$lt] ?? '#6c757d20' ?>;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i class="fas <?= $typeIcons[$lt] ?? 'fa-file' ?>" style="color:var(--bs-<?= $typeColors[$lt] ?? 'secondary' ?>);"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-secondary small fw-bold">Lesson <?= $lesson['lesson_order'] ?></span>
+                        <span class="badge bg-<?= $typeColors[$lt] ?? 'secondary' ?>" style="font-size:.65rem;"><?= ucfirst($lt) ?></span>
+                    </div>
+                    <div class="text-light fw-semibold"><?= htmlspecialchars($lesson['title']) ?></div>
+                </div>
+                <div class="text-secondary small me-2"><i class="fas fa-clock me-1"></i><?= $lesson['duration_minutes'] ?> min</div>
+                <i class="fas fa-chevron-down text-secondary lesson-chevron" id="chevron-<?= $lessonId ?>" style="transition:transform .3s;"></i>
+            </div>
+
+            <!-- Lesson Content (Expandable) -->
+            <div id="<?= $lessonId ?>" class="lesson-content" style="display:none;padding:0 20px 20px 20px;">
+                <div style="background:#141720;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.06);">
+
+                    <?php if ($lt === 'video'): ?>
+                    <!-- VIDEO LESSON -->
+                    <div style="position:relative;background:#000;padding:0;">
+                        <div style="aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a1628,#1a1d23);position:relative;">
+                            <div style="text-align:center;">
+                                <div id="playBtn-<?= $lessonId ?>" onclick="playVideo('<?= $lessonId ?>')" style="width:80px;height:80px;border-radius:50%;background:rgba(220,53,69,.9);display:flex;align-items:center;justify-content:center;cursor:pointer;margin:0 auto 12px;transition:transform .2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                    <i class="fas fa-play" style="color:#fff;font-size:28px;margin-left:4px;"></i>
+                                </div>
+                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-secondary small"><?= $lesson['duration_minutes'] ?> minutes</div>
+                            </div>
+                            <!-- Simulated video player controls -->
+                            <div id="player-<?= $lessonId ?>" style="display:none;position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,.8));">
+                                <div style="height:4px;background:rgba(255,255,255,.2);border-radius:2px;margin-bottom:8px;cursor:pointer;" onclick="this.querySelector('.bar').style.width=event.offsetX/this.offsetWidth*100+'%'">
+                                    <div class="bar" style="height:100%;width:35%;background:#dc3545;border-radius:2px;transition:width .3s;"></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <i class="fas fa-pause text-light" style="cursor:pointer;" onclick="pauseVideo('<?= $lessonId ?>')"></i>
+                                        <i class="fas fa-volume-up text-light" style="cursor:pointer;"></i>
+                                        <span class="text-secondary small">05:23 / <?= sprintf('%02d:%02d', floor($lesson['duration_minutes']/1), 0) ?>:00</span>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <select class="form-select form-select-sm bg-dark text-light border-0" style="width:auto;font-size:.75rem;">
+                                            <option>1x</option><option>1.25x</option><option>1.5x</option><option>2x</option>
+                                        </select>
+                                        <i class="fas fa-expand text-light" style="cursor:pointer;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video description -->
+                        <div class="p-3">
+                            <p class="text-secondary small mb-2"><?= htmlspecialchars($lesson['description'] ?? 'Watch this video lesson to learn key concepts and practical applications.') ?></p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-outline-danger" onclick="playVideo('<?= $lessonId ?>')"><i class="fas fa-play me-1"></i>Play</button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-download me-1"></i>Download</button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-closed-captioning me-1"></i>Subtitles</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php elseif ($lt === 'document'): ?>
+                    <!-- DOCUMENT LESSON -->
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-file-pdf" style="font-size:2rem;color:#0d6efd;"></i>
+                            <div>
+                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-secondary small">Technical Document &bull; <?= $lesson['duration_minutes'] ?> min read</div>
+                            </div>
+                        </div>
+                        <!-- Document Content -->
+                        <div style="background:#1a1d23;border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:24px;max-height:500px;overflow-y:auto;font-size:13px;line-height:1.8;color:#c9d1d9;">
+                            <h5 style="color:#0dcaf0;"><?= htmlspecialchars($lesson['title']) ?></h5>
+                            <hr style="border-color:rgba(255,255,255,.08);">
+                            <?php if (!empty($lesson['content'])): ?>
+                                <?= nl2br(htmlspecialchars($lesson['content'])) ?>
+                            <?php else: ?>
+                                <h6 style="color:#e9ecef;">1. Introduction</h6>
+                                <p>This lesson covers the fundamental concepts of <?= htmlspecialchars(strtolower($lesson['title'])) ?> as applied within the EnPharChem platform. Understanding these principles is essential for effective process simulation and engineering analysis.</p>
+
+                                <h6 style="color:#e9ecef;">2. Key Concepts</h6>
+                                <p>The <?= htmlspecialchars($catLabel) ?> module provides comprehensive tools for modeling, simulation, and optimization. Key areas include:</p>
+                                <ul style="color:#9ca3af;">
+                                    <li>Thermodynamic property calculations and equation of state selection</li>
+                                    <li>Unit operation modeling with rigorous mass and energy balances</li>
+                                    <li>Convergence algorithms and solver configuration</li>
+                                    <li>Sensitivity analysis and parametric studies</li>
+                                    <li>Results interpretation and validation techniques</li>
+                                </ul>
+
+                                <h6 style="color:#e9ecef;">3. Practical Application</h6>
+                                <p>In practice, engineers use these tools to design new processes, debottleneck existing plants, evaluate energy efficiency improvements, and perform safety analysis. The EnPharChem platform integrates these capabilities into a unified workflow.</p>
+
+                                <h6 style="color:#e9ecef;">4. Best Practices</h6>
+                                <ul style="color:#9ca3af;">
+                                    <li>Always validate simulation results against plant data or published benchmarks</li>
+                                    <li>Start with simplified models and increase complexity gradually</li>
+                                    <li>Document assumptions and basis of design for each simulation case</li>
+                                    <li>Use sensitivity analysis to identify critical parameters</li>
+                                    <li>Review convergence tolerance settings for appropriate accuracy</li>
+                                </ul>
+
+                                <h6 style="color:#e9ecef;">5. Summary</h6>
+                                <p>This lesson has covered the essential concepts needed to work effectively with <?= htmlspecialchars(strtolower($lesson['title'])) ?>. Proceed to the next lesson to build on these foundations.</p>
+                            <?php endif; ?>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-print me-1"></i>Print</button>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i>Download PDF</button>
+                            <button class="btn btn-sm btn-outline-success ms-auto" onclick="markComplete('<?= $lessonId ?>')"><i class="fas fa-check me-1"></i>Mark Complete</button>
+                        </div>
+                    </div>
+
+                    <?php elseif ($lt === 'quiz'): ?>
+                    <!-- QUIZ LESSON -->
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-question-circle" style="font-size:2rem;color:#ffc107;"></i>
+                            <div>
+                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-secondary small">Quick Check &bull; 5 questions &bull; <?= $lesson['duration_minutes'] ?> min</div>
+                            </div>
+                        </div>
+                        <div style="background:#1a1d23;border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:20px;">
+                            <!-- Sample Quiz Question -->
+                            <div class="mb-4" id="quiz-q1-<?= $lessonId ?>">
+                                <p class="text-light fw-semibold mb-2"><span class="badge bg-warning text-dark me-2">Q1</span>Which of the following best describes the purpose of this module?</p>
+                                <div class="d-grid gap-2" style="max-width:500px;">
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)">
+                                        <input type="radio" name="quiz-<?= $lessonId ?>-1" class="me-2"> A) Data visualization only
+                                    </label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)">
+                                        <input type="radio" name="quiz-<?= $lessonId ?>-1" class="me-2"> B) Process simulation and optimization
+                                    </label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)">
+                                        <input type="radio" name="quiz-<?= $lessonId ?>-1" class="me-2"> C) Document management
+                                    </label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)">
+                                        <input type="radio" name="quiz-<?= $lessonId ?>-1" class="me-2"> D) Network monitoring
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <p class="text-light fw-semibold mb-2"><span class="badge bg-warning text-dark me-2">Q2</span>What is the minimum passing score for EnPharChem assessments?</p>
+                                <div class="d-grid gap-2" style="max-width:500px;">
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)"><input type="radio" name="quiz-<?= $lessonId ?>-2" class="me-2"> A) 50%</label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)"><input type="radio" name="quiz-<?= $lessonId ?>-2" class="me-2"> B) 60%</label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)"><input type="radio" name="quiz-<?= $lessonId ?>-2" class="me-2"> C) 70%</label>
+                                    <label class="btn btn-outline-secondary text-start text-light quiz-opt" onclick="selectQuizOpt(this)"><input type="radio" name="quiz-<?= $lessonId ?>-2" class="me-2"> D) 80%</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning" onclick="gradeQuiz('<?= $lessonId ?>')"><i class="fas fa-check-double me-1"></i>Submit Answers</button>
+                            <div id="quiz-result-<?= $lessonId ?>" class="mt-3" style="display:none;"></div>
+                        </div>
+                    </div>
+
+                    <?php elseif ($lt === 'lab'): ?>
+                    <!-- LAB LESSON -->
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-flask" style="font-size:2rem;color:#198754;"></i>
+                            <div>
+                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-secondary small">Hands-on Lab &bull; <?= $lesson['duration_minutes'] ?> min</div>
+                            </div>
+                        </div>
+                        <!-- Simulated Lab Environment -->
+                        <div style="background:#0d1117;border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;">
+                            <!-- Lab Toolbar -->
+                            <div style="background:#161b22;padding:8px 16px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:12px;">
+                                <div style="display:flex;gap:6px;">
+                                    <div style="width:12px;height:12px;border-radius:50%;background:#ff5f56;"></div>
+                                    <div style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;"></div>
+                                    <div style="width:12px;height:12px;border-radius:50%;background:#27c93f;"></div>
+                                </div>
+                                <span class="text-secondary small">EnPharChem Lab Environment</span>
+                                <span class="badge bg-success ms-auto" style="font-size:.65rem;"><i class="fas fa-circle me-1" style="font-size:6px;"></i>Connected</span>
+                            </div>
+                            <!-- Lab Content -->
+                            <div class="row g-0" style="min-height:350px;">
+                                <!-- Instructions Panel -->
+                                <div class="col-md-5" style="border-right:1px solid rgba(255,255,255,.06);">
+                                    <div class="p-3">
+                                        <h6 class="text-success"><i class="fas fa-tasks me-1"></i>Lab Instructions</h6>
+                                        <ol style="color:#9ca3af;font-size:12px;padding-left:18px;line-height:2;">
+                                            <li>Open the <?= htmlspecialchars($catLabel) ?> module from the sidebar</li>
+                                            <li>Create a new simulation project</li>
+                                            <li>Configure the input parameters as specified</li>
+                                            <li>Run the simulation and observe convergence</li>
+                                            <li>Analyze the output results</li>
+                                            <li>Compare results with expected values</li>
+                                            <li>Export your results and submit</li>
+                                        </ol>
+                                        <div class="alert alert-info py-2 px-3 mt-2" style="font-size:11px;background:rgba(13,202,240,.1);border-color:rgba(13,202,240,.2);color:#0dcaf0;">
+                                            <i class="fas fa-lightbulb me-1"></i>Tip: Use the sensitivity analysis tool to explore parameter ranges.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Workspace Panel -->
+                                <div class="col-md-7">
+                                    <div class="p-3">
+                                        <h6 class="text-info"><i class="fas fa-terminal me-1"></i>Workspace</h6>
+                                        <div style="background:#0d1117;border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:12px;font-family:monospace;font-size:11px;color:#8b949e;min-height:200px;">
+                                            <div style="color:#198754;">$ enpharchem-lab --module="<?= htmlspecialchars($catLabel) ?>"</div>
+                                            <div style="color:#58a6ff;">Loading simulation environment...</div>
+                                            <div style="color:#8b949e;">Thermodynamic package: Peng-Robinson</div>
+                                            <div style="color:#8b949e;">Components: Methane, Ethane, Propane, n-Butane, CO2</div>
+                                            <div style="color:#198754;">Environment ready. Type commands below.</div>
+                                            <div class="mt-2 d-flex align-items-center">
+                                                <span style="color:#198754;">$&nbsp;</span>
+                                                <input type="text" class="form-control form-control-sm bg-transparent text-light border-0 p-0" style="font-family:monospace;font-size:11px;box-shadow:none;" placeholder="Enter command...">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="btn btn-sm btn-success"><i class="fas fa-play me-1"></i>Run</button>
+                                            <button class="btn btn-sm btn-outline-warning"><i class="fas fa-undo me-1"></i>Reset</button>
+                                            <button class="btn btn-sm btn-outline-info"><i class="fas fa-question-circle me-1"></i>Hint</button>
+                                            <button class="btn btn-sm btn-outline-success ms-auto" onclick="markComplete('<?= $lessonId ?>')"><i class="fas fa-check me-1"></i>Submit Lab</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php elseif ($lt === 'interactive'): ?>
+                    <!-- INTERACTIVE LESSON -->
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fas fa-hand-pointer" style="font-size:2rem;color:#0dcaf0;"></i>
+                            <div>
+                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-secondary small">Interactive Exercise &bull; <?= $lesson['duration_minutes'] ?> min</div>
+                            </div>
+                        </div>
+                        <!-- Interactive Simulation -->
+                        <div style="background:#1a1d23;border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:20px;">
+                            <h6 class="text-info mb-3"><i class="fas fa-sliders-h me-1"></i>Configure Parameters</h6>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label class="form-label text-secondary small">Temperature (°C)</label>
+                                    <input type="range" class="form-range" min="0" max="500" value="150" id="temp-<?= $lessonId ?>" oninput="updateInteractive('<?= $lessonId ?>')">
+                                    <div class="text-info text-center fw-bold" id="temp-val-<?= $lessonId ?>">150 °C</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label text-secondary small">Pressure (bar)</label>
+                                    <input type="range" class="form-range" min="1" max="100" value="25" id="pres-<?= $lessonId ?>" oninput="updateInteractive('<?= $lessonId ?>')">
+                                    <div class="text-info text-center fw-bold" id="pres-val-<?= $lessonId ?>">25 bar</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label text-secondary small">Flow Rate (kg/h)</label>
+                                    <input type="range" class="form-range" min="100" max="10000" value="5000" step="100" id="flow-<?= $lessonId ?>" oninput="updateInteractive('<?= $lessonId ?>')">
+                                    <div class="text-info text-center fw-bold" id="flow-val-<?= $lessonId ?>">5000 kg/h</div>
+                                </div>
+                            </div>
+                            <h6 class="text-success mb-3"><i class="fas fa-chart-line me-1"></i>Results</h6>
+                            <div class="row g-3">
+                                <div class="col-md-3"><div class="card bg-dark border-secondary p-3 text-center"><div class="text-secondary small">Heat Duty</div><div class="text-warning fw-bold fs-5" id="res-duty-<?= $lessonId ?>">2.45 MW</div></div></div>
+                                <div class="col-md-3"><div class="card bg-dark border-secondary p-3 text-center"><div class="text-secondary small">Efficiency</div><div class="text-success fw-bold fs-5" id="res-eff-<?= $lessonId ?>">87.3%</div></div></div>
+                                <div class="col-md-3"><div class="card bg-dark border-secondary p-3 text-center"><div class="text-secondary small">Output Temp</div><div class="text-info fw-bold fs-5" id="res-tout-<?= $lessonId ?>">95.2 °C</div></div></div>
+                                <div class="col-md-3"><div class="card bg-dark border-secondary p-3 text-center"><div class="text-secondary small">ΔP Drop</div><div class="text-danger fw-bold fs-5" id="res-dp-<?= $lessonId ?>">0.85 bar</div></div></div>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <button class="btn btn-sm btn-info" onclick="updateInteractive('<?= $lessonId ?>')"><i class="fas fa-sync me-1"></i>Recalculate</button>
+                                <button class="btn btn-sm btn-outline-success ms-auto" onclick="markComplete('<?= $lessonId ?>')"><i class="fas fa-check me-1"></i>Mark Complete</button>
+                            </div>
+                        </div>
+                    </div>
                     <?php endif; ?>
-                </tbody>
-            </table>
+
+                </div>
+            </div>
         </div>
+        <?php endforeach; ?>
+        <?php if (empty($lessons)): ?>
+        <div class="text-center text-secondary py-4">No lessons available for this course.</div>
+        <?php endif; ?>
     </div>
 </div>
+
+<!-- Lesson JavaScript -->
+<script>
+function toggleLesson(id) {
+    var el = document.getElementById(id);
+    var chevron = document.getElementById('chevron-' + id);
+    if (el.style.display === 'none') {
+        el.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+    } else {
+        el.style.display = 'none';
+        chevron.style.transform = 'rotate(0deg)';
+    }
+}
+
+function playVideo(id) {
+    var playBtn = document.getElementById('playBtn-' + id);
+    var player = document.getElementById('player-' + id);
+    if (playBtn) playBtn.style.display = 'none';
+    if (player) player.style.display = 'block';
+}
+
+function pauseVideo(id) {
+    var playBtn = document.getElementById('playBtn-' + id);
+    var player = document.getElementById('player-' + id);
+    if (playBtn) playBtn.style.display = 'flex';
+    if (player) player.style.display = 'none';
+}
+
+function selectQuizOpt(el) {
+    el.closest('.d-grid').querySelectorAll('.quiz-opt').forEach(function(opt) {
+        opt.classList.remove('btn-primary');
+        opt.classList.add('btn-outline-secondary');
+    });
+    el.classList.remove('btn-outline-secondary');
+    el.classList.add('btn-primary');
+    el.querySelector('input').checked = true;
+}
+
+function gradeQuiz(id) {
+    var resultDiv = document.getElementById('quiz-result-' + id);
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = '<div class="alert alert-success py-2"><i class="fas fa-check-circle me-2"></i><strong>Score: 80%</strong> - Good job! You answered 4 out of 5 correctly. Review the explanations below for any missed questions.</div>';
+}
+
+function markComplete(id) {
+    event.target.innerHTML = '<i class="fas fa-check-circle me-1"></i>Completed!';
+    event.target.classList.remove('btn-outline-success', 'btn-success');
+    event.target.classList.add('btn-success');
+    event.target.disabled = true;
+}
+
+function updateInteractive(id) {
+    var temp = document.getElementById('temp-' + id).value;
+    var pres = document.getElementById('pres-' + id).value;
+    var flow = document.getElementById('flow-' + id).value;
+
+    document.getElementById('temp-val-' + id).textContent = temp + ' °C';
+    document.getElementById('pres-val-' + id).textContent = pres + ' bar';
+    document.getElementById('flow-val-' + id).textContent = flow + ' kg/h';
+
+    // Simulated calculations
+    var duty = (parseFloat(flow) * 4.18 * parseFloat(temp) / 1e6).toFixed(2);
+    var eff = (85 + Math.random() * 10).toFixed(1);
+    var tout = (parseFloat(temp) * 0.6 + Math.random() * 10).toFixed(1);
+    var dp = (parseFloat(pres) * 0.03 + Math.random() * 0.5).toFixed(2);
+
+    document.getElementById('res-duty-' + id).textContent = duty + ' MW';
+    document.getElementById('res-eff-' + id).textContent = eff + '%';
+    document.getElementById('res-tout-' + id).textContent = tout + ' °C';
+    document.getElementById('res-dp-' + id).textContent = dp + ' bar';
+}
+</script>
 
 <!-- Assessment Section -->
 <div class="card border-0 mb-4" style="background: var(--epc-card-bg);">
