@@ -447,7 +447,23 @@ function loadYouTubeSearch(lessonId, searchQuery) {
     if (thumb) thumb.style.display = 'none';
     if (frame) {
         frame.style.display = 'block';
-        frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed?listType=search&list=' + searchQuery + '&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
+        // Use YouTube Data API via Invidious (public, no API key needed) to find a real video ID
+        var apiUrl = 'https://vid.puffyan.us/api/v1/search?q=' + searchQuery + '&type=video&sort_by=relevance';
+        frame.innerHTML = '<div style="aspect-ratio:16/9;background:#000;display:flex;align-items:center;justify-content:center;"><div class="text-center"><i class="fas fa-spinner fa-spin text-danger" style="font-size:2rem;"></i><p class="text-light mt-2 small">Finding best video...</p></div></div>';
+
+        fetch(apiUrl)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data && data.length > 0 && data[0].videoId) {
+                    var vid = data[0].videoId;
+                    frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
+                } else {
+                    openYouTubeFallback(searchQuery, frame);
+                }
+            })
+            .catch(function() {
+                openYouTubeFallback(searchQuery, frame);
+            });
     }
 }
 
@@ -457,8 +473,34 @@ function loadRelatedVideo(relId, searchQuery) {
     if (thumb) thumb.style.display = 'none';
     if (frame) {
         frame.style.display = 'block';
-        frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed?listType=search&list=' + searchQuery + '&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
+        frame.innerHTML = '<div style="aspect-ratio:16/9;background:#000;display:flex;align-items:center;justify-content:center;"><i class="fas fa-spinner fa-spin text-danger" style="font-size:1.5rem;"></i></div>';
+
+        var apiUrl = 'https://vid.puffyan.us/api/v1/search?q=' + searchQuery + '&type=video&sort_by=relevance';
+        fetch(apiUrl)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data && data.length > 0 && data[0].videoId) {
+                    var vid = data[0].videoId;
+                    frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
+                } else {
+                    openYouTubeFallback(searchQuery, frame);
+                }
+            })
+            .catch(function() {
+                openYouTubeFallback(searchQuery, frame);
+            });
     }
+}
+
+function openYouTubeFallback(searchQuery, frame) {
+    // Fallback: show a clickable link to open YouTube search in new tab
+    frame.innerHTML = '<div style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a1d23);display:flex;align-items:center;justify-content:center;">' +
+        '<div class="text-center p-4">' +
+            '<i class="fab fa-youtube" style="font-size:3rem;color:#dc3545;margin-bottom:12px;display:block;"></i>' +
+            '<p class="text-light fw-bold mb-2">Click below to watch on YouTube</p>' +
+            '<a href="https://www.youtube.com/results?search_query=' + searchQuery + '" target="_blank" class="btn btn-danger"><i class="fab fa-youtube me-2"></i>Open YouTube</a>' +
+        '</div>' +
+    '</div>';
 }
 
 function selectQuizOpt(el) {
