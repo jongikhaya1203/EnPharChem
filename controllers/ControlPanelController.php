@@ -122,6 +122,8 @@ class ControlPanelController extends BaseController {
                     'footer_text' => $_POST['footer_text'] ?? '© 2026 EnPharChem Technologies',
                     'logo_url' => $_POST['logo_url'] ?? '',
                     'logo_icon' => $_POST['logo_icon'] ?? 'fa-atom',
+                    'logo_size' => $_POST['logo_size'] ?? '48',
+                    'logo_align' => $_POST['logo_align'] ?? 'left',
                     'primary_color' => $_POST['primary_color'] ?? '#0d6efd',
                     'accent_color' => $_POST['accent_color'] ?? '#0dcaf0',
                     'company_name' => $_POST['company_name'] ?? 'EnPharChem Technologies',

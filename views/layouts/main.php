@@ -11,9 +11,16 @@ $_siteAccent = $_branding['site_name_accent'] ?? 'Phar';
 $_siteTagline = $_branding['site_tagline'] ?? 'Energy, Pharmaceutical & Chemical Engineering Platform';
 $_logoUrl = $_branding['logo_url'] ?? '';
 $_logoIcon = $_branding['logo_icon'] ?? 'fa-atom';
+$_logoSize = (int)($_branding['logo_size'] ?? 48);
+$_logoAlign = $_branding['logo_align'] ?? 'left';
 $_footerText = $_branding['footer_text'] ?? '&copy; 2026 EnPharChem Technologies &mdash; Energy, Pharmaceutical &amp; Chemical Engineering Platform';
 $_primaryColor = $_branding['primary_color'] ?? '#0d6efd';
 $_accentColor = $_branding['accent_color'] ?? '#0dcaf0';
+$_logoFontSize = max(0.8, $_logoSize / 25);
+$_logoRadius = max(6, $_logoSize / 5);
+$_logoHeight = $_logoSize;
+$_navbarHeight = max(60, $_logoSize + 12);
+$_logoJustify = $_logoAlign === 'center' ? 'center' : ($_logoAlign === 'right' ? 'flex-end' : 'flex-start');
 $_dashTitle = $_branding['dashboard_title'] ?? '';
 $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
 ?>
@@ -32,7 +39,7 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
             --epc-dark-bg: #1a1d23;
             --epc-card-bg: #212529;
             --epc-sidebar-w: 280px;
-            --epc-navbar-h: 60px;
+            --epc-navbar-h: <?= $_navbarHeight ?>px;
         }
 
         * { box-sizing: border-box; }
@@ -60,19 +67,24 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
             width: calc(var(--epc-sidebar-w) - 1rem);
             display: flex;
             align-items: center;
-            gap: .6rem;
+            justify-content: <?= $_logoJustify ?>;
             font-weight: 700;
-            font-size: 1.15rem;
             color: #fff;
             text-decoration: none;
             flex-shrink: 0;
+            z-index: 10;
+            position: relative;
+            padding-left: 4px;
         }
+        .top-navbar .brand:hover { color: #fff; text-decoration: none; }
         .top-navbar .brand .brand-icon {
-            width: 34px; height: 34px;
+            width: <?= $_logoSize ?>px; height: <?= $_logoSize ?>px; min-width: <?= $_logoSize ?>px;
             background: linear-gradient(135deg, var(--epc-primary), var(--epc-accent));
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: .9rem; color: #fff;
+            border-radius: <?= $_logoRadius ?>px;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: <?= $_logoFontSize ?>rem; color: #fff;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(13,110,253,.35);
         }
         .top-navbar .brand span.text-accent { color: var(--epc-accent); }
         .navbar-search {
@@ -386,11 +398,10 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
     <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
     <a href="/enpharchem/" class="brand">
         <?php if (!empty($_logoUrl)): ?>
-            <img src="<?= htmlspecialchars($_logoUrl) ?>" alt="Logo" style="width:34px;height:34px;border-radius:8px;object-fit:contain;">
+            <img src="<?= htmlspecialchars($_logoUrl) ?>" alt="Logo" style="width:<?= $_logoSize ?>px;height:<?= $_logoSize ?>px;border-radius:<?= $_logoRadius ?>px;object-fit:contain;display:block;">
         <?php else: ?>
             <span class="brand-icon"><i class="fas <?= htmlspecialchars($_logoIcon) ?>"></i></span>
         <?php endif; ?>
-        <?= htmlspecialchars($_siteName) ?><span class="text-accent"><?= htmlspecialchars($_siteAccent) ?></span>Chem
     </a>
 
     <div class="navbar-search position-relative d-none d-sm-block">

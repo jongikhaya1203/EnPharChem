@@ -43,9 +43,9 @@
                         <small class="text-secondary d-block mt-2">PNG, JPG, SVG, WebP (max 5MB)</small>
 
                         <div class="mt-3">
-                            <label class="form-label text-secondary small">Or Logo URL</label>
-                            <input type="url" name="logo_url" class="form-control form-control-sm bg-dark text-light border-secondary"
-                                   value="<?= htmlspecialchars($branding['logo_url'] ?? '') ?>" placeholder="https://example.com/logo.png">
+                            <label class="form-label text-secondary small">Or Logo URL / Path</label>
+                            <input type="text" name="logo_url" class="form-control form-control-sm bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['logo_url'] ?? '') ?>" placeholder="/enpharchem/assets/uploads/logo.png or https://...">
                         </div>
 
                         <div class="mt-3">
@@ -56,6 +56,43 @@
                                        value="<?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>" placeholder="fa-atom">
                             </div>
                             <small class="text-secondary">Font Awesome class (e.g., fa-atom, fa-flask, fa-industry)</small>
+                        </div>
+
+                        <!-- Logo Size Control -->
+                        <div class="mt-3">
+                            <label class="form-label text-light small"><i class="fas fa-expand-arrows-alt me-1"></i>Logo Size</label>
+                            <input type="range" name="logo_size" class="form-range" min="24" max="200" step="2"
+                                   value="<?= htmlspecialchars($branding['logo_size'] ?? '48') ?>"
+                                   id="logoSizeSlider" oninput="updateLogoPreview()">
+                            <div class="d-flex justify-content-between align-items-center mt-1">
+                                <small class="text-secondary">24px</small>
+                                <span class="badge bg-info" id="logoSizeLabel"><?= htmlspecialchars($branding['logo_size'] ?? '48') ?>px</span>
+                                <small class="text-secondary">200px</small>
+                            </div>
+                            <div class="d-flex gap-1 mt-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary flex-fill logo-size-btn" data-size="32" onclick="return setLogoSize(32)">S <small>32</small></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary flex-fill logo-size-btn" data-size="48" onclick="return setLogoSize(48)">M <small>48</small></button>
+                                <button type="button" class="btn btn-sm btn-outline-info flex-fill logo-size-btn" data-size="72" onclick="return setLogoSize(72)">L <small>72</small></button>
+                                <button type="button" class="btn btn-sm btn-outline-primary flex-fill logo-size-btn" data-size="100" onclick="return setLogoSize(100)">XL <small>100</small></button>
+                                <button type="button" class="btn btn-sm btn-outline-warning flex-fill logo-size-btn" data-size="150" onclick="return setLogoSize(150)">2XL <small>150</small></button>
+                                <button type="button" class="btn btn-sm btn-outline-danger flex-fill logo-size-btn" data-size="200" onclick="return setLogoSize(200)">MAX</button>
+                            </div>
+                        </div>
+
+                        <!-- Logo Alignment Control -->
+                        <div class="mt-3">
+                            <label class="form-label text-light small"><i class="fas fa-align-left me-1"></i>Logo Alignment</label>
+                            <div class="btn-group w-100" role="group">
+                                <?php $currentAlign = $branding['logo_align'] ?? 'left'; ?>
+                                <input type="radio" class="btn-check" name="logo_align" id="alignLeft" value="left" <?= $currentAlign === 'left' ? 'checked' : '' ?> onchange="updateLogoPreview()">
+                                <label class="btn btn-outline-info" for="alignLeft"><i class="fas fa-align-left me-1"></i>Left</label>
+
+                                <input type="radio" class="btn-check" name="logo_align" id="alignCenter" value="center" <?= $currentAlign === 'center' ? 'checked' : '' ?> onchange="updateLogoPreview()">
+                                <label class="btn btn-outline-info" for="alignCenter"><i class="fas fa-align-center me-1"></i>Center</label>
+
+                                <input type="radio" class="btn-check" name="logo_align" id="alignRight" value="right" <?= $currentAlign === 'right' ? 'checked' : '' ?> onchange="updateLogoPreview()">
+                                <label class="btn btn-outline-info" for="alignRight"><i class="fas fa-align-right me-1"></i>Right</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,19 +169,34 @@
                     </div>
 
                     <!-- Live Preview -->
-                    <div class="mt-4 p-3" style="background:#1a1d23;border-radius:8px;border:1px solid rgba(255,255,255,.08);">
-                        <small class="text-secondary d-block mb-2"><i class="fas fa-desktop me-1"></i>Navbar Preview</small>
-                        <div class="d-flex align-items-center gap-2">
-                            <?php if (!empty($branding['logo_url'])): ?>
-                                <img src="<?= htmlspecialchars($branding['logo_url']) ?>" style="width:34px;height:34px;border-radius:8px;">
-                            <?php else: ?>
-                                <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>,<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;">
-                                    <i class="fas <?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>"></i>
-                                </div>
-                            <?php endif; ?>
-                            <span style="font-weight:700;font-size:1.1rem;color:#fff;">
-                                <?= htmlspecialchars($branding['site_name'] ?? 'En') ?><span style="color:<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>;"><?= htmlspecialchars($branding['site_name_accent'] ?? 'Phar') ?></span>Chem
-                            </span>
+                    <div class="mt-4 p-3" style="background:#1a1d23;border-radius:10px;border:1px solid rgba(255,255,255,.08);">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <small class="text-secondary"><i class="fas fa-desktop me-1"></i>Live Navbar Preview</small>
+                            <small class="text-secondary" id="previewInfo">Size: <?= htmlspecialchars($branding['logo_size'] ?? '48') ?>px | Align: <?= ucfirst($branding['logo_align'] ?? 'left') ?></small>
+                        </div>
+                        <!-- Simulated Navbar -->
+                        <div style="background:var(--epc-dark-bg);border-radius:8px;padding:8px 16px;height:60px;display:flex;align-items:center;border:1px solid rgba(255,255,255,.06);">
+                            <div id="previewLogoContainer" style="width:280px;display:flex;align-items:center;justify-content:<?= ($branding['logo_align'] ?? 'left') === 'center' ? 'center' : (($branding['logo_align'] ?? 'left') === 'right' ? 'flex-end' : 'flex-start') ?>;">
+                                <?php
+                                    $prevSize = (int)($branding['logo_size'] ?? 48);
+                                    $prevFontSize = max(0.8, $prevSize / 25);
+                                    $prevRadius = max(6, $prevSize / 5);
+                                ?>
+                                <?php if (!empty($branding['logo_url'])): ?>
+                                    <img id="previewLogoImg" src="<?= htmlspecialchars($branding['logo_url']) ?>" style="width:<?= $prevSize ?>px;height:<?= $prevSize ?>px;border-radius:<?= $prevRadius ?>px;object-fit:contain;">
+                                <?php else: ?>
+                                    <div id="previewLogoIcon" style="width:<?= $prevSize ?>px;height:<?= $prevSize ?>px;min-width:<?= $prevSize ?>px;border-radius:<?= $prevRadius ?>px;background:linear-gradient(135deg,<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>,<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>);display:flex;align-items:center;justify-content:center;color:#fff;font-size:<?= $prevFontSize ?>rem;box-shadow:0 4px 12px rgba(13,110,253,.3);transition:all .2s ease;">
+                                        <i class="fas <?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>"></i>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div style="flex:1;margin-left:16px;display:flex;align-items:center;">
+                                <div style="width:180px;height:32px;background:rgba(255,255,255,.04);border-radius:6px;border:1px solid rgba(255,255,255,.06);"></div>
+                            </div>
+                            <div style="display:flex;gap:8px;">
+                                <div style="width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,.04);"></div>
+                                <div style="width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,.04);"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,6 +204,70 @@
         </form>
     </div>
 </div>
+
+<!-- Logo Size & Alignment JavaScript -->
+<script>
+function setLogoSize(size) {
+    event.preventDefault();
+    event.stopPropagation();
+    document.getElementById('logoSizeSlider').value = size;
+    updateLogoPreview();
+    return false;
+}
+
+function updateLogoPreview() {
+    var slider = document.getElementById('logoSizeSlider');
+    if (!slider) return;
+    var size = parseInt(slider.value);
+    var alignEl = document.querySelector('input[name="logo_align"]:checked');
+    var align = alignEl ? alignEl.value : 'left';
+    var fontSize = Math.max(0.8, size / 25);
+    var radius = Math.max(6, size / 5);
+
+    // Update size label
+    var label = document.getElementById('logoSizeLabel');
+    if (label) label.textContent = size + 'px';
+
+    // Update preview info
+    var info = document.getElementById('previewInfo');
+    if (info) info.textContent = 'Size: ' + size + 'px | Align: ' + align.charAt(0).toUpperCase() + align.slice(1);
+
+    // Update alignment
+    var container = document.getElementById('previewLogoContainer');
+    if (container) {
+        container.style.justifyContent = align === 'center' ? 'center' : (align === 'right' ? 'flex-end' : 'flex-start');
+    }
+
+    // Update logo icon preview - scale both width AND height proportionally
+    var iconEl = document.getElementById('previewLogoIcon');
+    if (iconEl) {
+        iconEl.style.width = size + 'px';
+        iconEl.style.height = size + 'px';
+        iconEl.style.minWidth = size + 'px';
+        iconEl.style.borderRadius = radius + 'px';
+        iconEl.style.fontSize = fontSize + 'rem';
+    }
+
+    // Update logo image preview
+    var imgEl = document.getElementById('previewLogoImg');
+    if (imgEl) {
+        imgEl.style.width = size + 'px';
+        imgEl.style.height = size + 'px';
+        imgEl.style.borderRadius = radius + 'px';
+    }
+
+    // Highlight active size button
+    document.querySelectorAll('.logo-size-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (parseInt(btn.dataset.size) === size) btn.classList.add('active');
+    });
+}
+
+// Initialize preview on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateLogoPreview();
+});
+</script>
 
 <!-- Stats Bar -->
 <div class="row g-3 mb-4">
