@@ -1,15 +1,34 @@
+<?php
+// Load site branding from database
+$_branding = [];
+try {
+    $db = Database::getInstance();
+    $bRows = $db->fetchAll("SELECT setting_key, setting_value FROM site_branding") ?: [];
+    foreach ($bRows as $bRow) $_branding[$bRow['setting_key']] = $bRow['setting_value'];
+} catch (Exception $e) {}
+$_siteName = $_branding['site_name'] ?? 'En';
+$_siteAccent = $_branding['site_name_accent'] ?? 'Phar';
+$_siteTagline = $_branding['site_tagline'] ?? 'Energy, Pharmaceutical & Chemical Engineering Platform';
+$_logoUrl = $_branding['logo_url'] ?? '';
+$_logoIcon = $_branding['logo_icon'] ?? 'fa-atom';
+$_footerText = $_branding['footer_text'] ?? '&copy; 2026 EnPharChem Technologies &mdash; Energy, Pharmaceutical &amp; Chemical Engineering Platform';
+$_primaryColor = $_branding['primary_color'] ?? '#0d6efd';
+$_accentColor = $_branding['accent_color'] ?? '#0dcaf0';
+$_dashTitle = $_branding['dashboard_title'] ?? '';
+$_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= isset($pageTitle) ? htmlspecialchars($pageTitle) . ' - ' : '' ?>EnPharChem Platform</title>
+    <title><?= isset($pageTitle) ? htmlspecialchars($pageTitle) . ' - ' : '' ?><?= htmlspecialchars($_siteName . $_siteAccent) ?>Chem Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --epc-primary: #0d6efd;
-            --epc-accent: #0dcaf0;
+            --epc-primary: <?= htmlspecialchars($_primaryColor) ?>;
+            --epc-accent: <?= htmlspecialchars($_accentColor) ?>;
             --epc-dark-bg: #1a1d23;
             --epc-card-bg: #212529;
             --epc-sidebar-w: 280px;
@@ -366,8 +385,12 @@
 <nav class="top-navbar">
     <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
     <a href="/enpharchem/" class="brand">
-        <span class="brand-icon"><i class="fas fa-atom"></i></span>
-        En<span class="text-accent">Phar</span>Chem
+        <?php if (!empty($_logoUrl)): ?>
+            <img src="<?= htmlspecialchars($_logoUrl) ?>" alt="Logo" style="width:34px;height:34px;border-radius:8px;object-fit:contain;">
+        <?php else: ?>
+            <span class="brand-icon"><i class="fas <?= htmlspecialchars($_logoIcon) ?>"></i></span>
+        <?php endif; ?>
+        <?= htmlspecialchars($_siteName) ?><span class="text-accent"><?= htmlspecialchars($_siteAccent) ?></span>Chem
     </a>
 
     <div class="navbar-search position-relative d-none d-sm-block">
@@ -489,7 +512,7 @@
         <?= $content ?>
     </div>
     <footer class="main-footer">
-        &copy; 2026 EnPharChem Technologies &mdash; Energy, Pharmaceutical &amp; Chemical Engineering Platform
+        <?= $_footerText ?>
     </footer>
 </main>
 

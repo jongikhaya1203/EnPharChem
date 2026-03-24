@@ -99,10 +99,70 @@ class ControlPanelController extends BaseController {
      * CMS Pages management
      */
     public function cmsPages() {
+        // Ensure branding table exists
+        try {
+            $this->db->query("CREATE TABLE IF NOT EXISTS site_branding (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                setting_key VARCHAR(100) NOT NULL UNIQUE,
+                setting_value TEXT,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            ) ENGINE=InnoDB");
+        } catch (Exception $e) {}
+
         if ($this->isPost()) {
             $action = $_POST['action'] ?? '';
 
-            if ($action === 'create') {
+            if ($action === 'save_branding') {
+                $brandingFields = [
+                    'site_name' => $_POST['site_name'] ?? 'EnPharChem',
+                    'site_name_accent' => $_POST['site_name_accent'] ?? 'Phar',
+                    'site_tagline' => $_POST['site_tagline'] ?? 'Energy, Pharmaceutical & Chemical Engineering Platform',
+                    'dashboard_title' => $_POST['dashboard_title'] ?? 'Dashboard',
+                    'dashboard_subtitle' => $_POST['dashboard_subtitle'] ?? '',
+                    'footer_text' => $_POST['footer_text'] ?? '© 2026 EnPharChem Technologies',
+                    'logo_url' => $_POST['logo_url'] ?? '',
+                    'logo_icon' => $_POST['logo_icon'] ?? 'fa-atom',
+                    'primary_color' => $_POST['primary_color'] ?? '#0d6efd',
+                    'accent_color' => $_POST['accent_color'] ?? '#0dcaf0',
+                    'company_name' => $_POST['company_name'] ?? 'EnPharChem Technologies',
+                    'company_email' => $_POST['company_email'] ?? 'info@enpharchem.com',
+                ];
+
+                foreach ($brandingFields as $key => $value) {
+                    try {
+                        $existing = $this->db->fetch("SELECT id FROM site_branding WHERE setting_key = ?", [$key]);
+                        if ($existing) {
+                            $this->db->update('site_branding', ['setting_value' => $value], 'setting_key = ?', [$key]);
+                        } else {
+                            $this->db->insert('site_branding', ['setting_key' => $key, 'setting_value' => $value]);
+                        }
+                    } catch (Exception $e) {}
+                }
+
+                // Handle logo file upload
+                if (!empty($_FILES['logo_file']['tmp_name'])) {
+                    $uploadDir = APP_ROOT . '/assets/uploads/';
+                    if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+
+                    $ext = strtolower(pathinfo($_FILES['logo_file']['name'], PATHINFO_EXTENSION));
+                    $allowed = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+                    if (in_array($ext, $allowed) && $_FILES['logo_file']['size'] < 5 * 1024 * 1024) {
+                        $filename = 'logo_' . time() . '.' . $ext;
+                        if (move_uploaded_file($_FILES['logo_file']['tmp_name'], $uploadDir . $filename)) {
+                            $logoUrl = '/enpharchem/assets/uploads/' . $filename;
+                            $existing = $this->db->fetch("SELECT id FROM site_branding WHERE setting_key = 'logo_url'");
+                            if ($existing) {
+                                $this->db->update('site_branding', ['setting_value' => $logoUrl], "setting_key = 'logo_url'");
+                            } else {
+                                $this->db->insert('site_branding', ['setting_key' => 'logo_url', 'setting_value' => $logoUrl]);
+                            }
+                        }
+                    }
+                }
+
+                $this->redirect('control-panel/cms?msg=branding_saved');
+                return;
+            } elseif ($action === 'create') {
                 $title = $_POST['title'] ?? '';
                 $slug = $this->slugify($title);
                 try {
@@ -150,10 +210,21 @@ class ControlPanelController extends BaseController {
             'total_views' => array_sum(array_column($pages, 'view_count')),
         ];
 
+        // Load branding settings
+        $branding = [];
+        try {
+            $rows = $this->db->fetchAll("SELECT setting_key, setting_value FROM site_branding") ?: [];
+            foreach ($rows as $r) {
+                $branding[$r['setting_key']] = $r['setting_value'];
+            }
+        } catch (Exception $e) {}
+
         $this->view('control-panel/cms', [
             'pageTitle' => 'CMS Pages',
             'pages' => $pages,
             'cmsStats' => $cmsStats,
+            'pageStats' => $cmsStats,
+            'branding' => $branding,
         ]);
     }
 

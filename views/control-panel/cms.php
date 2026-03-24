@@ -7,7 +7,151 @@
     </ol>
 </nav>
 
-<h2 class="text-light mb-4"><i class="bi bi-file-earmark-text-fill me-2" style="color: var(--epc-accent);"></i>CMS Pages</h2>
+<?php if (isset($_GET['msg']) && $_GET['msg'] === 'branding_saved'): ?>
+    <div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Branding settings saved successfully. Refresh to see changes.</div>
+<?php endif; ?>
+
+<h2 class="text-light mb-4"><i class="fas fa-file-alt me-2" style="color: var(--epc-accent);"></i>CMS & Branding</h2>
+
+<?php $branding = $branding ?? []; ?>
+
+<!-- Branding & Logo Section -->
+<div class="card border-0 mb-4" style="background: var(--epc-card-bg); border-top: 3px solid var(--epc-accent) !important;">
+    <div class="card-header d-flex justify-content-between align-items-center border-bottom border-secondary" style="background: var(--epc-card-bg);">
+        <h5 class="text-light mb-0"><i class="fas fa-palette me-2" style="color:var(--epc-accent);"></i>Branding & Logo</h5>
+        <span class="badge bg-info">Dashboard Customization</span>
+    </div>
+    <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="save_branding">
+
+            <div class="row g-4">
+                <!-- Logo Upload Section -->
+                <div class="col-lg-4">
+                    <div class="text-center p-4" style="background:rgba(255,255,255,.03);border-radius:12px;border:1px dashed rgba(255,255,255,.15);">
+                        <div class="mb-3">
+                            <?php if (!empty($branding['logo_url'])): ?>
+                                <img src="<?= htmlspecialchars($branding['logo_url']) ?>" alt="Logo" style="max-width:120px;max-height:120px;border-radius:12px;margin-bottom:10px;">
+                            <?php else: ?>
+                                <div style="width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>,<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;margin-bottom:10px;">
+                                    <i class="fas <?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>"></i>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <label class="form-label text-light d-block">Upload Logo</label>
+                        <input type="file" name="logo_file" class="form-control form-control-sm bg-dark text-light border-secondary" accept="image/*">
+                        <small class="text-secondary d-block mt-2">PNG, JPG, SVG, WebP (max 5MB)</small>
+
+                        <div class="mt-3">
+                            <label class="form-label text-secondary small">Or Logo URL</label>
+                            <input type="url" name="logo_url" class="form-control form-control-sm bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['logo_url'] ?? '') ?>" placeholder="https://example.com/logo.png">
+                        </div>
+
+                        <div class="mt-3">
+                            <label class="form-label text-secondary small">Logo Icon (if no image)</label>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text bg-dark border-secondary text-light"><i class="fas <?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>"></i></span>
+                                <input type="text" name="logo_icon" class="form-control bg-dark text-light border-secondary"
+                                       value="<?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>" placeholder="fa-atom">
+                            </div>
+                            <small class="text-secondary">Font Awesome class (e.g., fa-atom, fa-flask, fa-industry)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site Name & Text -->
+                <div class="col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-heading me-1"></i>Site Name (before accent)</label>
+                            <input type="text" name="site_name" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['site_name'] ?? 'EnPharChem') ?>" placeholder="EnPharChem">
+                            <small class="text-secondary">Text shown in navbar & title</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-highlighter me-1"></i>Accent Text (colored part)</label>
+                            <input type="text" name="site_name_accent" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['site_name_accent'] ?? 'Phar') ?>" placeholder="Phar">
+                            <small class="text-secondary">The highlighted portion of the name</small>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-light"><i class="fas fa-quote-left me-1"></i>Site Tagline</label>
+                            <input type="text" name="site_tagline" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['site_tagline'] ?? 'Energy, Pharmaceutical & Chemical Engineering Platform') ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-tachometer-alt me-1"></i>Dashboard Title</label>
+                            <input type="text" name="dashboard_title" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['dashboard_title'] ?? 'Dashboard') ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-align-left me-1"></i>Dashboard Subtitle</label>
+                            <input type="text" name="dashboard_subtitle" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['dashboard_subtitle'] ?? '') ?>" placeholder="Welcome to your engineering workspace">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-light"><i class="fas fa-copyright me-1"></i>Footer Text</label>
+                            <input type="text" name="footer_text" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['footer_text'] ?? '© 2026 EnPharChem Technologies — Energy, Pharmaceutical & Chemical Engineering Platform') ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-building me-1"></i>Company Name</label>
+                            <input type="text" name="company_name" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['company_name'] ?? 'EnPharChem Technologies') ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-light"><i class="fas fa-envelope me-1"></i>Company Email</label>
+                            <input type="email" name="company_email" class="form-control bg-dark text-light border-secondary"
+                                   value="<?= htmlspecialchars($branding['company_email'] ?? 'info@enpharchem.com') ?>">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-light"><i class="fas fa-paint-brush me-1"></i>Primary Color</label>
+                            <div class="input-group input-group-sm">
+                                <input type="color" name="primary_color" class="form-control form-control-color bg-dark border-secondary" style="height:38px;"
+                                       value="<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>">
+                                <input type="text" class="form-control bg-dark text-light border-secondary"
+                                       value="<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>" readonly style="max-width:100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-light"><i class="fas fa-paint-brush me-1"></i>Accent Color</label>
+                            <div class="input-group input-group-sm">
+                                <input type="color" name="accent_color" class="form-control form-control-color bg-dark border-secondary" style="height:38px;"
+                                       value="<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>">
+                                <input type="text" class="form-control bg-dark text-light border-secondary"
+                                       value="<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>" readonly style="max-width:100px;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="d-flex gap-2 w-100">
+                                <button type="submit" class="btn btn-primary flex-fill"><i class="fas fa-save me-1"></i>Save Branding</button>
+                                <a href="/enpharchem/dashboard" class="btn btn-outline-secondary" target="_blank"><i class="fas fa-eye me-1"></i>Preview</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Preview -->
+                    <div class="mt-4 p-3" style="background:#1a1d23;border-radius:8px;border:1px solid rgba(255,255,255,.08);">
+                        <small class="text-secondary d-block mb-2"><i class="fas fa-desktop me-1"></i>Navbar Preview</small>
+                        <div class="d-flex align-items-center gap-2">
+                            <?php if (!empty($branding['logo_url'])): ?>
+                                <img src="<?= htmlspecialchars($branding['logo_url']) ?>" style="width:34px;height:34px;border-radius:8px;">
+                            <?php else: ?>
+                                <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,<?= htmlspecialchars($branding['primary_color'] ?? '#0d6efd') ?>,<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;">
+                                    <i class="fas <?= htmlspecialchars($branding['logo_icon'] ?? 'fa-atom') ?>"></i>
+                                </div>
+                            <?php endif; ?>
+                            <span style="font-weight:700;font-size:1.1rem;color:#fff;">
+                                <?= htmlspecialchars($branding['site_name'] ?? 'En') ?><span style="color:<?= htmlspecialchars($branding['accent_color'] ?? '#0dcaf0') ?>;"><?= htmlspecialchars($branding['site_name_accent'] ?? 'Phar') ?></span>Chem
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 <!-- Stats Bar -->
 <div class="row g-3 mb-4">
