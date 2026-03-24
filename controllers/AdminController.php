@@ -114,7 +114,16 @@ class AdminController extends BaseController {
             $action = $_POST['action'] ?? '';
             $moduleId = $_POST['module_id'] ?? '';
 
-            if (!empty($moduleId)) {
+            if ($action === 'update_module' && !empty($moduleId)) {
+                $updateData = [];
+                if (!empty($_POST['module_name'])) $updateData['name'] = $_POST['module_name'];
+                if (!empty($_POST['module_version'])) $updateData['version'] = $_POST['module_version'];
+                if (!empty($_POST['module_icon'])) $updateData['icon'] = $_POST['module_icon'];
+                if (!empty($_POST['license_required'])) $updateData['license_required'] = $_POST['license_required'];
+                if (!empty($updateData)) {
+                    $this->db->update('modules', $updateData, 'id = ?', [$moduleId]);
+                }
+            } elseif (!empty($moduleId)) {
                 if ($action === 'activate') {
                     $this->db->update('modules', ['is_active' => 1], 'id = ?', [$moduleId]);
                 } elseif ($action === 'deactivate') {
@@ -143,6 +152,17 @@ class AdminController extends BaseController {
     }
 
     public function settings() {
+        // Auto-create settings table if missing
+        try {
+            $this->db->query("CREATE TABLE IF NOT EXISTS settings (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                setting_key VARCHAR(255) NOT NULL UNIQUE,
+                setting_value TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            ) ENGINE=InnoDB");
+        } catch (Exception $e) {}
+
         if ($this->isPost()) {
             $settingsKeys = [
                 'site_name', 'site_description', 'maintenance_mode',

@@ -128,6 +128,14 @@ return [
     'training/my-certificates' => ['controller' => 'TrainingController', 'action' => 'myCertificates'],
     'training/seed' => ['controller' => 'TrainingController', 'action' => 'seedTraining'],
 
+    // Licensing Portal
+    'control-panel/licensing' => ['controller' => 'LicensingController', 'action' => 'index'],
+    'control-panel/licensing/issue' => ['controller' => 'LicensingController', 'action' => 'issueLicense'],
+    'control-panel/licensing/manage' => ['controller' => 'LicensingController', 'action' => 'manageLicense'],
+    'control-panel/licensing/requests' => ['controller' => 'LicensingController', 'action' => 'requests'],
+    'control-panel/licensing/bulk' => ['controller' => 'LicensingController', 'action' => 'bulkManage'],
+    'control-panel/licensing/report' => ['controller' => 'LicensingController', 'action' => 'generateReport'],
+
     // Benchmark
     'benchmark' => ['controller' => 'BenchmarkController', 'action' => 'index'],
     'benchmark/pdf' => ['controller' => 'BenchmarkController', 'action' => 'pdf'],
