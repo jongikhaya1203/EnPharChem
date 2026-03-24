@@ -113,9 +113,8 @@ $catLabel = $catLabels[$course['category'] ?? 'general'] ?? ucwords(str_replace(
                 <div style="background:#141720;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.06);">
 
                     <?php if ($lt === 'video'): ?>
-                    <!-- VIDEO LESSON - YouTube Search Embed (always finds relevant content) -->
+                    <!-- VIDEO LESSON - EnPharChem YouTube Plugin -->
                     <?php
-                    // Build search query from lesson title and category for YouTube search embed
                     $categorySearchTerms = [
                         'process_sim_energy' => 'HYSYS process simulation energy',
                         'process_sim_chemicals' => 'Aspen Plus chemical process simulation',
@@ -124,87 +123,35 @@ $catLabel = $catLabels[$course['category'] ?? 'general'] ?? ucwords(str_replace(
                         'subsurface_science' => 'reservoir modeling petroleum engineering',
                         'energy_optimization' => 'energy optimization pinch analysis',
                         'operations_support' => 'plant operations process monitoring',
-                        'apc' => 'advanced process control MPC DMC',
+                        'apc' => 'advanced process control MPC tutorial',
                         'dynamic_optimization' => 'dynamic optimization chemical process',
-                        'mes' => 'manufacturing execution system MES',
+                        'mes' => 'manufacturing execution system MES tutorial',
                         'petroleum_supply_chain' => 'petroleum refinery planning optimization',
-                        'supply_chain' => 'supply chain management planning',
+                        'supply_chain' => 'supply chain management planning tutorial',
                         'apm' => 'predictive maintenance asset performance',
-                        'industrial_data_fabric' => 'industrial data management historian',
-                        'digital_grid_mgmt' => 'SCADA power grid management',
+                        'industrial_data_fabric' => 'industrial data management OPC historian',
+                        'digital_grid_mgmt' => 'SCADA power grid management tutorial',
                     ];
                     $courseCat = $course['category'] ?? 'general';
                     $searchBase = $categorySearchTerms[$courseCat] ?? 'chemical engineering tutorial';
-                    $searchQuery = urlencode($searchBase . ' tutorial');
-                    $lessonSearchQuery = urlencode(($lesson['title'] ?? '') . ' engineering tutorial');
+                    $videoSearchQuery = ($lesson['title'] ?? $searchBase) . ' ' . $searchBase . ' tutorial';
+                    $widgetId = 'yt-widget-' . ($lesson['id'] ?? $idx);
                     ?>
-                    <div style="background:#0d1117;border-radius:0;">
-                        <!-- Main Video Player -->
-                        <div id="videoThumb-<?= $lessonId ?>" style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a1d23);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;" onclick="loadYouTubeSearch('<?= $lessonId ?>', '<?= $lessonSearchQuery ?>')">
+                    <div id="<?= $widgetId ?>" style="background:#0d1117;min-height:200px;">
+                        <!-- Initial play button - loads plugin on click -->
+                        <div id="<?= $widgetId ?>-thumb" style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a1d23);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;" onclick="EPYouTube.buildLessonWidget('<?= $widgetId ?>', '<?= htmlspecialchars(addslashes($videoSearchQuery), ENT_QUOTES) ?>', {title:'<?= htmlspecialchars(addslashes($lesson['title']), ENT_QUOTES) ?>', duration:<?= (int)$lesson['duration_minutes'] ?>})">
                             <div style="text-align:center;position:relative;z-index:2;">
-                                <div style="width:72px;height:72px;border-radius:50%;background:rgba(220,53,69,.9);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;transition:transform .2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                <div style="width:72px;height:72px;border-radius:50%;background:rgba(220,53,69,.9);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;transition:transform .2s;box-shadow:0 4px 20px rgba(220,53,69,.4);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                                     <i class="fas fa-play" style="color:#fff;font-size:24px;margin-left:4px;"></i>
                                 </div>
-                                <div class="text-light fw-bold" style="text-shadow:0 2px 8px rgba(0,0,0,.8);"><?= htmlspecialchars($lesson['title']) ?></div>
-                                <div class="text-light small" style="text-shadow:0 2px 8px rgba(0,0,0,.8);opacity:.8;"><i class="fab fa-youtube me-1"></i><?= $lesson['duration_minutes'] ?> min &bull; Click to play</div>
-                            </div>
-                            <i class="fab fa-youtube" style="position:absolute;font-size:8rem;color:rgba(220,53,69,.08);"></i>
-                        </div>
-                        <div id="videoFrame-<?= $lessonId ?>" style="display:none;aspect-ratio:16/9;"></div>
-
-                        <!-- 3 Related Videos Row -->
-                        <?php
-                        $relatedQueries = [
-                            urlencode($searchBase . ' beginner tutorial'),
-                            urlencode($searchBase . ' advanced tutorial'),
-                            urlencode($searchBase . ' practical example'),
-                        ];
-                        $relatedTitles = [
-                            'Fundamentals: ' . $searchBase,
-                            'Advanced: ' . $searchBase,
-                            'Practical: ' . $searchBase,
-                        ];
-                        ?>
-                        <div class="p-3" style="border-top:1px solid rgba(255,255,255,.06);">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <span class="text-secondary small fw-bold"><i class="fab fa-youtube me-1" style="color:#dc3545;"></i>Related Videos (3)</span>
-                                <a href="https://www.youtube.com/results?search_query=<?= $searchQuery ?>" target="_blank" class="text-danger small text-decoration-none">Browse more <i class="fas fa-external-link-alt" style="font-size:9px;"></i></a>
-                            </div>
-                            <div class="row g-2">
-                                <?php for ($vi = 0; $vi < 3; $vi++): ?>
-                                <div class="col-md-4">
-                                    <div style="background:#141720;border:1px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden;cursor:pointer;" onclick="loadRelatedVideo('<?= $lessonId ?>-rel<?= $vi ?>', '<?= $relatedQueries[$vi] ?>')">
-                                        <!-- Thumbnail / Player -->
-                                        <div id="relThumb-<?= $lessonId ?>-rel<?= $vi ?>" style="aspect-ratio:16/9;background:linear-gradient(135deg,#1a1d23,#0d1117);display:flex;align-items:center;justify-content:center;position:relative;">
-                                            <div style="text-align:center;">
-                                                <div style="width:40px;height:40px;border-radius:50%;background:rgba(220,53,69,.85);display:flex;align-items:center;justify-content:center;margin:0 auto;">
-                                                    <i class="fas fa-play" style="color:#fff;font-size:14px;margin-left:2px;"></i>
-                                                </div>
-                                            </div>
-                                            <i class="fab fa-youtube" style="position:absolute;font-size:3rem;color:rgba(220,53,69,.06);"></i>
-                                        </div>
-                                        <div id="relFrame-<?= $lessonId ?>-rel<?= $vi ?>" style="display:none;aspect-ratio:16/9;"></div>
-                                        <div class="p-2">
-                                            <div class="text-light small fw-semibold" style="line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-                                                <?= htmlspecialchars($relatedTitles[$vi]) ?>
-                                            </div>
-                                            <div class="text-secondary" style="font-size:10px;"><i class="fab fa-youtube me-1" style="color:#dc3545;"></i>YouTube</div>
-                                        </div>
-                                    </div>
+                                <div class="text-light fw-bold mb-1" style="text-shadow:0 2px 8px rgba(0,0,0,.8);"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div style="color:#8b949e;font-size:12px;text-shadow:0 2px 8px rgba(0,0,0,.8);">
+                                    <i class="fab fa-youtube me-1" style="color:#dc3545;"></i><?= $lesson['duration_minutes'] ?> min &bull; 3 videos &bull; Click to play
                                 </div>
-                                <?php endfor; ?>
                             </div>
+                            <i class="fab fa-youtube" style="position:absolute;font-size:10rem;color:rgba(220,53,69,.05);"></i>
                         </div>
-
-                        <!-- Video info & actions -->
-                        <div class="p-3" style="border-top:1px solid rgba(255,255,255,.06);">
-                            <p class="text-secondary small mb-2"><?= htmlspecialchars($lesson['description'] ?? 'Watch this video lesson to learn key concepts and practical applications.') ?></p>
-                            <div class="d-flex gap-2 flex-wrap">
-                                <button class="btn btn-sm btn-danger" onclick="loadYouTubeSearch('<?= $lessonId ?>', '<?= $lessonSearchQuery ?>')"><i class="fas fa-play me-1"></i>Play Main</button>
-                                <a href="https://www.youtube.com/results?search_query=<?= $searchQuery ?>" target="_blank" class="btn btn-sm btn-outline-danger"><i class="fab fa-youtube me-1"></i>Browse on YouTube</a>
-                                <button class="btn btn-sm btn-outline-success ms-auto" onclick="markComplete('<?= $lessonId ?>')"><i class="fas fa-check me-1"></i>Mark Complete</button>
-                            </div>
-                        </div>
+                    </div>
                     </div>
 
                     <?php elseif ($lt === 'document'): ?>
@@ -441,67 +388,7 @@ function toggleLesson(id) {
     }
 }
 
-function loadYouTubeSearch(lessonId, searchQuery) {
-    var thumb = document.getElementById('videoThumb-' + lessonId);
-    var frame = document.getElementById('videoFrame-' + lessonId);
-    if (thumb) thumb.style.display = 'none';
-    if (frame) {
-        frame.style.display = 'block';
-        // Use YouTube Data API via Invidious (public, no API key needed) to find a real video ID
-        var apiUrl = 'https://vid.puffyan.us/api/v1/search?q=' + searchQuery + '&type=video&sort_by=relevance';
-        frame.innerHTML = '<div style="aspect-ratio:16/9;background:#000;display:flex;align-items:center;justify-content:center;"><div class="text-center"><i class="fas fa-spinner fa-spin text-danger" style="font-size:2rem;"></i><p class="text-light mt-2 small">Finding best video...</p></div></div>';
-
-        fetch(apiUrl)
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                if (data && data.length > 0 && data[0].videoId) {
-                    var vid = data[0].videoId;
-                    frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
-                } else {
-                    openYouTubeFallback(searchQuery, frame);
-                }
-            })
-            .catch(function() {
-                openYouTubeFallback(searchQuery, frame);
-            });
-    }
-}
-
-function loadRelatedVideo(relId, searchQuery) {
-    var thumb = document.getElementById('relThumb-' + relId);
-    var frame = document.getElementById('relFrame-' + relId);
-    if (thumb) thumb.style.display = 'none';
-    if (frame) {
-        frame.style.display = 'block';
-        frame.innerHTML = '<div style="aspect-ratio:16/9;background:#000;display:flex;align-items:center;justify-content:center;"><i class="fas fa-spinner fa-spin text-danger" style="font-size:1.5rem;"></i></div>';
-
-        var apiUrl = 'https://vid.puffyan.us/api/v1/search?q=' + searchQuery + '&type=video&sort_by=relevance';
-        fetch(apiUrl)
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                if (data && data.length > 0 && data[0].videoId) {
-                    var vid = data[0].videoId;
-                    frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;"></iframe>';
-                } else {
-                    openYouTubeFallback(searchQuery, frame);
-                }
-            })
-            .catch(function() {
-                openYouTubeFallback(searchQuery, frame);
-            });
-    }
-}
-
-function openYouTubeFallback(searchQuery, frame) {
-    // Fallback: show a clickable link to open YouTube search in new tab
-    frame.innerHTML = '<div style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a1d23);display:flex;align-items:center;justify-content:center;">' +
-        '<div class="text-center p-4">' +
-            '<i class="fab fa-youtube" style="font-size:3rem;color:#dc3545;margin-bottom:12px;display:block;"></i>' +
-            '<p class="text-light fw-bold mb-2">Click below to watch on YouTube</p>' +
-            '<a href="https://www.youtube.com/results?search_query=' + searchQuery + '" target="_blank" class="btn btn-danger"><i class="fab fa-youtube me-2"></i>Open YouTube</a>' +
-        '</div>' +
-    '</div>';
-}
+// YouTube plugin handles all video playback - see /assets/js/youtube-plugin.js
 
 function selectQuizOpt(el) {
     el.closest('.d-grid').querySelectorAll('.quiz-opt').forEach(function(opt) {
@@ -547,6 +434,9 @@ function updateInteractive(id) {
     document.getElementById('res-dp-' + id).textContent = dp + ' bar';
 }
 </script>
+
+<!-- EnPharChem YouTube Plugin -->
+<script src="/enpharchem/assets/js/youtube-plugin.js"></script>
 
 <!-- Assessment Section -->
 <div class="card border-0 mb-4" style="background: var(--epc-card-bg);">
