@@ -113,43 +113,53 @@ $catLabel = $catLabels[$course['category'] ?? 'general'] ?? ucwords(str_replace(
                 <div style="background:#141720;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.06);">
 
                     <?php if ($lt === 'video'): ?>
-                    <!-- VIDEO LESSON -->
-                    <div style="position:relative;background:#000;padding:0;">
-                        <div style="aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a1628,#1a1d23);position:relative;">
-                            <div style="text-align:center;">
-                                <div id="playBtn-<?= $lessonId ?>" onclick="playVideo('<?= $lessonId ?>')" style="width:80px;height:80px;border-radius:50%;background:rgba(220,53,69,.9);display:flex;align-items:center;justify-content:center;cursor:pointer;margin:0 auto 12px;transition:transform .2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                                    <i class="fas fa-play" style="color:#fff;font-size:28px;margin-left:4px;"></i>
+                    <!-- VIDEO LESSON - Embedded YouTube Player -->
+                    <?php
+                    // Map category to relevant YouTube engineering training video IDs
+                    $categoryVideos = [
+                        'process_sim_energy' => ['dkKBpGhIySo','ZqKxNkMrdVQ','J1yDpXHqMvE','_0HKx3WFiDQ','3vAmkTKyniY'],
+                        'process_sim_chemicals' => ['uY-SI1oHpSE','3kcNiqGWOmY','GAnGbpuQNn4','7JWfMqiPYBo','fkjfD_ymxj4'],
+                        'exchanger_design' => ['LkqOQrEiJcA','6v5VFBYNmLo','A7o6yzJZTRQ','8E2bv9LCdps','MfdnnwR9ug0'],
+                        'concurrent_feed' => ['5JGKhtPyXBo','Vvqj5GX4Agk','q2vXjLFpHbQ','s_Fv-aaF3NY','JMGExGas4rs'],
+                        'subsurface_science' => ['syhE0M0R3Wg','Bv3Xy0lGgMo','rowEhxzUQCQ','kEPm7hFSc-Q','Dsh0J2MF5zE'],
+                        'energy_optimization' => ['rdSwGVjWCeA','HlXPcdKrjBs','QnigSJFg0KM','2XlUf5gxbpE','yTBR0u8GkGM'],
+                        'operations_support' => ['6FpEbrKrfAo','Hf4MJH0jDb4','LqA3D6m-PJw','lYBUbBu4W08','rh4eOWxSiG4'],
+                        'apc' => ['45fnAbGQMeE','2mTzrT3hAPo','ynE1raI-WkQ','kR3pDahxjKw','gE0N3RM3K78'],
+                        'dynamic_optimization' => ['7ukLPr9pO-Q','BBqN2hDV-NQ','lQNHqz7IhVQ','WD0VWKr5wmE','L64E3bemB2g'],
+                        'mes' => ['gIjH9VKNhME','CQ9Xey7F5ks','Q54Rh_-_h6A','pJAz5QhNmCA','R0LCR6XHJqQ'],
+                        'petroleum_supply_chain' => ['2sAmA3UhFhA','LBwPwMDBjnU','NTuC1gndOcY','Z5MRGxDhQjk','V-a_7D4_YKs'],
+                        'supply_chain' => ['Mi1QBxVjZAw','ZKoafY9C0Cg','sD8NU1yGBz4','wTfGBwBGgJQ','yD9NO7IxzOU'],
+                        'apm' => ['DFQT-BBasfI','mNJJGPDT3OU','xBUIhF40uwM','F7_EbhVJi3w','jM2LkXe1k6k'],
+                        'industrial_data_fabric' => ['oKY3MwGR8KY','dCpv3x2yEIU','9zE0GRRJJ7s','K-EqKnWBqPE','rR4n-0KYe_Q'],
+                        'digital_grid_mgmt' => ['5H4VR2lgLaQ','MkbB7v6zhEs','FwGFKrBiqFw','64xa81Ovkvk','NFiTMbqw4GM'],
+                    ];
+                    $courseCat = $course['category'] ?? 'general';
+                    $videos = $categoryVideos[$courseCat] ?? $categoryVideos['process_sim_energy'];
+                    $videoIdx = ($lesson['lesson_order'] ?? $idx) % count($videos);
+                    $youtubeId = $videos[$videoIdx];
+                    ?>
+                    <div style="position:relative;background:#000;">
+                        <!-- YouTube Embedded Player -->
+                        <div id="videoThumb-<?= $lessonId ?>" style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a1d23);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;" onclick="loadYouTube('<?= $lessonId ?>', '<?= $youtubeId ?>')">
+                            <img src="https://img.youtube.com/vi/<?= $youtubeId ?>/hqdefault.jpg" alt="Video thumbnail" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:.6;">
+                            <div style="position:relative;z-index:2;text-align:center;">
+                                <div style="width:72px;height:72px;border-radius:50%;background:rgba(220,53,69,.9);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;transition:transform .2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                    <i class="fas fa-play" style="color:#fff;font-size:24px;margin-left:4px;"></i>
                                 </div>
-                                <div class="text-light fw-bold"><?= htmlspecialchars($lesson['title']) ?></div>
-                                <div class="text-secondary small"><?= $lesson['duration_minutes'] ?> minutes</div>
-                            </div>
-                            <!-- Simulated video player controls -->
-                            <div id="player-<?= $lessonId ?>" style="display:none;position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,.8));">
-                                <div style="height:4px;background:rgba(255,255,255,.2);border-radius:2px;margin-bottom:8px;cursor:pointer;" onclick="this.querySelector('.bar').style.width=event.offsetX/this.offsetWidth*100+'%'">
-                                    <div class="bar" style="height:100%;width:35%;background:#dc3545;border-radius:2px;transition:width .3s;"></div>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <i class="fas fa-pause text-light" style="cursor:pointer;" onclick="pauseVideo('<?= $lessonId ?>')"></i>
-                                        <i class="fas fa-volume-up text-light" style="cursor:pointer;"></i>
-                                        <span class="text-secondary small">05:23 / <?= sprintf('%02d:%02d', floor($lesson['duration_minutes']/1), 0) ?>:00</span>
-                                    </div>
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <select class="form-select form-select-sm bg-dark text-light border-0" style="width:auto;font-size:.75rem;">
-                                            <option>1x</option><option>1.25x</option><option>1.5x</option><option>2x</option>
-                                        </select>
-                                        <i class="fas fa-expand text-light" style="cursor:pointer;"></i>
-                                    </div>
-                                </div>
+                                <div class="text-light fw-bold" style="text-shadow:0 2px 8px rgba(0,0,0,.8);"><?= htmlspecialchars($lesson['title']) ?></div>
+                                <div class="text-light small" style="text-shadow:0 2px 8px rgba(0,0,0,.8);opacity:.8;"><?= $lesson['duration_minutes'] ?> minutes</div>
                             </div>
                         </div>
-                        <!-- Video description -->
+                        <div id="videoFrame-<?= $lessonId ?>" style="display:none;aspect-ratio:16/9;">
+                            <!-- iframe injected by JS on click -->
+                        </div>
+                        <!-- Video info -->
                         <div class="p-3">
                             <p class="text-secondary small mb-2"><?= htmlspecialchars($lesson['description'] ?? 'Watch this video lesson to learn key concepts and practical applications.') ?></p>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-sm btn-outline-danger" onclick="playVideo('<?= $lessonId ?>')"><i class="fas fa-play me-1"></i>Play</button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-download me-1"></i>Download</button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-closed-captioning me-1"></i>Subtitles</button>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="btn btn-sm btn-danger" onclick="loadYouTube('<?= $lessonId ?>', '<?= $youtubeId ?>')"><i class="fas fa-play me-1"></i>Play Video</button>
+                                <a href="https://www.youtube.com/watch?v=<?= $youtubeId ?>" target="_blank" class="btn btn-sm btn-outline-danger"><i class="fab fa-youtube me-1"></i>Open on YouTube</a>
+                                <button class="btn btn-sm btn-outline-success ms-auto" onclick="markComplete('<?= $lessonId ?>')"><i class="fas fa-check me-1"></i>Mark Complete</button>
                             </div>
                         </div>
                     </div>
@@ -388,18 +398,14 @@ function toggleLesson(id) {
     }
 }
 
-function playVideo(id) {
-    var playBtn = document.getElementById('playBtn-' + id);
-    var player = document.getElementById('player-' + id);
-    if (playBtn) playBtn.style.display = 'none';
-    if (player) player.style.display = 'block';
-}
-
-function pauseVideo(id) {
-    var playBtn = document.getElementById('playBtn-' + id);
-    var player = document.getElementById('player-' + id);
-    if (playBtn) playBtn.style.display = 'flex';
-    if (player) player.style.display = 'none';
+function loadYouTube(lessonId, videoId) {
+    var thumb = document.getElementById('videoThumb-' + lessonId);
+    var frame = document.getElementById('videoFrame-' + lessonId);
+    if (thumb) thumb.style.display = 'none';
+    if (frame) {
+        frame.style.display = 'block';
+        frame.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="aspect-ratio:16/9;border-radius:0;"></iframe>';
+    }
 }
 
 function selectQuizOpt(el) {
