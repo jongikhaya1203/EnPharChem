@@ -105,16 +105,37 @@ class MarketingDocsController extends BaseController {
             ],
         ];
 
+        // Ensure table exists
+        try {
+            $this->db->query("CREATE TABLE IF NOT EXISTS marketing_materials (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                title VARCHAR(255) NOT NULL,
+                description TEXT,
+                material_type ENUM('brochure','whitepaper','case_study','datasheet','presentation','video','infographic') NOT NULL DEFAULT 'brochure',
+                category VARCHAR(100),
+                target_audience VARCHAR(255),
+                file_url VARCHAR(500),
+                thumbnail_url VARCHAR(500),
+                file_size VARCHAR(50),
+                status ENUM('draft','review','approved','published') DEFAULT 'draft',
+                download_count INT DEFAULT 0,
+                created_by INT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            ) ENGINE=InnoDB");
+        } catch (Exception $e) {
+            // table may already exist
+        }
+
         $count = 0;
         foreach ($materials as $m) {
-            $existing = $this->db->fetch("SELECT id FROM marketing_materials WHERE title = ?", [$m['title']]);
-            if (!$existing) {
-                try {
-                    $this->db->insert('marketing_materials', $m);
-                    $count++;
-                } catch (Exception $e) {
-                    // skip
-                }
+            try {
+                // Delete existing with same title to allow re-seeding
+                $this->db->query("DELETE FROM marketing_materials WHERE title = ?", [$m['title']]);
+                $this->db->insert('marketing_materials', $m);
+                $count++;
+            } catch (Exception $e) {
+                // skip on error
             }
         }
 

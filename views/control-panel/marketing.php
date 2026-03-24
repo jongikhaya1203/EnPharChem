@@ -7,11 +7,25 @@
     </ol>
 </nav>
 
+<?php if (isset($_GET['msg'])): ?>
+    <?php if ($_GET['msg'] === 'seeded'): ?>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            <div>Successfully loaded <?= (int)($_GET['count'] ?? 0) ?> marketing documents with PDF links.</div>
+        </div>
+    <?php elseif ($_GET['msg'] === 'deleted'): ?>
+        <div class="alert alert-info"><i class="fas fa-trash me-2"></i>Material deleted.</div>
+    <?php endif; ?>
+<?php endif; ?>
+
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="text-light mb-0"><i class="bi bi-megaphone-fill me-2" style="color: var(--epc-accent);"></i>Marketing Material</h2>
-    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#createMaterialModal">
-        <i class="bi bi-plus-lg me-1"></i>Create Material
-    </button>
+    <h2 class="text-light mb-0"><i class="fas fa-bullhorn me-2" style="color: var(--epc-accent);"></i>Marketing Material</h2>
+    <div class="d-flex gap-2">
+        <a href="/enpharchem/marketing/seed-materials" class="btn btn-info btn-sm"><i class="fas fa-magic me-1"></i>Load EnPharChem Docs</a>
+        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#createMaterialModal">
+            <i class="fas fa-plus me-1"></i>Create Material
+        </button>
+    </div>
 </div>
 
 <!-- Material Cards Grid -->
@@ -75,13 +89,21 @@
                                 <small class="text-secondary">by <?= htmlspecialchars($material['creator_name']) ?></small>
                             </div>
                         <?php endif; ?>
+                        <!-- PDF View/Download Button -->
+                        <?php if (!empty($material['file_url'])): ?>
+                        <div class="mb-3">
+                            <a href="<?= htmlspecialchars($material['file_url']) ?>" target="_blank" class="btn btn-sm btn-primary w-100">
+                                <i class="fas fa-file-pdf me-1"></i>View / Download PDF
+                            </a>
+                        </div>
+                        <?php endif; ?>
                         <div class="d-flex gap-2 mt-auto">
                             <?php if ($mStatus !== 'approved' && $mStatus !== 'published'): ?>
                                 <form method="POST" class="flex-fill">
                                     <input type="hidden" name="action" value="approve">
                                     <input type="hidden" name="material_id" value="<?= htmlspecialchars($material['id'] ?? '') ?>">
                                     <button type="submit" class="btn btn-sm btn-outline-success w-100">
-                                        <i class="bi bi-check-lg me-1"></i>Approve
+                                        <i class="fas fa-check me-1"></i>Approve
                                     </button>
                                 </form>
                             <?php endif; ?>
@@ -89,7 +111,7 @@
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="material_id" value="<?= htmlspecialchars($material['id'] ?? '') ?>">
                                 <button type="submit" class="btn btn-sm btn-outline-danger w-100" onclick="return confirm('Are you sure you want to delete this material?')">
-                                    <i class="bi bi-trash me-1"></i>Delete
+                                    <i class="fas fa-trash me-1"></i>Delete
                                 </button>
                             </form>
                         </div>
@@ -101,8 +123,12 @@
         <div class="col-12">
             <div class="card border-0" style="background: var(--epc-card-bg);">
                 <div class="card-body text-center py-5">
-                    <i class="bi bi-megaphone text-secondary" style="font-size: 3rem;"></i>
-                    <p class="text-secondary mt-3 mb-0">No marketing materials found. Create your first one!</p>
+                    <i class="fas fa-bullhorn text-secondary" style="font-size: 3rem;opacity:.4;"></i>
+                    <p class="text-secondary mt-3">No marketing materials found.</p>
+                    <div class="d-flex justify-content-center gap-3 mt-3">
+                        <a href="/enpharchem/marketing/seed-materials" class="btn btn-primary"><i class="fas fa-magic me-1"></i>Load EnPharChem Marketing Docs</a>
+                        <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#createMaterialModal"><i class="fas fa-plus me-1"></i>Create Custom</button>
+                    </div>
                 </div>
             </div>
         </div>
