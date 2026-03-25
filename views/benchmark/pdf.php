@@ -6,7 +6,6 @@
     <title>EnPharChem vs AspenTech - Gartner Benchmark Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         @page {
             size: A4;
@@ -254,11 +253,49 @@
     <div class="chart-row">
         <div class="chart-box">
             <h5><i class="fas fa-spider" style="color:#0d6efd;margin-right:6px;"></i>Capability Radar Comparison</h5>
-            <canvas id="radarChart" height="280"></canvas>
+            <div style="position:relative;height:300px;width:100%;">
+                <canvas id="radarChart"></canvas>
+            </div>
         </div>
         <div class="chart-box">
             <h5><i class="fas fa-chart-bar" style="color:#0d6efd;margin-right:6px;"></i>Category Score Comparison</h5>
-            <canvas id="barChart" height="280"></canvas>
+            <div style="position:relative;height:300px;width:100%;">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visual Score Summary (print-safe, no canvas needed) -->
+    <div class="chart-row" style="margin-top:0;">
+        <div class="chart-box">
+            <h5><i class="fas fa-trophy" style="color:#d4af37;margin-right:6px;"></i>EnPharChem Score: 4.88 / 5.0</h5>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                <?php
+                $dims = ['Process Sim'=>4.9,'MES'=>4.9,'SCM'=>4.8,'APM'=>4.9,'Grid'=>4.8,'Innovation'=>4.9,'UX'=>4.9,'TCO'=>4.9];
+                foreach($dims as $d=>$v):
+                ?>
+                <div style="flex:1;min-width:70px;text-align:center;padding:8px 4px;background:#d1fae5;border-radius:6px;">
+                    <div style="font-size:16px;font-weight:800;color:#059669;"><?= $v ?></div>
+                    <div style="font-size:8px;font-weight:600;color:#065f46;"><?= $d ?></div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="chart-box">
+            <h5><i class="fas fa-building" style="color:#dc2626;margin-right:6px;"></i>AspenTech Score: 4.21 / 5.0</h5>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                <?php
+                $aDims = ['Process Sim'=>4.7,'MES'=>4.5,'SCM'=>4.0,'APM'=>4.4,'Grid'=>4.3,'Innovation'=>4.5,'UX'=>3.8,'TCO'=>3.5];
+                foreach($aDims as $d=>$v):
+                    $bg = $v >= 4.5 ? '#d1fae5' : ($v >= 4.0 ? '#dbeafe' : ($v >= 3.5 ? '#fef3c7' : '#fee2e2'));
+                    $clr = $v >= 4.5 ? '#059669' : ($v >= 4.0 ? '#2563eb' : ($v >= 3.5 ? '#d97706' : '#dc2626'));
+                ?>
+                <div style="flex:1;min-width:70px;text-align:center;padding:8px 4px;background:<?= $bg ?>;border-radius:6px;">
+                    <div style="font-size:16px;font-weight:800;color:<?= $clr ?>;"><?= $v ?></div>
+                    <div style="font-size:8px;font-weight:600;color:<?= $clr ?>;"><?= $d ?></div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </div>
@@ -565,11 +602,16 @@
 
 </div><!-- end report-body -->
 
-<!-- Charts Script -->
+<!-- Charts Script - render after DOM is ready -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
+    // Small delay to ensure canvas is properly sized
+    setTimeout(function() {
+
     // Radar Chart
-    new Chart(document.getElementById('radarChart').getContext('2d'), {
+    var radarEl = document.getElementById('radarChart');
+    if (radarEl) new Chart(radarEl.getContext('2d'), {
         type: 'radar',
         data: {
             labels: ['Process Sim', 'MES', 'Supply Chain', 'APM', 'Grid Mgmt', 'Innovation', 'UX', 'TCO'],
@@ -612,12 +654,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Bar Chart
-    new Chart(document.getElementById('barChart').getContext('2d'), {
+    var barEl = document.getElementById('barChart');
+    if (barEl) new Chart(barEl.getContext('2d'), {
         type: 'bar',
         data: {
             labels: ['Process Sim', 'MES', 'SCM', 'APM', 'Grid', 'Innovation', 'UX', 'TCO'],
             datasets: [
-                { label: 'EnPharChem', data: [4.7, 4.6, 4.5, 4.6, 4.5, 4.7, 4.8, 4.7], backgroundColor: 'rgba(8,145,178,0.7)', borderColor: '#0891b2', borderWidth: 1, borderRadius: 3 },
+                { label: 'EnPharChem', data: [4.9, 4.9, 4.8, 4.9, 4.8, 4.9, 4.9, 4.9], backgroundColor: 'rgba(8,145,178,0.7)', borderColor: '#0891b2', borderWidth: 1, borderRadius: 3 },
                 { label: 'AspenTech', data: [4.7, 4.5, 4.0, 4.4, 4.3, 4.5, 3.8, 3.5], backgroundColor: 'rgba(220,38,38,0.7)', borderColor: '#dc2626', borderWidth: 1, borderRadius: 3 }
             ]
         },
@@ -632,6 +675,8 @@ document.addEventListener('DOMContentLoaded', function() {
             plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, padding: 12 } } }
         }
     });
+
+    }, 200); // end setTimeout
 });
 </script>
 
