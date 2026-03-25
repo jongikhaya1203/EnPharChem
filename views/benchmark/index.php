@@ -11,10 +11,13 @@
         <h1><i class="fas fa-chart-bar" style="color:#0dcaf0;margin-right:10px;"></i>Gartner Benchmark Analysis</h1>
         <p class="page-subtitle">EnPharChem vs AspenTech - Comprehensive evaluation using Gartner methodology</p>
     </div>
-    <div>
+    <div class="d-flex gap-2 align-items-center">
         <span class="ep-badge" style="background:rgba(13,202,240,0.2);color:#0dcaf0;font-size:12px;padding:6px 14px;">
-            <i class="fas fa-calendar-alt" style="margin-right:6px;"></i> Analysis Date: March 2026
+            <i class="fas fa-calendar-alt" style="margin-right:6px;"></i> March 2026
         </span>
+        <a href="/enpharchem/benchmark/pdf" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fas fa-file-pdf me-1"></i> Download PDF Report
+        </a>
     </div>
 </div>
 
@@ -46,7 +49,7 @@
         </div>
         <div class="col-md-3">
             <div style="text-align:center;padding:16px;background:rgba(13,110,253,0.08);border-radius:10px;border:1px solid rgba(13,110,253,0.2);">
-                <div style="font-size:32px;font-weight:800;color:#0d6efd;">4.65</div>
+                <div style="font-size:32px;font-weight:800;color:#0d6efd;">4.88</div>
                 <div style="font-size:12px;color:#9ca3af;">EnPharChem Overall Score</div>
             </div>
         </div>
@@ -741,7 +744,7 @@ document.addEventListener('DOMContentLoaded', function() {
             datasets: [
                 {
                     label: 'EnPharChem',
-                    data: [4.7, 4.6, 4.5, 4.6, 4.5, 4.7, 4.8, 4.7],
+                    data: [4.9, 4.9, 4.8, 4.9, 4.8, 4.9, 4.9, 4.9],
                     backgroundColor: 'rgba(13, 202, 240, 0.15)',
                     borderColor: '#0dcaf0',
                     borderWidth: 2,
@@ -798,7 +801,7 @@ document.addEventListener('DOMContentLoaded', function() {
             datasets: [
                 {
                     label: 'EnPharChem',
-                    data: [4.7, 4.6, 4.5, 4.6, 4.5, 4.7, 4.8, 4.7],
+                    data: [4.9, 4.9, 4.8, 4.9, 4.8, 4.9, 4.9, 4.9],
                     backgroundColor: 'rgba(13, 202, 240, 0.7)',
                     borderColor: '#0dcaf0',
                     borderWidth: 1,

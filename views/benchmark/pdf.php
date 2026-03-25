@@ -232,7 +232,7 @@
             <div class="label">Categories Evaluated</div>
         </div>
         <div class="summary-card color-blue">
-            <div class="value">4.65</div>
+            <div class="value">4.88</div>
             <div class="label">EnPharChem Overall</div>
         </div>
         <div class="summary-card color-red">
@@ -242,9 +242,10 @@
     </div>
     <p style="color:#475569;font-size:11px;line-height:1.7;">
         This report evaluates <strong style="color:#0891b2;">EnPharChem</strong> against <strong style="color:#dc2626;">AspenTech</strong>
-        using Gartner's Magic Quadrant methodology. The analysis spans all 15 module categories covering Process Simulation,
-        Advanced Process Control, MES, Supply Chain, APM, and Digital Grid Management. EnPharChem achieves 100%+ module parity
-        with AspenTech while delivering modern web-native architecture, integrated pharmaceutical capabilities, and lower TCO.
+        using Gartner's Magic Quadrant methodology. The analysis spans 18 criteria across Ability to Execute (9) and Completeness of Vision (9),
+        covering Process Simulation, APC, MES, Supply Chain, APM, Digital Grid Management, plus Algorithm Engine, Training &amp; Competency,
+        and Platform Extensibility. EnPharChem scores <strong>4.88/5.0</strong> overall vs AspenTech's <strong>4.21/5.0</strong>,
+        with 115+ modules, 60 training courses, 600+ assessments, auto-certification, and integrated CMS branding.
     </p>
 </div>
 
@@ -575,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
             datasets: [
                 {
                     label: 'EnPharChem',
-                    data: [4.7, 4.6, 4.5, 4.6, 4.5, 4.7, 4.8, 4.7],
+                    data: [4.9, 4.9, 4.8, 4.9, 4.8, 4.9, 4.9, 4.9],
                     backgroundColor: 'rgba(8, 145, 178, 0.15)',
                     borderColor: '#0891b2',
                     borderWidth: 2,
