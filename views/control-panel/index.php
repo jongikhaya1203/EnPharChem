@@ -85,6 +85,24 @@
             'count_key' => null,
             'count_label' => '',
         ],
+        [
+            'title' => 'Licensing Portal',
+            'desc' => 'Issue and manage module licenses with grant/deny controls per license and user.',
+            'icon' => 'bi-key-fill',
+            'link' => '/enpharchem/control-panel/licensing',
+            'color' => '#ffc107',
+            'count_key' => null,
+            'count_label' => '',
+        ],
+        [
+            'title' => 'Formulae Control Sheets',
+            'desc' => 'Interactive calculators for Energy, Pharmaceutical & Chemical engineering mixes with real-time formulas.',
+            'icon' => 'bi-calculator-fill',
+            'link' => '/enpharchem/control-panel/formulae',
+            'color' => '#198754',
+            'count_key' => null,
+            'count_label' => '3 Sheets',
+        ],
     ];
     foreach ($features as $f): ?>
         <div class="col-lg-4 col-md-6">

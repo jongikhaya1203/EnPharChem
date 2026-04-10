@@ -112,6 +112,12 @@ return [
     'control-panel/load-sample-data' => ['controller' => 'ControlPanelController', 'action' => 'loadSampleData'],
     'control-panel/reset-sample-data' => ['controller' => 'ControlPanelController', 'action' => 'resetSampleData'],
 
+    // Formulae Control Sheets
+    'control-panel/formulae' => ['controller' => 'FormulaControlController', 'action' => 'index'],
+    'control-panel/formulae/energy-mix' => ['controller' => 'FormulaControlController', 'action' => 'energyMix'],
+    'control-panel/formulae/pharma-mix' => ['controller' => 'FormulaControlController', 'action' => 'pharmaMix'],
+    'control-panel/formulae/chemical-mix' => ['controller' => 'FormulaControlController', 'action' => 'chemicalMix'],
+
     // Marketing Material PDFs
     'marketing/installation-manual' => ['controller' => 'MarketingDocsController', 'action' => 'installationManual'],
     'marketing/security-architecture' => ['controller' => 'MarketingDocsController', 'action' => 'securityArchitecture'],

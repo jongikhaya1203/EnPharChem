@@ -509,6 +509,7 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
     <a href="/enpharchem/control-panel/training" class="nav-link"><i class="fas fa-graduation-cap"></i>Training Material</a>
     <a href="/enpharchem/control-panel/data-management" class="nav-link"><i class="fas fa-database"></i>Data Management</a>
     <a href="/enpharchem/control-panel/licensing" class="nav-link"><i class="fas fa-key"></i>Licensing Portal</a>
+    <a href="/enpharchem/control-panel/formulae" class="nav-link"><i class="fas fa-calculator"></i>Formulae Sheets</a>
 
     <div class="sidebar-section">Administration</div>
     <a href="/enpharchem/admin" class="nav-link"><i class="fas fa-shield-alt"></i>Admin Panel</a>
