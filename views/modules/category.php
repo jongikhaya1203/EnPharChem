@@ -50,7 +50,9 @@ $icon = $catIcons[$category['slug'] ?? ''] ?? ($category['icon'] ?? 'fa-cube');
                         <div class="flex-grow-1">
                             <div class="d-flex justify-content-between align-items-start">
                                 <h6 class="mb-0" style="color:#fff;font-weight:600;"><?= htmlspecialchars($mod['name']) ?></h6>
-                                <?php if (!empty($mod['license_required'])): ?>
+                                <?php if (!empty($mod['license_waived'])): ?>
+                                <span class="badge bg-success" style="font-size:.65rem;"><i class="fas fa-check me-1"></i>Licensed</span>
+                                <?php elseif (!empty($mod['license_required'])): ?>
                                 <span class="badge bg-warning text-dark" style="font-size:.65rem;">License Required</span>
                                 <?php else: ?>
                                 <span class="badge bg-success" style="font-size:.65rem;">Free</span>

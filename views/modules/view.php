@@ -23,7 +23,11 @@ $relatedModules = $relatedModules ?? [];
                 <div class="d-flex gap-2 align-items-center">
                     <span class="badge bg-primary"><?= htmlspecialchars($module['category_name'] ?? '') ?></span>
                     <span class="badge bg-secondary">v<?= htmlspecialchars($module['version'] ?? '1.0.0') ?></span>
-                    <span class="badge bg-info"><?= htmlspecialchars(ucfirst($module['license_required'] ?? 'standard')) ?> License</span>
+                    <?php if (!empty($module['license_waived'])): ?>
+                        <span class="badge bg-success"><i class="fas fa-check me-1"></i>Licensed</span>
+                    <?php else: ?>
+                        <span class="badge bg-info"><?= htmlspecialchars(ucfirst($module['license_required'] ?? 'standard')) ?> License</span>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="ms-auto">
@@ -85,7 +89,7 @@ $relatedModules = $relatedModules ?? [];
                     <tbody>
                         <tr><td style="color:#6c757d;">Version</td><td><?= htmlspecialchars($module['version'] ?? '1.0.0') ?></td></tr>
                         <tr><td style="color:#6c757d;">Category</td><td><?= htmlspecialchars($module['category_name'] ?? '') ?></td></tr>
-                        <tr><td style="color:#6c757d;">License</td><td><?= htmlspecialchars(ucfirst($module['license_required'] ?? 'standard')) ?></td></tr>
+                        <tr><td style="color:#6c757d;">License</td><td><?= !empty($module['license_waived']) ? '<span class="text-success"><i class="fas fa-check me-1"></i>Granted</span>' : htmlspecialchars(ucfirst($module['license_required'] ?? 'standard')) ?></td></tr>
                         <tr><td style="color:#6c757d;">Status</td><td><span class="badge bg-success">Active</span></td></tr>
                     </tbody>
                 </table>

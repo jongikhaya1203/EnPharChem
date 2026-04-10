@@ -112,6 +112,9 @@ return [
     'control-panel/load-sample-data' => ['controller' => 'ControlPanelController', 'action' => 'loadSampleData'],
     'control-panel/reset-sample-data' => ['controller' => 'ControlPanelController', 'action' => 'resetSampleData'],
 
+    // Module License Manager
+    'control-panel/module-licenses' => ['controller' => 'ModuleLicenseController', 'action' => 'index'],
+
     // Formulae Control Sheets
     'control-panel/formulae' => ['controller' => 'FormulaControlController', 'action' => 'index'],
     'control-panel/formulae/energy-mix' => ['controller' => 'FormulaControlController', 'action' => 'energyMix'],
