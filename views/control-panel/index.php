@@ -95,6 +95,15 @@
             'count_label' => '',
         ],
         [
+            'title' => 'Module Licenses',
+            'desc' => 'Grant or revoke license requirements per module category. Controls visibility of "License Required" badge on modules.',
+            'icon' => 'bi-shield-fill-check',
+            'link' => '/enpharchem/control-panel/module-licenses',
+            'color' => '#0dcaf0',
+            'count_key' => null,
+            'count_label' => '115+ modules',
+        ],
+        [
             'title' => 'Formulae Control Sheets',
             'desc' => 'Interactive calculators for Energy, Pharmaceutical & Chemical engineering mixes with real-time formulas.',
             'icon' => 'bi-calculator-fill',
