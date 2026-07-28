@@ -31,7 +31,7 @@
                     <?php foreach ($projects as $project): ?>
                     <tr>
                         <td>
-                            <a href="/enpharchem/projects/<?= (int)$project['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);font-weight:500;">
+                            <a href="/enpharchem/projects/view?id=<?= (int)$project['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);font-weight:500;">
                                 <?= htmlspecialchars($project['name']) ?>
                             </a>
                         </td>
@@ -40,9 +40,10 @@
                         <td style="font-size:.85rem;color:#6c757d;"><?= htmlspecialchars($project['created_at'] ?? '') ?></td>
                         <td style="font-size:.85rem;color:#6c757d;"><?= htmlspecialchars($project['updated_at'] ?? '') ?></td>
                         <td>
-                            <a href="/enpharchem/projects/<?= (int)$project['id'] ?>" class="btn btn-sm btn-outline-primary me-1" title="View"><i class="fas fa-eye"></i></a>
-                            <a href="/enpharchem/projects/<?= (int)$project['id'] ?>/edit" class="btn btn-sm btn-outline-secondary me-1" title="Edit"><i class="fas fa-edit"></i></a>
-                            <form method="POST" action="/enpharchem/projects/<?= (int)$project['id'] ?>/delete" class="d-inline" onsubmit="return confirm('Delete this project?');">
+                            <a href="/enpharchem/projects/view?id=<?= (int)$project['id'] ?>" class="btn btn-sm btn-outline-primary me-1" title="View"><i class="fas fa-eye"></i></a>
+                            <a href="/enpharchem/projects/edit?id=<?= (int)$project['id'] ?>" class="btn btn-sm btn-outline-secondary me-1" title="Edit"><i class="fas fa-edit"></i></a>
+                            <form method="POST" action="/enpharchem/projects/delete" class="d-inline" onsubmit="return confirm('Delete this project?');">
+                                <input type="hidden" name="id" value="<?= (int)$project['id'] ?>">
                                 <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete"><i class="fas fa-trash"></i></button>
                             </form>
                         </td>

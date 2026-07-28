@@ -16,14 +16,14 @@ return [
     // Projects
     'projects' => ['controller' => 'ProjectController', 'action' => 'index'],
     'projects/create' => ['controller' => 'ProjectController', 'action' => 'create'],
-    'projects/view' => ['controller' => 'ProjectController', 'action' => 'view'],
+    'projects/view' => ['controller' => 'ProjectController', 'action' => 'view_project'],
     'projects/edit' => ['controller' => 'ProjectController', 'action' => 'edit'],
     'projects/delete' => ['controller' => 'ProjectController', 'action' => 'delete'],
 
     // Module categories
     'modules' => ['controller' => 'ModuleController', 'action' => 'index'],
     'modules/category' => ['controller' => 'ModuleController', 'action' => 'category'],
-    'modules/view' => ['controller' => 'ModuleController', 'action' => 'view'],
+    'modules/view' => ['controller' => 'ModuleController', 'action' => 'view_module'],
     'modules/launch' => ['controller' => 'ModuleController', 'action' => 'launch'],
 
     // Flowsheet Simulator (flagship process-simulation tool)
@@ -37,7 +37,7 @@ return [
     'simulations' => ['controller' => 'SimulationController', 'action' => 'index'],
     'simulations/create' => ['controller' => 'SimulationController', 'action' => 'create'],
     'simulations/run' => ['controller' => 'SimulationController', 'action' => 'run'],
-    'simulations/view' => ['controller' => 'SimulationController', 'action' => 'view'],
+    'simulations/view' => ['controller' => 'SimulationController', 'action' => 'view_simulation'],
     'simulations/results' => ['controller' => 'SimulationController', 'action' => 'results'],
 
     // Process Simulation Energy

@@ -31,14 +31,14 @@
                     <?php foreach ($simulations as $sim): ?>
                     <tr>
                         <td>
-                            <a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);font-weight:500;">
+                            <a href="/enpharchem/simulations/view?id=<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);font-weight:500;">
                                 <?= htmlspecialchars($sim['name']) ?>
                             </a>
                         </td>
                         <td style="font-size:.85rem;"><?= htmlspecialchars($sim['module_name'] ?? 'N/A') ?></td>
                         <td style="font-size:.85rem;">
                             <?php if (!empty($sim['project_name'])): ?>
-                            <a href="/enpharchem/projects/<?= (int)($sim['project_id'] ?? 0) ?>" class="text-decoration-none" style="color:#adb5bd;"><?= htmlspecialchars($sim['project_name']) ?></a>
+                            <a href="/enpharchem/projects/view?id=<?= (int)($sim['project_id'] ?? 0) ?>" class="text-decoration-none" style="color:#adb5bd;"><?= htmlspecialchars($sim['project_name']) ?></a>
                             <?php else: ?>
                             <span class="text-muted">--</span>
                             <?php endif; ?>
@@ -46,9 +46,9 @@
                         <td><span class="badge badge-status-<?= htmlspecialchars($sim['status'] ?? 'draft') ?>"><?= htmlspecialchars(ucfirst($sim['status'] ?? 'draft')) ?></span></td>
                         <td style="font-size:.85rem;color:#6c757d;"><?= htmlspecialchars($sim['created_at'] ?? '') ?></td>
                         <td>
-                            <a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>" class="btn btn-sm btn-outline-primary me-1" title="View"><i class="fas fa-eye"></i></a>
+                            <a href="/enpharchem/simulations/view?id=<?= (int)$sim['id'] ?>" class="btn btn-sm btn-outline-primary me-1" title="View"><i class="fas fa-eye"></i></a>
                             <?php if (($sim['status'] ?? '') === 'completed'): ?>
-                            <a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>/results" class="btn btn-sm btn-outline-success" title="Results"><i class="fas fa-chart-bar"></i></a>
+                            <a href="/enpharchem/simulations/results?id=<?= (int)$sim['id'] ?>" class="btn btn-sm btn-outline-success" title="Results"><i class="fas fa-chart-bar"></i></a>
                             <?php endif; ?>
                         </td>
                     </tr>

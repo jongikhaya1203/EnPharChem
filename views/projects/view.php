@@ -19,7 +19,7 @@ $simulations = $simulations ?? [];
     </div>
     <div class="d-flex gap-2">
         <a href="/enpharchem/simulations/create?project_id=<?= (int)$project['id'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-plus me-1"></i>New Simulation</a>
-        <a href="/enpharchem/projects/<?= (int)$project['id'] ?>/edit" class="btn btn-outline-secondary btn-sm"><i class="fas fa-edit me-1"></i>Edit Project</a>
+        <a href="/enpharchem/projects/edit?id=<?= (int)$project['id'] ?>" class="btn btn-outline-secondary btn-sm"><i class="fas fa-edit me-1"></i>Edit Project</a>
     </div>
 </div>
 
@@ -73,12 +73,12 @@ $simulations = $simulations ?? [];
                 <tbody>
                     <?php foreach ($simulations as $sim): ?>
                     <tr>
-                        <td><a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($sim['name']) ?></a></td>
+                        <td><a href="/enpharchem/simulations/view?id=<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($sim['name']) ?></a></td>
                         <td style="font-size:.85rem;"><?= htmlspecialchars($sim['module_name'] ?? '') ?></td>
                         <td><span class="badge badge-status-<?= htmlspecialchars($sim['status'] ?? 'draft') ?>"><?= htmlspecialchars(ucfirst($sim['status'] ?? 'draft')) ?></span></td>
                         <td style="font-size:.85rem;color:#6c757d;"><?= htmlspecialchars($sim['created_at'] ?? '') ?></td>
                         <td>
-                            <a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>" class="btn btn-sm btn-outline-primary" title="View"><i class="fas fa-eye"></i></a>
+                            <a href="/enpharchem/simulations/view?id=<?= (int)$sim['id'] ?>" class="btn btn-sm btn-outline-primary" title="View"><i class="fas fa-eye"></i></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

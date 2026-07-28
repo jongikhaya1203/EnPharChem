@@ -6,6 +6,9 @@
 
 class ProjectController extends BaseController {
 
+    /** Mirrors the `category` ENUM on the projects table. */
+    const CATEGORIES = ['energy', 'chemicals', 'pharma', 'subsurface', 'grid', 'general'];
+
     public function index() {
         $projects = $this->db->fetchAll(
             "SELECT p.*,
@@ -28,7 +31,10 @@ class ProjectController extends BaseController {
         if ($this->isPost()) {
             $name = trim($_POST['name'] ?? '');
             $description = trim($_POST['description'] ?? '');
-            $type = trim($_POST['type'] ?? 'general');
+            $category = trim($_POST['category'] ?? 'general');
+            if (!in_array($category, self::CATEGORIES, true)) {
+                $category = 'general';
+            }
 
             if (empty($name)) {
                 $error = 'Project name is required.';
@@ -37,7 +43,7 @@ class ProjectController extends BaseController {
                     'user_id' => $this->user['id'],
                     'name' => $name,
                     'description' => $description,
-                    'type' => $type,
+                    'category' => $category,
                     'status' => 'active',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
@@ -104,7 +110,10 @@ class ProjectController extends BaseController {
         if ($this->isPost()) {
             $name = trim($_POST['name'] ?? '');
             $description = trim($_POST['description'] ?? '');
-            $type = trim($_POST['type'] ?? $project['type']);
+            $category = trim($_POST['category'] ?? $project['category']);
+            if (!in_array($category, self::CATEGORIES, true)) {
+                $category = $project['category'] ?? 'general';
+            }
             $status = trim($_POST['status'] ?? $project['status']);
 
             if (empty($name)) {
@@ -113,7 +122,7 @@ class ProjectController extends BaseController {
                 $this->db->update('projects', [
                     'name' => $name,
                     'description' => $description,
-                    'type' => $type,
+                    'category' => $category,
                     'status' => $status,
                     'updated_at' => date('Y-m-d H:i:s'),
                 ], 'id = ? AND user_id = ?', [$id, $this->user['id']]);

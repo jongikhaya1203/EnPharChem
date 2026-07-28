@@ -49,7 +49,12 @@ if (isset($routes[$path])) {
 
     if (class_exists($controllerName)) {
         $controller = new $controllerName();
-        if (method_exists($controller, $action)) {
+        // method_exists() also matches BaseController's protected helpers
+        // (view, json, redirect, ...), so a route action colliding with one
+        // would fatal on invocation instead of 404ing. Only dispatch to
+        // genuinely public actions.
+        if (method_exists($controller, $action)
+            && (new ReflectionMethod($controller, $action))->isPublic()) {
             $controller->$action();
         } else {
             http_response_code(404);
