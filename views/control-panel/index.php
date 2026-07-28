@@ -113,6 +113,17 @@
             'count_label' => '3 Sheets',
         ],
         [
+            'title' => 'Marketing Brochure',
+            'desc' => 'Product brochure showcasing the platform and its module categories. Opens print-ready; use the browser\'s Save as PDF.',
+            'icon' => 'bi-megaphone-fill',
+            'link' => '/enpharchem/marketing/product-brochure',
+            'color' => '#fd7e14',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'View brochure',
+            'new_tab' => true,
+        ],
+        [
             'title' => 'Module Catalogue (PDF)',
             'desc' => 'Generated PDF brochure covering every active module, each with a vector interface view, capability bullets and licence tier.',
             'icon' => 'bi-journal-richtext',

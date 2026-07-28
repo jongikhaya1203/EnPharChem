@@ -29,38 +29,129 @@
     <?php endif; ?>
 <?php endif; ?>
 
-<!-- Generated module documents -->
+<!-- Marketing documents: always viewable, independent of the materials table -->
 <div class="card border-0 mb-4" style="background: var(--epc-card-bg);">
     <div class="card-body">
-        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
             <div>
-                <h5 class="text-light mb-1"><i class="bi bi-journals me-2" style="color: var(--epc-accent);"></i>Generated Module Documents</h5>
+                <h5 class="text-light mb-1"><i class="bi bi-journals me-2" style="color: var(--epc-accent);"></i>Marketing Documents</h5>
                 <p class="text-secondary small mb-0">
-                    Generated PDFs built live from the module registry &mdash; every active module, its
-                    interface view, and the tasks performed in it. Screen-readable HTML editions are also
-                    available:
-                    <a href="/enpharchem/marketing/module-catalogue/html" target="_blank" rel="noopener">catalogue</a> &middot;
-                    <a href="/enpharchem/marketing/how-to-manual/html" target="_blank" rel="noopener">manual</a>.
+                    Built live from the module registry and content settings &mdash; always current, no
+                    seeding required. Generated PDFs open in a new tab; print-ready pages use the
+                    browser's <em>Save as PDF</em>.
                 </p>
             </div>
-            <div class="d-flex gap-2 flex-wrap">
-                <a href="/enpharchem/marketing/module-catalogue" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                    <i class="fas fa-file-pdf me-1"></i>Module Catalogue PDF
-                </a>
-                <a href="/enpharchem/marketing/module-catalogue?download=1" class="btn btn-outline-primary btn-sm" title="Download the catalogue">
-                    <i class="fas fa-download"></i>
-                </a>
-                <a href="/enpharchem/marketing/how-to-manual" target="_blank" rel="noopener" class="btn btn-success btn-sm">
-                    <i class="fas fa-file-pdf me-1"></i>How-To Manual PDF
-                </a>
-                <a href="/enpharchem/marketing/how-to-manual?download=1" class="btn btn-outline-success btn-sm" title="Download the manual">
-                    <i class="fas fa-download"></i>
-                </a>
-                <a href="/enpharchem/marketing/seed-module-docs" class="btn btn-outline-info btn-sm"
-                   onclick="return confirm('Regenerate feature bullets and task walkthroughs for every active module? This overwrites previously generated content.');">
-                    <i class="fas fa-arrows-rotate me-1"></i>Regenerate Content
-                </a>
-            </div>
+            <a href="/enpharchem/marketing/seed-module-docs" class="btn btn-outline-info btn-sm"
+               onclick="return confirm('Regenerate feature bullets and task walkthroughs for every active module? This overwrites previously generated content.');">
+                <i class="fas fa-arrows-rotate me-1"></i>Regenerate Content
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+                <thead>
+                    <tr class="text-secondary" style="font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;">
+                        <th style="border-color:rgba(255,255,255,.08);">Document</th>
+                        <th style="border-color:rgba(255,255,255,.08);">Format</th>
+                        <th class="text-end" style="border-color:rgba(255,255,255,.08);">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                $marketingDocs = [
+                    [
+                        'title'  => 'Module Catalogue',
+                        'desc'   => 'Every active module with an interface view, capability bullets and licence tier.',
+                        'icon'   => 'bi-journal-richtext',
+                        'colour' => '#0d6efd',
+                        'url'    => '/enpharchem/marketing/module-catalogue',
+                        'format' => 'Generated PDF',
+                        'html'   => '/enpharchem/marketing/module-catalogue/html',
+                    ],
+                    [
+                        'title'  => 'How-To Manual',
+                        'desc'   => 'Tasks performed in each module, with walkthroughs and How Helper hints.',
+                        'icon'   => 'bi-life-preserver',
+                        'colour' => '#20c997',
+                        'url'    => '/enpharchem/marketing/how-to-manual',
+                        'format' => 'Generated PDF',
+                        'html'   => '/enpharchem/marketing/how-to-manual/html',
+                    ],
+                    [
+                        'title'  => 'Product Brochure',
+                        'desc'   => 'Marketing brochure showcasing the platform and its module categories.',
+                        'icon'   => 'bi-megaphone',
+                        'colour' => '#ffc107',
+                        'url'    => '/enpharchem/marketing/product-brochure',
+                        'format' => 'Print-ready page',
+                        'html'   => null,
+                    ],
+                    [
+                        'title'  => 'Installation Manual',
+                        'desc'   => 'System requirements, database configuration and module deployment.',
+                        'icon'   => 'bi-download',
+                        'colour' => '#0dcaf0',
+                        'url'    => '/enpharchem/marketing/installation-manual',
+                        'format' => 'Print-ready page',
+                        'html'   => null,
+                    ],
+                    [
+                        'title'  => 'Security Architecture',
+                        'desc'   => 'Authentication, authorisation, RBAC, audit logging and compliance.',
+                        'icon'   => 'bi-shield-lock',
+                        'colour' => '#6f42c1',
+                        'url'    => '/enpharchem/marketing/security-architecture',
+                        'format' => 'Print-ready page',
+                        'html'   => null,
+                    ],
+                    [
+                        'title'  => 'System Architecture',
+                        'desc'   => 'Platform stack, MVC framework, schema design and integration layer.',
+                        'icon'   => 'bi-diagram-3',
+                        'colour' => '#198754',
+                        'url'    => '/enpharchem/marketing/system-architecture',
+                        'format' => 'Print-ready page',
+                        'html'   => null,
+                    ],
+                ];
+                foreach ($marketingDocs as $doc):
+                    $isPdf = $doc['format'] === 'Generated PDF';
+                ?>
+                    <tr>
+                        <td style="border-color:rgba(255,255,255,.06);">
+                            <div class="d-flex align-items-center">
+                                <span class="rounded-2 d-inline-flex align-items-center justify-content-center me-2"
+                                      style="width:32px;height:32px;background: <?= $doc['colour'] ?>20;">
+                                    <i class="bi <?= $doc['icon'] ?>" style="color: <?= $doc['colour'] ?>;"></i>
+                                </span>
+                                <div>
+                                    <div class="text-light" style="font-size:.9rem;"><?= htmlspecialchars($doc['title']) ?></div>
+                                    <div class="text-secondary" style="font-size:.75rem;"><?= htmlspecialchars($doc['desc']) ?></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-color:rgba(255,255,255,.06);">
+                            <span class="badge rounded-pill" style="background: <?= $doc['colour'] ?>25; color: <?= $doc['colour'] ?>;">
+                                <?= htmlspecialchars($doc['format']) ?>
+                            </span>
+                        </td>
+                        <td class="text-end" style="border-color:rgba(255,255,255,.06);">
+                            <a href="<?= $doc['url'] ?>" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                                <i class="fas fa-eye me-1"></i>View
+                            </a>
+                            <?php if ($isPdf): ?>
+                                <a href="<?= $doc['url'] ?>?download=1" class="btn btn-sm btn-outline-light" title="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="<?= $doc['html'] ?>" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Screen-readable HTML edition">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
