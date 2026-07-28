@@ -26,6 +26,13 @@ return [
     'modules/view' => ['controller' => 'ModuleController', 'action' => 'view'],
     'modules/launch' => ['controller' => 'ModuleController', 'action' => 'launch'],
 
+    // Flowsheet Simulator (flagship process-simulation tool)
+    'flowsheet' => ['controller' => 'FlowsheetController', 'action' => 'index'],
+    'flowsheet/run' => ['controller' => 'FlowsheetController', 'action' => 'run'],
+    'flowsheet/request-license' => ['controller' => 'FlowsheetController', 'action' => 'requestLicense'],
+    'flowsheet/components' => ['controller' => 'FlowsheetController', 'action' => 'components'],
+    'flowsheet/examples' => ['controller' => 'FlowsheetController', 'action' => 'examples'],
+
     // Simulations
     'simulations' => ['controller' => 'SimulationController', 'action' => 'index'],
     'simulations/create' => ['controller' => 'SimulationController', 'action' => 'create'],
@@ -136,6 +143,8 @@ return [
     'training/certificate' => ['controller' => 'TrainingController', 'action' => 'certificate'],
     'training/my-certificates' => ['controller' => 'TrainingController', 'action' => 'myCertificates'],
     'training/seed' => ['controller' => 'TrainingController', 'action' => 'seedTraining'],
+    'training/ai-use-cases' => ['controller' => 'TrainingController', 'action' => 'aiUseCasesPdf'],
+    'training/ai-use-cases/html' => ['controller' => 'TrainingController', 'action' => 'aiUseCasesHtml'],
 
     // Licensing Portal
     'control-panel/licensing' => ['controller' => 'LicensingController', 'action' => 'index'],

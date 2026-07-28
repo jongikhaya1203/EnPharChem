@@ -1,0 +1,28 @@
+# EnPharChem - CLOUD deployment (app only; uses a managed MySQL/MariaDB)
+# The database is external (Azure Database for MySQL, Amazon RDS, Cloud SQL, ...).
+# Usage:
+#   cp .env.example .env      # fill in managed DB creds + public APP_URL
+#   docker compose -f docker-compose.cloud.yml up -d --build
+services:
+  app:
+    build: .
+    image: enpharchem:latest
+    ports:
+      - "80:80"
+    environment:
+      # Public URL of the deployment (keep the /enpharchem base path)
+      APP_URL: ${APP_URL:?set APP_URL to your public URL, e.g. https://app.example.com/enpharchem}
+      DB_HOST: ${DB_HOST:?set DB_HOST to the managed database host}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_NAME: ${DB_NAME:-enpharchem}
+      DB_USER: ${DB_USER:?set DB_USER}
+      DB_PASS: ${DB_PASS:?set DB_PASS}
+      # Cloud tenants are licensed through the online Licensing Portal
+      FLOWSHEET_LICENSE_ENFORCE: ${FLOWSHEET_LICENSE_ENFORCE:-true}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "bash", "-c", "curl -fsS http://localhost/enpharchem/login >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s

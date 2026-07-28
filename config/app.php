@@ -6,8 +6,17 @@
 define('APP_NAME', 'EnPharChem');
 define('APP_VERSION', '1.0.0');
 define('APP_TAGLINE', 'Energy, Pharmaceutical & Chemical Engineering Platform');
-define('APP_URL', 'http://localhost/enpharchem');
+define('APP_URL', getenv('APP_URL') ?: 'http://localhost/enpharchem');
 define('APP_ROOT', dirname(__DIR__));
+
+// ── Deployment / licensing (env-driven; safe defaults for local dev) ──
+// FLOWSHEET_LICENSE_ENFORCE: master switch for compute-time license gating.
+$__enf = getenv('FLOWSHEET_LICENSE_ENFORCE');
+define('FLOWSHEET_LICENSE_ENFORCE',
+    $__enf === false ? true : !in_array(strtolower($__enf), ['0', 'false', 'no', 'off'], true));
+// Offline (air-gapped) signed-license file + the vendor public key that verifies it.
+define('LICENSE_FILE', getenv('LICENSE_FILE') ?: '');
+define('LICENSE_PUBKEY', getenv('LICENSE_PUBKEY') ?: (APP_ROOT . '/deploy/keys/vendor_public.pem'));
 
 // Session configuration
 define('SESSION_LIFETIME', 3600 * 8); // 8 hours

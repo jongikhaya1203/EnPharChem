@@ -6,6 +6,38 @@
 class TrainingController extends BaseController {
 
     /**
+     * Streams a real, generated PDF binary cataloging AI/ML use cases for every module.
+     * Also caches a copy under assets/pdfs/ai-use-cases.pdf for direct linking.
+     */
+    public function aiUseCasesPdf() {
+        require_once __DIR__ . '/../lib/AIUseCasesPDFBuilder.php';
+        $binary = AIUseCasesPDFBuilder::build();
+
+        $outDir = __DIR__ . '/../assets/pdfs';
+        if (!is_dir($outDir)) @mkdir($outDir, 0775, true);
+        $outFile = $outDir . '/ai-use-cases.pdf';
+        @file_put_contents($outFile, $binary);
+
+        $disposition = (isset($_GET['download']) && $_GET['download'] == '1') ? 'attachment' : 'inline';
+        while (ob_get_level() > 0) { ob_end_clean(); }
+        header('Content-Type: application/pdf');
+        header('Content-Length: ' . strlen($binary));
+        header('Content-Disposition: ' . $disposition . '; filename="EnPharChem-AI-Use-Cases.pdf"');
+        header('Cache-Control: private, max-age=0, must-revalidate');
+        header('Pragma: public');
+        echo $binary;
+        exit;
+    }
+
+    /**
+     * Legacy HTML "print-to-PDF" view, kept for browsers / accessibility.
+     */
+    public function aiUseCasesHtml() {
+        include VIEWS_PATH . '/training/ai-use-cases-pdf.php';
+        exit;
+    }
+
+    /**
      * List all training courses with lesson counts, assessment status, certificate status
      */
     public function courses() {
