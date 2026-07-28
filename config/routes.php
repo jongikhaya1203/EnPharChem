@@ -133,7 +133,10 @@ return [
     'marketing/security-architecture' => ['controller' => 'MarketingDocsController', 'action' => 'securityArchitecture'],
     'marketing/system-architecture' => ['controller' => 'MarketingDocsController', 'action' => 'systemArchitecture'],
     'marketing/product-brochure' => ['controller' => 'MarketingDocsController', 'action' => 'productBrochure'],
+    'marketing/module-catalogue' => ['controller' => 'MarketingDocsController', 'action' => 'moduleCatalogue'],
+    'marketing/how-to-manual' => ['controller' => 'MarketingDocsController', 'action' => 'howToManual'],
     'marketing/seed-materials' => ['controller' => 'MarketingDocsController', 'action' => 'seedMaterials'],
+    'marketing/seed-module-docs' => ['controller' => 'MarketingDocsController', 'action' => 'seedModuleDocs'],
 
     // Training & Assessment
     'training' => ['controller' => 'TrainingController', 'action' => 'courses'],

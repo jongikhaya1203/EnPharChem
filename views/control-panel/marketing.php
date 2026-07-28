@@ -15,8 +15,46 @@
         </div>
     <?php elseif ($_GET['msg'] === 'deleted'): ?>
         <div class="alert alert-info"><i class="fas fa-trash me-2"></i>Material deleted.</div>
+    <?php elseif ($_GET['msg'] === 'docs_seeded'): ?>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            <div>
+                Generated module documentation for <?= (int)($_GET['modules'] ?? 0) ?> modules
+                (<?= (int)($_GET['tasks'] ?? 0) ?> task walkthroughs). The Module Catalogue and
+                How-To Manual now read from the database.
+            </div>
+        </div>
+    <?php elseif ($_GET['msg'] === 'docs_error'): ?>
+        <div class="alert alert-danger"><i class="fas fa-exclamation-triangle me-2"></i>Could not create the module_tasks table. Check database permissions.</div>
     <?php endif; ?>
 <?php endif; ?>
+
+<!-- Generated module documents -->
+<div class="card border-0 mb-4" style="background: var(--epc-card-bg);">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+            <div>
+                <h5 class="text-light mb-1"><i class="bi bi-journals me-2" style="color: var(--epc-accent);"></i>Generated Module Documents</h5>
+                <p class="text-secondary small mb-0">
+                    Built live from the module registry &mdash; every active module, its interface view,
+                    and the tasks performed in it. Open either document and use <strong>Save as PDF</strong>.
+                </p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+                <a href="/enpharchem/marketing/module-catalogue" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                    <i class="fas fa-book-open me-1"></i>Module Catalogue
+                </a>
+                <a href="/enpharchem/marketing/how-to-manual" target="_blank" rel="noopener" class="btn btn-success btn-sm">
+                    <i class="fas fa-list-check me-1"></i>How-To Manual
+                </a>
+                <a href="/enpharchem/marketing/seed-module-docs" class="btn btn-outline-info btn-sm"
+                   onclick="return confirm('Regenerate feature bullets and task walkthroughs for every active module? This overwrites previously generated content.');">
+                    <i class="fas fa-arrows-rotate me-1"></i>Regenerate Content
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="text-light mb-0"><i class="fas fa-bullhorn me-2" style="color: var(--epc-accent);"></i>Marketing Material</h2>

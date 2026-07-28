@@ -112,10 +112,32 @@
             'count_key' => null,
             'count_label' => '3 Sheets',
         ],
+        [
+            'title' => 'Module Catalogue (PDF)',
+            'desc' => 'Print-ready brochure covering every active module, each with an interface view, capability bullets and licence tier.',
+            'icon' => 'bi-journal-richtext',
+            'link' => '/enpharchem/marketing/module-catalogue',
+            'color' => '#0d6efd',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'Open brochure',
+            'new_tab' => true,
+        ],
+        [
+            'title' => 'How-To Manual (PDF)',
+            'desc' => 'Task-by-task operating manual for every module, with numbered walkthroughs, required inputs and How Helper hints.',
+            'icon' => 'bi-life-preserver',
+            'link' => '/enpharchem/marketing/how-to-manual',
+            'color' => '#20c997',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'Open manual',
+            'new_tab' => true,
+        ],
     ];
     foreach ($features as $f): ?>
         <div class="col-lg-4 col-md-6">
-            <a href="<?= $f['link'] ?>" class="text-decoration-none">
+            <a href="<?= $f['link'] ?>" class="text-decoration-none"<?= !empty($f['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>>
                 <div class="card border-0 h-100 position-relative overflow-hidden" style="background: var(--epc-card-bg); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';" onmouseleave="this.style.transform='none';this.style.boxShadow='none';">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-start justify-content-between mb-3">
@@ -131,7 +153,7 @@
                         <h5 class="text-light mb-2"><?= $f['title'] ?></h5>
                         <p class="text-secondary small mb-3"><?= $f['desc'] ?></p>
                         <div class="d-flex align-items-center" style="color: <?= $f['color'] ?>;">
-                            <span class="small fw-semibold">Manage</span>
+                            <span class="small fw-semibold"><?= htmlspecialchars($f['cta'] ?? 'Manage') ?></span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </div>
                     </div>
