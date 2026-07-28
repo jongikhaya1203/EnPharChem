@@ -57,10 +57,33 @@ class MarketingDocsController extends BaseController {
     }
 
     /**
-     * Module Catalogue brochure - every active module with an interface
-     * illustration, feature bullets and licence tier.
+     * Module Catalogue - streams a real generated PDF binary and caches a copy
+     * under assets/pdfs/ for direct linking.
      */
     public function moduleCatalogue() {
+        require_once APP_ROOT . '/lib/ModuleDocsPdfBuilder.php';
+        $data = $this->getModuleData();
+        $binary = ModuleDocsPdfBuilder::catalogue(
+            $data['categories'], $data['modules'], $this->featureMap($data['modules'])
+        );
+        $this->streamPdf($binary, 'EnPharChem-Module-Catalogue.pdf', 'module-catalogue.pdf');
+    }
+
+    /**
+     * How-To Manual - streams a real generated PDF binary and caches a copy
+     * under assets/pdfs/ for direct linking.
+     */
+    public function howToManual() {
+        require_once APP_ROOT . '/lib/ModuleDocsPdfBuilder.php';
+        $data = $this->getModuleData();
+        $binary = ModuleDocsPdfBuilder::manual(
+            $data['categories'], $data['modules'], $this->taskMap($data['modules'])
+        );
+        $this->streamPdf($binary, 'EnPharChem-How-To-Manual.pdf', 'how-to-manual.pdf');
+    }
+
+    /** Screen-readable HTML edition of the catalogue. */
+    public function moduleCatalogueHtml() {
         require_once APP_ROOT . '/lib/ModuleMockup.php';
         require_once APP_ROOT . '/lib/ModuleDocContent.php';
         $data = $this->getModuleData();
@@ -70,16 +93,33 @@ class MarketingDocsController extends BaseController {
         exit;
     }
 
-    /**
-     * How-To Manual - the tasks performed in every module, each with a
-     * step-by-step walkthrough and a How Helper hint.
-     */
-    public function howToManual() {
+    /** Screen-readable HTML edition of the manual. */
+    public function howToManualHtml() {
         require_once APP_ROOT . '/lib/ModuleDocContent.php';
         $data = $this->getModuleData();
         $data['moduleTasks'] = $this->taskMap($data['modules']);
         extract($data);
         include VIEWS_PATH . '/marketing-docs/how-to-manual.php';
+        exit;
+    }
+
+    /**
+     * Send a generated PDF to the browser, caching a copy under assets/pdfs/.
+     * ?download=1 forces a save dialog instead of inline display.
+     */
+    private function streamPdf($binary, $downloadName, $cacheName) {
+        $outDir = APP_ROOT . '/assets/pdfs';
+        if (!is_dir($outDir)) { @mkdir($outDir, 0775, true); }
+        @file_put_contents($outDir . '/' . $cacheName, $binary);
+
+        $disposition = (isset($_GET['download']) && $_GET['download'] == '1') ? 'attachment' : 'inline';
+        while (ob_get_level() > 0) { ob_end_clean(); }
+        header('Content-Type: application/pdf');
+        header('Content-Length: ' . strlen($binary));
+        header('Content-Disposition: ' . $disposition . '; filename="' . $downloadName . '"');
+        header('Cache-Control: private, max-age=0, must-revalidate');
+        header('Pragma: public');
+        echo $binary;
         exit;
     }
 

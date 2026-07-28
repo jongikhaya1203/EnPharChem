@@ -9,3 +9,7 @@ database/migrate_control_panel.php
 *.tmp
 .DS_Store
 Thumbs.db
+
+# Generated PDF caches - rebuilt on every request by MarketingDocsController
+assets/pdfs/module-catalogue.pdf
+assets/pdfs/how-to-manual.pdf

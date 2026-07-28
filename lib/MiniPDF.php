@@ -175,6 +175,133 @@ class MiniPDF {
         $this->current .= sprintf("%.2f %.2f m %.2f %.2f l S\n", $x1, $py1, $x2, $py2);
     }
 
+    // ---------------------------------------------------------------
+    // Vector primitives (added for the module interface figures).
+    // All coordinates are top-origin, matching the helpers above.
+    // ---------------------------------------------------------------
+
+    /** Bezier circle constant: 4/3 * (sqrt(2) - 1). */
+    const KAPPA = 0.5522847498;
+
+    public function save()    { $this->current .= "q\n"; }
+    public function restore() { $this->current .= "Q\n"; }
+
+    /** Convert a top-origin y to PDF bottom-origin. */
+    private function py($y) { return $this->pageH - $y; }
+
+    private function setStroke($r, $g, $b, $lw) {
+        $this->current .= sprintf("%.3f %.3f %.3f RG\n%.2f w\n", $r/255, $g/255, $b/255, $lw);
+    }
+
+    private function setFill($r, $g, $b) {
+        $this->current .= sprintf("%.3f %.3f %.3f rg\n", $r/255, $g/255, $b/255);
+    }
+
+    /** Clip subsequent drawing to a rectangle. Pair with save()/restore(). */
+    public function clipRect($x, $y, $w, $h) {
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f re W n\n", $x, $this->py($y) - $h, $w, $h);
+    }
+
+    /** Rounded filled rectangle. */
+    public function roundRectFill($x, $y, $w, $h, $rad, $r, $g, $b) {
+        $rad = min($rad, $w / 2, $h / 2);
+        $k = $rad * self::KAPPA;
+        $y0 = $this->py($y) - $h;          // bottom edge
+        $y1 = $this->py($y);               // top edge
+        $x0 = $x; $x1 = $x + $w;
+        $this->setFill($r, $g, $b);
+        $this->current .= sprintf("%.2f %.2f m\n", $x0 + $rad, $y0);
+        $this->current .= sprintf("%.2f %.2f l\n", $x1 - $rad, $y0);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $x1 - $rad + $k, $y0, $x1, $y0 + $rad - $k, $x1, $y0 + $rad);
+        $this->current .= sprintf("%.2f %.2f l\n", $x1, $y1 - $rad);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $x1, $y1 - $rad + $k, $x1 - $rad + $k, $y1, $x1 - $rad, $y1);
+        $this->current .= sprintf("%.2f %.2f l\n", $x0 + $rad, $y1);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $x0 + $rad - $k, $y1, $x0, $y1 - $rad + $k, $x0, $y1 - $rad);
+        $this->current .= sprintf("%.2f %.2f l\n", $x0, $y0 + $rad);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $x0, $y0 + $rad - $k, $x0 + $rad - $k, $y0, $x0 + $rad, $y0);
+        $this->current .= "f\n";
+    }
+
+    /** Ellipse, filled and/or stroked. Pass null to skip either. */
+    public function ellipse($cx, $cy, $rx, $ry, $fill = null, $stroke = null, $lw = 0.8) {
+        $c = $this->py($cy);
+        $kx = $rx * self::KAPPA; $ky = $ry * self::KAPPA;
+        if ($fill)   { $this->setFill($fill[0], $fill[1], $fill[2]); }
+        if ($stroke) { $this->setStroke($stroke[0], $stroke[1], $stroke[2], $lw); }
+        $this->current .= sprintf("%.2f %.2f m\n", $cx - $rx, $c);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $cx - $rx, $c + $ky, $cx - $kx, $c + $ry, $cx, $c + $ry);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $cx + $kx, $c + $ry, $cx + $rx, $c + $ky, $cx + $rx, $c);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $cx + $rx, $c - $ky, $cx + $kx, $c - $ry, $cx, $c - $ry);
+        $this->current .= sprintf("%.2f %.2f %.2f %.2f %.2f %.2f c\n", $cx - $kx, $c - $ry, $cx - $rx, $c - $ky, $cx - $rx, $c);
+        $this->current .= ($fill && $stroke) ? "B\n" : ($fill ? "f\n" : "S\n");
+    }
+
+    public function circle($cx, $cy, $r, $fill = null, $stroke = null, $lw = 0.8) {
+        $this->ellipse($cx, $cy, $r, $r, $fill, $stroke, $lw);
+    }
+
+    /** Open polyline through top-origin points [[x,y],...]. */
+    public function polyline($points, $r, $g, $b, $lw = 1.0) {
+        if (count($points) < 2) { return; }
+        $this->setStroke($r, $g, $b, $lw);
+        $this->current .= sprintf("%.2f %.2f m\n", $points[0][0], $this->py($points[0][1]));
+        for ($i = 1; $i < count($points); $i++) {
+            $this->current .= sprintf("%.2f %.2f l\n", $points[$i][0], $this->py($points[$i][1]));
+        }
+        $this->current .= "S\n";
+    }
+
+    /** Filled polygon through top-origin points. */
+    public function polygonFill($points, $r, $g, $b) {
+        if (count($points) < 3) { return; }
+        $this->setFill($r, $g, $b);
+        $this->current .= sprintf("%.2f %.2f m\n", $points[0][0], $this->py($points[0][1]));
+        for ($i = 1; $i < count($points); $i++) {
+            $this->current .= sprintf("%.2f %.2f l\n", $points[$i][0], $this->py($points[$i][1]));
+        }
+        $this->current .= "f\n";
+    }
+
+    /**
+     * Circular arc stroked as a polyline. Angles in degrees, 0 = east,
+     * increasing counter-clockwise (screen orientation).
+     */
+    public function arc($cx, $cy, $rad, $fromDeg, $toDeg, $r, $g, $b, $lw = 1.0, $segments = 36) {
+        $pts = [];
+        for ($i = 0; $i <= $segments; $i++) {
+            $a = deg2rad($fromDeg + ($toDeg - $fromDeg) * $i / $segments);
+            $pts[] = [$cx + cos($a) * $rad, $cy - sin($a) * $rad];
+        }
+        $this->polyline($pts, $r, $g, $b, $lw);
+    }
+
+    /** Dashed straight line. */
+    public function dashLine($x1, $y1, $x2, $y2, $r, $g, $b, $lw = 0.6, $on = 3, $off = 2) {
+        $this->current .= sprintf("[%.1f %.1f] 0 d\n", $on, $off);
+        $this->line($x1, $y1, $x2, $y2, $r, $g, $b, $lw);
+        $this->current .= "[] 0 d\n";
+    }
+
+    /** Arrow head (small filled triangle) pointing along +x or +y. */
+    public function arrowHead($x, $y, $dir, $size, $r, $g, $b) {
+        $s = $size;
+        if ($dir === 'right')      { $p = [[$x, $y - $s/2], [$x + $s, $y], [$x, $y + $s/2]]; }
+        elseif ($dir === 'left')   { $p = [[$x, $y - $s/2], [$x - $s, $y], [$x, $y + $s/2]]; }
+        elseif ($dir === 'down')   { $p = [[$x - $s/2, $y], [$x, $y + $s], [$x + $s/2, $y]]; }
+        else                       { $p = [[$x - $s/2, $y], [$x, $y - $s], [$x + $s/2, $y]]; }
+        $this->polygonFill($p, $r, $g, $b);
+    }
+
+    /** Centre-aligned single line of text. */
+    public function textCenter($cx, $y, $string) {
+        $this->text($cx - $this->stringWidth($string) / 2, $y, $string);
+    }
+
+    /** Right-aligned single line of text. */
+    public function textRight($rx, $y, $string) {
+        $this->text($rx - $this->stringWidth($string), $y, $string);
+    }
+
     /**
      * Ensures there's room for `needed` height before drawing; otherwise adds a page.
      */

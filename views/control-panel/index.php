@@ -114,7 +114,7 @@
         ],
         [
             'title' => 'Module Catalogue (PDF)',
-            'desc' => 'Print-ready brochure covering every active module, each with an interface view, capability bullets and licence tier.',
+            'desc' => 'Generated PDF brochure covering every active module, each with a vector interface view, capability bullets and licence tier.',
             'icon' => 'bi-journal-richtext',
             'link' => '/enpharchem/marketing/module-catalogue',
             'color' => '#0d6efd',
@@ -125,7 +125,7 @@
         ],
         [
             'title' => 'How-To Manual (PDF)',
-            'desc' => 'Task-by-task operating manual for every module, with numbered walkthroughs, required inputs and How Helper hints.',
+            'desc' => 'Generated PDF operating manual covering every module task-by-task, with numbered walkthroughs, required inputs and How Helper hints.',
             'icon' => 'bi-life-preserver',
             'link' => '/enpharchem/marketing/how-to-manual',
             'color' => '#20c997',

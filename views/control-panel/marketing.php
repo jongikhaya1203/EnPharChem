@@ -36,16 +36,25 @@
             <div>
                 <h5 class="text-light mb-1"><i class="bi bi-journals me-2" style="color: var(--epc-accent);"></i>Generated Module Documents</h5>
                 <p class="text-secondary small mb-0">
-                    Built live from the module registry &mdash; every active module, its interface view,
-                    and the tasks performed in it. Open either document and use <strong>Save as PDF</strong>.
+                    Generated PDFs built live from the module registry &mdash; every active module, its
+                    interface view, and the tasks performed in it. Screen-readable HTML editions are also
+                    available:
+                    <a href="/enpharchem/marketing/module-catalogue/html" target="_blank" rel="noopener">catalogue</a> &middot;
+                    <a href="/enpharchem/marketing/how-to-manual/html" target="_blank" rel="noopener">manual</a>.
                 </p>
             </div>
             <div class="d-flex gap-2 flex-wrap">
                 <a href="/enpharchem/marketing/module-catalogue" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                    <i class="fas fa-book-open me-1"></i>Module Catalogue
+                    <i class="fas fa-file-pdf me-1"></i>Module Catalogue PDF
+                </a>
+                <a href="/enpharchem/marketing/module-catalogue?download=1" class="btn btn-outline-primary btn-sm" title="Download the catalogue">
+                    <i class="fas fa-download"></i>
                 </a>
                 <a href="/enpharchem/marketing/how-to-manual" target="_blank" rel="noopener" class="btn btn-success btn-sm">
-                    <i class="fas fa-list-check me-1"></i>How-To Manual
+                    <i class="fas fa-file-pdf me-1"></i>How-To Manual PDF
+                </a>
+                <a href="/enpharchem/marketing/how-to-manual?download=1" class="btn btn-outline-success btn-sm" title="Download the manual">
+                    <i class="fas fa-download"></i>
                 </a>
                 <a href="/enpharchem/marketing/seed-module-docs" class="btn btn-outline-info btn-sm"
                    onclick="return confirm('Regenerate feature bullets and task walkthroughs for every active module? This overwrites previously generated content.');">
