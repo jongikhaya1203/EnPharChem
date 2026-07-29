@@ -10,3 +10,11 @@ deploy/keys/*_private.pem
 deploy/license/*.lic
 docker-compose*.yml
 .env
+
+# Setup / maintenance scripts must never ship in the image. install.php is
+# gated + .htaccess-blocked; the rest are dev-only. Belt-and-suspenders so a
+# `COPY .` build can't bundle them.
+install.php
+reset_admin.php
+test_db.php
+setup_superuser.php
