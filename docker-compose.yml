@@ -1,0 +1,40 @@
+# EnPharChem - ON-PREMISE stack (app + local MariaDB)
+# Usage:  docker compose up -d --build
+# App:    http://localhost:8080/enpharchem
+services:
+  app:
+    build: .
+    image: enpharchem:latest
+    ports:
+      - "8080:80"
+    environment:
+      APP_URL: http://localhost:8080/enpharchem
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_NAME: enpharchem
+      DB_USER: enpharchem
+      DB_PASS: ${DB_PASS:-enpharchem_pw}
+      FLOWSHEET_LICENSE_ENFORCE: ${FLOWSHEET_LICENSE_ENFORCE:-true}
+      # Air-gapped signed license (optional): mount and point here
+      LICENSE_FILE: /var/lib/enpharchem/license.lic
+      LICENSE_PUBKEY: /var/www/html/enpharchem/deploy/keys/vendor_public.pem
+    volumes:
+      # Drop a signed license.lic here for offline entitlement (optional)
+      - ./deploy/license:/var/lib/enpharchem:ro
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.6
+    environment:
+      MARIADB_DATABASE: enpharchem
+      MARIADB_USER: enpharchem
+      MARIADB_PASSWORD: ${DB_PASS:-enpharchem_pw}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASS:-root_pw}
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  db_data:

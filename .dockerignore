@@ -1,0 +1,12 @@
+.git
+.gitignore
+.claude
+**/node_modules
+scratchpad
+*.log
+database/data
+assets/pdfs/*.pdf
+deploy/keys/*_private.pem
+deploy/license/*.lic
+docker-compose*.yml
+.env

@@ -95,6 +95,15 @@
             'count_label' => '',
         ],
         [
+            'title' => 'Module Licenses',
+            'desc' => 'Grant or revoke license requirements per module category. Controls visibility of "License Required" badge on modules.',
+            'icon' => 'bi-shield-fill-check',
+            'link' => '/enpharchem/control-panel/module-licenses',
+            'color' => '#0dcaf0',
+            'count_key' => null,
+            'count_label' => '115+ modules',
+        ],
+        [
             'title' => 'Formulae Control Sheets',
             'desc' => 'Interactive calculators for Energy, Pharmaceutical & Chemical engineering mixes with real-time formulas.',
             'icon' => 'bi-calculator-fill',
@@ -103,10 +112,43 @@
             'count_key' => null,
             'count_label' => '3 Sheets',
         ],
+        [
+            'title' => 'Marketing Brochure',
+            'desc' => 'Product brochure showcasing the platform and its module categories. Opens print-ready; use the browser\'s Save as PDF.',
+            'icon' => 'bi-megaphone-fill',
+            'link' => '/enpharchem/marketing/product-brochure',
+            'color' => '#fd7e14',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'View brochure',
+            'new_tab' => true,
+        ],
+        [
+            'title' => 'Module Catalogue (PDF)',
+            'desc' => 'Generated PDF brochure covering every active module, each with a vector interface view, capability bullets and licence tier.',
+            'icon' => 'bi-journal-richtext',
+            'link' => '/enpharchem/marketing/module-catalogue',
+            'color' => '#0d6efd',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'Open brochure',
+            'new_tab' => true,
+        ],
+        [
+            'title' => 'How-To Manual (PDF)',
+            'desc' => 'Generated PDF operating manual covering every module task-by-task, with numbered walkthroughs, required inputs and How Helper hints.',
+            'icon' => 'bi-life-preserver',
+            'link' => '/enpharchem/marketing/how-to-manual',
+            'color' => '#20c997',
+            'count_key' => null,
+            'count_label' => '',
+            'cta' => 'Open manual',
+            'new_tab' => true,
+        ],
     ];
     foreach ($features as $f): ?>
         <div class="col-lg-4 col-md-6">
-            <a href="<?= $f['link'] ?>" class="text-decoration-none">
+            <a href="<?= $f['link'] ?>" class="text-decoration-none"<?= !empty($f['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>>
                 <div class="card border-0 h-100 position-relative overflow-hidden" style="background: var(--epc-card-bg); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';" onmouseleave="this.style.transform='none';this.style.boxShadow='none';">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-start justify-content-between mb-3">
@@ -122,7 +164,7 @@
                         <h5 class="text-light mb-2"><?= $f['title'] ?></h5>
                         <p class="text-secondary small mb-3"><?= $f['desc'] ?></p>
                         <div class="d-flex align-items-center" style="color: <?= $f['color'] ?>;">
-                            <span class="small fw-semibold">Manage</span>
+                            <span class="small fw-semibold"><?= htmlspecialchars($f['cta'] ?? 'Manage') ?></span>
                             <i class="bi bi-arrow-right ms-2"></i>
                         </div>
                     </div>

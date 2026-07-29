@@ -19,12 +19,13 @@ $simulation = $simulation ?? ['id' => 0, 'name' => '', 'description' => '', 'sta
     </div>
     <div class="d-flex gap-2">
         <?php if ($simulation['status'] === 'draft'): ?>
-        <form method="POST" action="/enpharchem/simulations/<?= (int)$simulation['id'] ?>/run" class="d-inline">
+        <form method="POST" action="/enpharchem/simulations/run" class="d-inline">
+            <input type="hidden" name="id" value="<?= (int)$simulation['id'] ?>">
             <button type="submit" class="btn btn-success"><i class="fas fa-play me-1"></i>Run Simulation</button>
         </form>
         <?php endif; ?>
         <?php if ($simulation['status'] === 'completed'): ?>
-        <a href="/enpharchem/simulations/<?= (int)$simulation['id'] ?>/results" class="btn btn-primary"><i class="fas fa-chart-bar me-1"></i>View Results</a>
+        <a href="/enpharchem/simulations/results?id=<?= (int)$simulation['id'] ?>" class="btn btn-primary"><i class="fas fa-chart-bar me-1"></i>View Results</a>
         <?php endif; ?>
     </div>
 </div>

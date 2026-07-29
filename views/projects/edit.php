@@ -4,7 +4,7 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/enpharchem/dashboard">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="/enpharchem/projects">Projects</a></li>
-        <li class="breadcrumb-item"><a href="/enpharchem/projects/<?= (int)$project['id'] ?>"><?= htmlspecialchars($project['name']) ?></a></li>
+        <li class="breadcrumb-item"><a href="/enpharchem/projects/view?id=<?= (int)$project['id'] ?>"><?= htmlspecialchars($project['name']) ?></a></li>
         <li class="breadcrumb-item active">Edit</li>
     </ol>
 </nav>
@@ -19,7 +19,7 @@
         <div class="alert alert-danger"><i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
-        <form method="POST" action="/enpharchem/projects/<?= (int)$project['id'] ?>/edit">
+        <form method="POST" action="/enpharchem/projects/edit?id=<?= (int)$project['id'] ?>">
             <div class="mb-3">
                 <label for="name" class="form-label">Project Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="name" name="name"
@@ -45,7 +45,7 @@
 
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-primary"><i class="fas fa-save me-1"></i>Save Changes</button>
-                <a href="/enpharchem/projects/<?= (int)$project['id'] ?>" class="btn btn-outline-secondary">Cancel</a>
+                <a href="/enpharchem/projects/view?id=<?= (int)$project['id'] ?>" class="btn btn-outline-secondary">Cancel</a>
             </div>
         </form>
     </div>

@@ -1,0 +1,5 @@
+# Never commit private signing keys or issued licenses.
+*_private.pem
+*.key
+# The vendor PUBLIC key IS meant to ship with the image — keep it tracked:
+!vendor_public.pem

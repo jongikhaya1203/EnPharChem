@@ -437,6 +437,7 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
     <div class="sidebar-section">Main</div>
     <a href="/enpharchem/dashboard" class="nav-link"><i class="fas fa-th-large"></i>Dashboard</a>
     <a href="/enpharchem/projects" class="nav-link"><i class="fas fa-project-diagram"></i>Projects</a>
+    <a href="/enpharchem/flowsheet" class="nav-link"><i class="fas fa-project-diagram"></i>Flowsheet Simulator</a>
     <a href="/enpharchem/simulations" class="nav-link"><i class="fas fa-play-circle"></i>Simulations</a>
     <a href="/enpharchem/benchmark" class="nav-link"><i class="fas fa-chart-bar"></i>Gartner Benchmark</a>
     <a href="/enpharchem/control-panel" class="nav-link"><i class="fas fa-cogs"></i>Control Panel</a>

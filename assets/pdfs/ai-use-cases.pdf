@@ -1,0 +1,6999 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 17 /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 4767 >>
+stream
+0.051 0.157 0.278 rg
+0.00 611.89 595.28 230.00 re f
+0.051 0.431 0.992 rg
+0.00 611.89 595.28 30.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 28 Tf
+143.58 723.89 Td
+(AI Use Cases by Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 12 Tf
+100.22 704.89 Td
+(A detailed catalogue of AI/ML use cases across the EnPharChem platform) Tj
+ET
+BT
+0.659 0.784 0.910 rg
+/F2 11 Tf
+108.69 655.89 Td
+(15 categories  |  118 modules  |  12 AI techniques  |  Generated May 12, 2026) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F2 14 Tf
+36.00 567.89 Td
+(Executive Summary) Tj
+ET
+0.051 0.431 0.992 RG
+2.00 w
+36.00 573.89 m 136.00 573.89 l S
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 551.39 Td
+(EnPharChem embeds artificial intelligence and machine learning into every module category - from seismic) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 537.39 Td
+(interpretation and reservoir simulation, through process simulation, exchanger design, FEED, MES, APC, supply) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 523.39 Td
+(chain, asset performance management, to grid management. This document tabulates the principal AI/ML use) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 509.39 Td
+(cases for each module, identifies the underlying technique, and states the expected business value, so that) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 495.39 Td
+(engineers, operators, and trainees can immediately recognise the AI surface area of every tool they use.) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 475.39 Td
+(This catalogue is also a training reference: each row maps a module to the AI technique a learner should) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 461.39 Td
+(understand in order to operate that module safely and to extract value from it. Use it alongside the) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10.5 Tf
+36.00 447.39 Td
+(module-specific training courses available under Training > Courses.) Tj
+ET
+0.973 0.980 0.988 rg
+36.00 373.89 123.32 56.00 re f
+0.886 0.910 0.941 RG
+0.60 w
+36.00 373.89 123.32 56.00 re S
+0.031 0.569 0.698 rg
+36.00 426.89 123.32 3.00 re f
+BT
+0.031 0.569 0.698 rg
+/F2 22 Tf
+85.43 379.89 Td
+(15) Tj
+ET
+BT
+0.392 0.455 0.545 rg
+/F2 7.5 Tf
+73.07 375.39 Td
+(CATEGORIES) Tj
+ET
+0.973 0.980 0.988 rg
+169.32 373.89 123.32 56.00 re f
+0.886 0.910 0.941 RG
+0.60 w
+169.32 373.89 123.32 56.00 re S
+0.020 0.588 0.412 rg
+169.32 426.89 123.32 3.00 re f
+BT
+0.020 0.588 0.412 rg
+/F2 22 Tf
+212.63 379.89 Td
+(118) Tj
+ET
+BT
+0.392 0.455 0.545 rg
+/F2 7.5 Tf
+192.85 375.39 Td
+(MODULES COVERED) Tj
+ET
+0.973 0.980 0.988 rg
+302.64 373.89 123.32 56.00 re f
+0.886 0.910 0.941 RG
+0.60 w
+302.64 373.89 123.32 56.00 re S
+0.918 0.345 0.047 rg
+302.64 426.89 123.32 3.00 re f
+BT
+0.918 0.345 0.047 rg
+/F2 22 Tf
+352.07 379.89 Td
+(12) Tj
+ET
+BT
+0.392 0.455 0.545 rg
+/F2 7.5 Tf
+335.13 375.39 Td
+(AI TECHNIQUES) Tj
+ET
+0.973 0.980 0.988 rg
+435.96 373.89 123.32 56.00 re f
+0.886 0.910 0.941 RG
+0.60 w
+435.96 373.89 123.32 56.00 re S
+0.486 0.227 0.929 rg
+435.96 426.89 123.32 3.00 re f
+BT
+0.486 0.227 0.929 rg
+/F2 22 Tf
+469.49 379.89 Td
+(100%) Tj
+ET
+BT
+0.392 0.455 0.545 rg
+/F2 7.5 Tf
+471.78 375.39 Td
+(AI COVERAGE) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F2 14 Tf
+36.00 343.89 Td
+(Contents) Tj
+ET
+0.051 0.431 0.992 RG
+2.00 w
+36.00 349.89 m 106.00 349.89 l S
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 329.89 Td
+( 1.  Process Simulation for Energy  \(18 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 315.89 Td
+( 2.  Process Simulation for Chemicals  \(18 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 301.89 Td
+( 3.  Exchanger Design & Rating  \(7 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 287.89 Td
+( 4.  Concurrent FEED  \(7 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 273.89 Td
+( 5.  Subsurface Science & Engineering  \(11 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 259.89 Td
+( 6.  Energy & Utilities Optimization  \(3 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 245.89 Td
+( 7.  Operations Support  \(2 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 231.89 Td
+( 8.  Advanced Process Control  \(7 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 217.89 Td
+( 9.  Dynamic Optimization  \(1 module\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 203.89 Td
+(10.  Manufacturing Execution Systems  \(8 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 189.89 Td
+(11.  Petroleum Supply Chain  \(11 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 175.89 Td
+(12.  Supply Chain Management  \(6 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 161.89 Td
+(13.  Asset Performance Management  \(4 modules\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 147.89 Td
+(14.  Industrial Data Fabric  \(1 module\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 10 Tf
+36.00 133.89 Td
+(15.  Digital Grid Management  \(14 modules\)) Tj
+ET
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 14617 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(1. Process Simulation for Energy) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+500.76 780.89 Td
+(18 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI/ML augments first-principles thermodynamics with data-driven surrogates, accelerates convergence, predicts safety) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(scenarios, and tunes refining reactor kinetics in real time.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 658.39 m 559.28 658.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem HYSYS) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(Surrogate Neural Networks;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(Bayesian Calibration) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(ML-augmented thermodynamic property) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(prediction; AI-accelerated flowsheet) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 673.39 Td
+(convergence; data-driven tuning of EOS) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 662.89 Td
+(parameters.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Up to 70% faster) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(steady-state convergence;) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 673.39 Td
+(reduced model re-tuning) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 662.89 Td
+(effort.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 619.39 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 619.39 m 559.28 619.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 644.89 Td
+(Acid Gas Cleaning) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 644.89 Td
+(Gradient-Boosted Trees;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 634.39 Td
+(LSTM) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 644.89 Td
+(Predicts amine solvent loading, degradation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 634.39 Td
+(rates, and CO2/H2S slip; flags abnormal) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 623.89 Td
+(absorber performance.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 644.89 Td
+(Lower solvent make-up) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 634.39 Td
+(costs; reduced corrosion) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 623.89 Td
+(incidents.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 580.39 m 559.28 580.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 605.89 Td
+(EnPharChem HYSYS) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 595.39 Td
+(Crude) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 605.89 Td
+(Deep Neural Networks) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 595.39 Td
+(\(TBP\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 605.89 Td
+(AI-based crude assay characterization;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 595.39 Td
+(auto-generation of TBP and property curves) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 584.89 Td
+(from limited lab data.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 605.89 Td
+(Faster crude qualification;) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 595.39 Td
+(better refinery yield) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 584.89 Td
+(predictions.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 541.39 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 541.39 m 559.28 541.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 566.89 Td
+(BLOWDOWN) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 556.39 Td
+(Technology) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 566.89 Td
+(Classification ML; Monte) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 556.39 Td
+(Carlo + ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 566.89 Td
+(Risk classification of depressurization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 556.39 Td
+(scenarios; auto-identification of) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 545.89 Td
+(low-temperature embrittlement risks.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 566.89 Td
+(Higher PSM compliance;) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 556.39 Td
+(fewer over-conservative) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 545.89 Td
+(designs.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 502.39 m 559.28 502.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 527.89 Td
+(Relief Sizing \(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 527.89 Td
+(Anomaly Detection;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 517.39 Td
+(Decision Trees) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 527.89 Td
+(AI scenario generator for PSV sizing; detects) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 517.39 Td
+(unrealistic loads and missing scenarios in) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 506.89 Td
+(HAZOP coverage.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 527.89 Td
+(API 521/520 compliance) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 517.39 Td
+(with audit-ready trace.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 473.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 473.89 m 559.28 473.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 488.89 Td
+(Sulsim Sulfur Recovery) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 488.89 Td
+(Reinforcement Learning;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 478.39 Td
+(NN Surrogates) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 488.89 Td
+(Optimizes Claus reactor air ratio; learns) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 478.39 Td
+(optimal tail-gas treatment trajectories.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 488.89 Td
+(>99.9% sulfur recovery;) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 478.39 Td
+(lower SO2 emissions.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 445.39 m 559.28 445.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 460.39 Td
+(Activated Economics) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 449.89 Td
+(\(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 460.39 Td
+(LSTM Time-Series; Cost) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 449.89 Td
+(Indices ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 460.39 Td
+(Forecasts equipment/material cost escalation;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 449.89 Td
+(AI-driven CAPEX/OPEX scenario analysis.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 460.39 Td
+(More accurate Class 3/4) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 449.89 Td
+(estimates.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 406.39 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 406.39 m 559.28 406.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 431.89 Td
+(Activated Energy) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 421.39 Td
+(Analysis \(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 431.89 Td
+(Graph NN; AI Pinch) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 421.39 Td
+(Designer) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 431.89 Td
+(AI proposes optimal heat-exchanger networks;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 421.39 Td
+(predicts hot/cold composite curves from) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 410.89 Td
+(streams.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 431.89 Td
+(10-30% energy reduction) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 421.39 Td
+(via better integration.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 377.89 m 559.28 377.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 392.89 Td
+(Activated EDR \(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 392.89 Td
+(NN Exchanger Surrogates) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 392.89 Td
+(Replaces inner exchanger rating loops with) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 382.39 Td
+(fast NN surrogates inside flowsheet.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 392.89 Td
+(5-10x faster HX-coupled) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 382.39 Td
+(simulations.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 349.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 349.39 m 559.28 349.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 364.39 Td
+(EnPharChem HYSYS) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 353.89 Td
+(Petroleum Refining) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 364.39 Td
+(Reinforcement Learning;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 353.89 Td
+(Kinetic ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 364.39 Td
+(Tunes FCC, reformer, hydrocracker kinetics to) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 353.89 Td
+(live yields; closes the loop with plant data.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 364.39 Td
+(Higher margin via yield) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 353.89 Td
+(optimization.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 320.89 m 559.28 320.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 335.89 Td
+(Refinery Reactor Models) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 335.89 Td
+(RL Control; Surrogate NN) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 335.89 Td
+(AI agent recommends WHSV, temperature,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 325.39 Td
+(and H2/HC ratios.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 335.89 Td
+(Extended catalyst run) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 325.39 Td
+(length.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 292.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 292.39 m 559.28 292.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 307.39 Td
+(EnPharChem HYSYS) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 296.89 Td
+(Upstream) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 307.39 Td
+(ML Flow Assurance;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 296.89 Td
+(XGBoost) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 307.39 Td
+(Predicts hydrate, wax, slugging; AI well) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 296.89 Td
+(production decline forecasting.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 307.39 Td
+(Reduced production) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 296.89 Td
+(downtime.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 263.89 m 559.28 263.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 278.89 Td
+(EnPharChem HYSYS) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 268.39 Td
+(Dynamics) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 278.89 Td
+(Recurrent NN Surrogates) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 278.89 Td
+(LSTM dynamic-process surrogates for fast) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 268.39 Td
+(transient studies and OTS.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 278.89 Td
+(Real-time-capable OTS) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 268.39 Td
+(scenarios.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 235.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 235.39 m 559.28 235.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 250.39 Td
+(Activated Dynamics) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 250.39 Td
+(AI Operator Advisor) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 239.89 Td
+(\(LLM-style\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 250.39 Td
+(Real-time guidance on abnormal-event) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 239.89 Td
+(response; transient anomaly classification.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 250.39 Td
+(Faster recovery from) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 239.89 Td
+(upsets.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 206.89 m 559.28 206.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 221.89 Td
+(EnPharChem Hybrid) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 211.39 Td
+(Models \(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 221.89 Td
+(Hybrid First-Principles + ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 221.89 Td
+(Native AI/ML hybrid: combines mechanistic) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 211.39 Td
+(skeleton with neural residual.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 221.89 Td
+(Industrial-grade) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 211.39 Td
+(extrapolation with data.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 178.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 178.39 m 559.28 178.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 193.39 Td
+(EnPharChem Multi Case) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 182.89 Td
+(\(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 193.39 Td
+(Bayesian Optimization; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 182.89 Td
+(DOE) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 193.39 Td
+(Active learning across parametric studies;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 182.89 Td
+(recommends next high-information case.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 193.39 Td
+(Fewer simulation runs for) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 182.89 Td
+(same insight.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 149.89 m 559.28 149.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 164.89 Td
+(EnPharChem Operator) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 154.39 Td
+(Training) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 164.89 Td
+(LLM Coach; Scenario) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 154.39 Td
+(Generator) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 164.89 Td
+(AI generates plausible upset scenarios; LLM) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 154.39 Td
+(answers operator questions in context.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 164.89 Td
+(Higher trainee competency,) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 154.39 Td
+(lower instructor load.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 110.89 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 110.89 m 559.28 110.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 136.39 Td
+(EnPharChem Flare) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 125.89 Td
+(System Analyzer) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 115.39 Td
+(\(Energy\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 136.39 Td
+(CFD Surrogates; Emissions) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 125.89 Td
+(ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 136.39 Td
+(NN-based flare radiation/noise contour) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 125.89 Td
+(prediction; AI emissions inventory.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 136.39 Td
+(Faster siting and permit) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 125.89 Td
+(compliance.) Tj
+ET
+
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 12655 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(2. Process Simulation for Chemicals) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+500.76 780.89 Td
+(18 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI accelerates chemical process design through molecular-property neural networks, batch trajectory optimization, and) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(automated documentation via LLMs.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem Adsorption) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(Gaussian Process; NN) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(Isotherms) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(AI fits Langmuir/Freundlich/Toth isotherms;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(optimizes PSA/TSA/VSA cycle times.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Higher productivity; lower) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(energy per kg adsorbate.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(Chromatography) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(CNN Peak Detection; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 655.39 Td
+(Method DOE) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(Detects and deconvolutes peaks; AI gradient) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(and mobile-phase optimization.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Reduced method) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 655.39 Td
+(development time.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 622.39 m 559.28 622.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 637.39 Td
+(EnPharChem Custom) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(Modeler) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 637.39 Td
+(Symbolic Regression) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 637.39 Td
+(Equation discovery from data to extend custom) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(unit models.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 637.39 Td
+(Captures novel equipment) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(behavior.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 593.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 608.89 Td
+(EnPharChem Hybrid) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(Models \(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 608.89 Td
+(Hybrid Physics-ML;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 598.39 Td
+(Auto-DOE) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 608.89 Td
+(Combines mechanistic and data-driven layers;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(auto experimental design.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 608.89 Td
+(Faster scale-up; better) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 598.39 Td
+(generalization.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 565.39 m 559.28 565.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 580.39 Td
+(EnPharChem Multi Case) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 569.89 Td
+(\(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 580.39 Td
+(Bayesian Sensitivity;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 569.89 Td
+(Sobol-NN) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 580.39 Td
+(AI sensitivity analysis prioritizes high-impact) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 569.89 Td
+(variables.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 580.39 Td
+(Sharper sensitivity insight) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 569.89 Td
+(per run.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 536.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 536.89 m 559.28 536.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 551.89 Td
+(EnPharChem Plus) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 551.89 Td
+(Neural Surrogates;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 541.39 Td
+(Convergence ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 551.89 Td
+(NN surrogates for towers, reactors; learned) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 541.39 Td
+(convergence assistants.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 551.89 Td
+(2-10x simulation) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 541.39 Td
+(throughput.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 508.39 m 559.28 508.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 523.39 Td
+(EnPharChem Polymers) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 523.39 Td
+(NN MWD Predictor) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 523.39 Td
+(Predicts molecular-weight distribution from) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 512.89 Td
+(operating conditions.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 523.39 Td
+(Tighter product quality.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 479.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 479.89 m 559.28 479.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 494.89 Td
+(EnPharChem Properties) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 494.89 Td
+(Graph Neural Networks) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 484.39 Td
+(\(GNN\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 494.89 Td
+(Molecular GNN property prediction; auto) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 484.39 Td
+(thermo-model selection.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 494.89 Td
+(Faster property estimation) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 484.39 Td
+(for novel molecules.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 451.39 m 559.28 451.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 466.39 Td
+(Batch Modeling in) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 455.89 Td
+(EnPharChem Plus) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 466.39 Td
+(RL Batch Trajectory;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 455.89 Td
+(PAT-ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 466.39 Td
+(Optimizes feed/temperature trajectories;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 455.89 Td
+(integrates Process Analytical Technology.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 466.39 Td
+(Improved batch) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 455.89 Td
+(consistency and yield.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 422.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 422.89 m 559.28 422.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 437.89 Td
+(Distillation Modeling in) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 427.39 Td
+(EnPharChem Plus) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 437.89 Td
+(NN Tray Hydraulics; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 427.39 Td
+(Control) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 437.89 Td
+(AI tray-loading prediction; ML soft sensors for) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 427.39 Td
+(product purity.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 437.89 Td
+(Higher recovery, less) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 427.39 Td
+(reboiler energy.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 394.39 m 559.28 394.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 409.39 Td
+(Relief Sizing) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 398.89 Td
+(\(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 409.39 Td
+(Scenario ML; Anomaly) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 398.89 Td
+(Detection) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 409.39 Td
+(AI scenario classifier for runaway-reaction) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 398.89 Td
+(PSVs.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 409.39 Td
+(DIERS-compliant sizing) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 398.89 Td
+(assistance.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 365.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 365.89 m 559.28 365.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 380.89 Td
+(Solids Modeling) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 380.89 Td
+(Computer Vision; DEM) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 370.39 Td
+(Surrogate) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 380.89 Td
+(CV-based particle-size distribution; NN) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 370.39 Td
+(surrogate for DEM solids simulation.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 380.89 Td
+(Faster solids design cycles.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 337.39 m 559.28 337.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 352.39 Td
+(Activated Economics) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 341.89 Td
+(\(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 352.39 Td
+(LSTM Cost Forecasting) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 352.39 Td
+(AI-driven economic evaluation under inflation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 341.89 Td
+(scenarios.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 352.39 Td
+(Realistic NPV/IRR ranges.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 308.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 308.89 m 559.28 308.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 323.89 Td
+(Activated Energy) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 313.39 Td
+(Analysis \(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 323.89 Td
+(Graph NN Heat Networks) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 323.89 Td
+(AI proposes utility integration topology.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 323.89 Td
+(Lower utility cost.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 280.39 m 559.28 280.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 295.39 Td
+(Activated EDR) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 284.89 Td
+(\(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 295.39 Td
+(NN Exchanger Surrogate) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 295.39 Td
+(Embeds AI HX rating in chemical flowsheet.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 295.39 Td
+(Fast iteration on HX-bound) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 284.89 Td
+(designs.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 251.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 251.89 m 559.28 251.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 266.89 Td
+(EnPharChem Plus) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 256.39 Td
+(Dynamics) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 266.89 Td
+(AI Controller Tuning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 266.89 Td
+(Auto-tunes PID/MPC for chemical dynamic) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 256.39 Td
+(models.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 266.89 Td
+(Better controllability) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 256.39 Td
+(scoring.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 223.39 m 559.28 223.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 238.39 Td
+(EnPharChem Process) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 227.89 Td
+(Manuals) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 238.39 Td
+(LLM Document Generation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 238.39 Td
+(Auto-generates operating manuals, P&IDs) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 227.89 Td
+(narratives, and basis-of-design.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 238.39 Td
+(Cuts documentation time) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 227.89 Td
+(by 60-80%.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 184.39 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 184.39 m 559.28 184.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 209.89 Td
+(EnPharChem Flare) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 199.39 Td
+(System Analyzer) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 188.89 Td
+(\(Chemicals\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 209.89 Td
+(CFD ML Surrogates) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 209.89 Td
+(AI flare network rating with emissions) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 199.39 Td
+(inventory.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 209.89 Td
+(Faster compliance studies.) Tj
+ET
+
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 5449 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(3. Exchanger Design & Rating) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(7 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI replaces costly CFD/rigorous correlations with neural surrogates and predicts fouling/efficiency over operating life.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 691.39 m 559.28 691.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem Air Cooled) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 695.89 Td
+(Exchanger) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(NN Fan Power; Weather) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(AI fan-speed optimization with) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 695.89 Td
+(ambient-temperature forecasting.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Lower aux-power) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(consumption.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 662.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 662.89 m 559.28 662.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 677.89 Td
+(EnPharChem Fired) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 667.39 Td
+(Heater) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 677.89 Td
+(NN Combustion Model; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 667.39 Td
+(Efficiency) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 677.89 Td
+(Predicts firebox temperature, NOx, and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 667.39 Td
+(efficiency from fuel mix.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 677.89 Td
+(Lower fuel cost; reduced) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 667.39 Td
+(emissions.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 634.39 m 559.28 634.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 649.39 Td
+(EnPharChem Plate) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 638.89 Td
+(Exchanger) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 649.39 Td
+(Fouling-Rate ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 649.39 Td
+(Predicts plate fouling under variable services;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 638.89 Td
+(recommends cleaning intervals.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 649.39 Td
+(Less unplanned shutdown.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 605.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 605.89 m 559.28 605.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 620.89 Td
+(EnPharChem Plate Fin) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 610.39 Td
+(Exchanger) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 620.89 Td
+(NN Cryogenic Design) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 620.89 Td
+(AI design assistant for brazed aluminum heat) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 610.39 Td
+(exchangers.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 620.89 Td
+(Optimized cryogenic LNG) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 610.39 Td
+(service.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 577.39 m 559.28 577.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 592.39 Td
+(EnPharChem Shell &) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 581.89 Td
+(Tube Exchanger) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 592.39 Td
+(TEMA Design AI; Fouling) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 581.89 Td
+(ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 592.39 Td
+(AI selects TEMA type; predicts fouling factors;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 581.89 Td
+(auto pass-arrangement.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 592.39 Td
+(Faster shortlisting of viable) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 581.89 Td
+(designs.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 548.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 548.89 m 559.28 548.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 563.89 Td
+(EnPharChem Shell &) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 553.39 Td
+(Tube Mechanical) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 563.89 Td
+(AI ASME Compliance) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 553.39 Td
+(Check) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 563.89 Td
+(Auto stress/vibration checks; flags code) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 553.39 Td
+(non-conformance.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 563.89 Td
+(Reduced redesign) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 553.39 Td
+(iterations.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 520.39 m 559.28 520.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 535.39 Td
+(EnPharChem Coil) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 524.89 Td
+(Wound Exchanger) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 535.39 Td
+(NN Cryogenic Thermal) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 524.89 Td
+(Surrogate) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 535.39 Td
+(AI thermal model for LNG main exchangers.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 535.39 Td
+(Faster what-if studies.) Tj
+ET
+
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 5451 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(4. Concurrent FEED) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(7 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(Generative AI proposes 3D plant layouts; LLMs auto-draft engineering deliverables; ML forecasts cost escalation through) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(FEED.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem Fidelis) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(AI Cost-Process Linkage) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(Live link between simulation changes and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(CAPEX impact via ML cost models.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Faster concurrent FEED) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(iterations.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem Capital) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(Cost Estimator) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(XGBoost; ML Location) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 655.39 Td
+(Factors) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(AI equipment-cost regression; ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(location/labor factors.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Tighter Class 3 estimates.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 622.39 m 559.28 622.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 637.39 Td
+(EnPharChem In-Plant) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(Cost Estimator) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 637.39 Td
+(ML Revamp Forecasting) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 637.39 Td
+(Predicts revamp cost from brownfield) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(constraints.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 637.39 Td
+(Better turnaround) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(budgeting.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 593.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 608.89 Td
+(EnPharChem Process) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(Economic Analyzer) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 608.89 Td
+(LSTM Economics; Scenario) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 598.39 Td
+(AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 608.89 Td
+(AI NPV/IRR/payback forecasting under) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(multiple price decks.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 608.89 Td
+(Risk-adjusted investment) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 598.39 Td
+(decisions.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 565.39 m 559.28 565.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 580.39 Td
+(EnPharChem OptiPlant) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 569.89 Td
+(3D Layout) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 580.39 Td
+(Generative AI Layout;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 569.89 Td
+(Clash AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 580.39 Td
+(GAN-based layout proposals; AI clash) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 569.89 Td
+(detection across disciplines.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 580.39 Td
+(Shorter FEED schedules.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 536.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 536.89 m 559.28 536.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 551.89 Td
+(EnPharChem OptiRouter) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 551.89 Td
+(Reinforcement Learning) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 541.39 Td
+(Pipe Routing) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 551.89 Td
+(RL agent learns rule-compliant pipe routes) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 541.39 Td
+(minimizing length and supports.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 551.89 Td
+(Faster, cheaper pipe) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 541.39 Td
+(routing.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 508.39 m 559.28 508.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 523.39 Td
+(EnPharChem Basic) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 512.89 Td
+(Engineering) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 523.39 Td
+(LLM Auto P&ID; Datasheet) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 512.89 Td
+(AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 523.39 Td
+(LLM drafts P&ID narratives, datasheets, and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 512.89 Td
+(SOR.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 523.39 Td
+(Cuts basic engineering by) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 512.89 Td
+(40-60%.) Tj
+ET
+
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 7520 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(5. Subsurface Science & Engineering) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+500.76 780.89 Td
+(11 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(Deep learning transforms seismic processing, log interpretation, geological modelling, and reservoir simulation across the) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(upstream lifecycle.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 668.89 m 559.28 668.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 683.89 Td
+(Subsurface Intelligence) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 673.39 Td
+(\(ESI\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(AI Data Fusion; ML Insights) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(Cross-domain subsurface fusion: seismic +) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(well + production via ML.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Faster decision turnaround.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 640.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 640.39 m 559.28 640.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(EnPharChem Echos) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 655.39 Td
+(Deep Learning Denoise;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 644.89 Td
+(CNN Velocity) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(AI seismic processing; CNN velocity-model) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 644.89 Td
+(building.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 655.39 Td
+(Cleaner images; less) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 644.89 Td
+(manual QC.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 611.89 m 559.28 611.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 616.39 Td
+(EarthStudy 360) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 626.89 Td
+(Azimuthal Deep Learning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(AI full-azimuth imaging and anisotropy) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 616.39 Td
+(detection.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(Sharper reservoir) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 616.39 Td
+(characterization.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 583.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 583.39 m 559.28 583.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(EnPharChem GeoDepth) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 598.39 Td
+(Deep-Learning Migration) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(AI velocity update; learning-based RTM) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 587.89 Td
+(components.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 598.39 Td
+(Faster depth imaging.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 554.89 m 559.28 554.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 569.89 Td
+(EnPharChem SeisEarth) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 569.89 Td
+(CNN Horizon/Fault Picking) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 569.89 Td
+(Deep-learning auto-picking of horizons, faults,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 559.39 Td
+(salt bodies.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 569.89 Td
+(70-90% interpretation time) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 559.39 Td
+(saved.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 526.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 526.39 m 559.28 526.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 541.39 Td
+(EnPharChem Geolog) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 541.39 Td
+(ML Petrophysics; NN Log) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 530.89 Td
+(Synthesis) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 541.39 Td
+(Predicts missing logs; AI lithology/facies) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 530.89 Td
+(classification.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 541.39 Td
+(Consistent petrophysical) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 530.89 Td
+(analysis.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 497.89 m 559.28 497.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 512.89 Td
+(EnPharChem RMS) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 512.89 Td
+(AI Geostatistics; ML) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 502.39 Td
+(Property Modeling) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 512.89 Td
+(NN-driven property modeling between wells.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 512.89 Td
+(Better history-match) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 502.39 Td
+(starting points.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 469.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 469.39 m 559.28 469.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 484.39 Td
+(EnPharChem SKUA) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 484.39 Td
+(Deep-Learning Geomodels) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 484.39 Td
+(AI structural framework building.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 484.39 Td
+(Faster geological model) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 473.89 Td
+(build.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 440.89 m 559.28 440.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 455.89 Td
+(EnPharChem OpsLink) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 455.89 Td
+(Real-Time Anomaly) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 445.39 Td
+(Detection) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 455.89 Td
+(AI monitors live field telemetry; detects) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 445.39 Td
+(equipment/well anomalies.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 455.89 Td
+(Reduced NPT) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 445.39 Td
+(\(non-productive time\).) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 412.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 412.39 m 559.28 412.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 427.39 Td
+(EnPharChem Tempest) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 427.39 Td
+(RL Well Control; ML History) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 416.89 Td
+(Matching) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 427.39 Td
+(RL learns optimal well operating strategies; AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 416.89 Td
+(assisted history match.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 427.39 Td
+(Improved recovery factor.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 383.89 m 559.28 383.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 398.89 Td
+(EnPharChem Epos) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 398.89 Td
+(AI Risk Scoring; Portfolio) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 388.39 Td
+(ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 398.89 Td
+(AI exploration risk; ML portfolio optimization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 388.39 Td
+(under uncertainty.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 398.89 Td
+(Better drilling capital) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 388.39 Td
+(allocation.) Tj
+ET
+
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2726 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(6. Energy & Utilities Optimization) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(3 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI optimises site-wide energy, models decarbonization pathways, and forecasts utility demand for industrial sustainability.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 691.39 m 559.28 691.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem Energy) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 695.89 Td
+(Analyzer) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(AI Pinch Designer; ML) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(Forecasts) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(AI HEN synthesis; utility demand forecasting.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Site energy intensity) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(reduction.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 662.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 662.89 m 559.28 662.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 677.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 667.39 Td
+(Sustainability Pathways) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 677.89 Td
+(Optimization + ML; LCA AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 677.89 Td
+(AI decarbonization-pathway optimizer; ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 667.39 Td
+(life-cycle inventory.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 677.89 Td
+(Net-zero roadmap with cost) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 667.39 Td
+(curves.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 634.39 m 559.28 634.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 649.39 Td
+(EnPharChem Utilities) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 638.89 Td
+(Planner) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 649.39 Td
+(LSTM Demand Forecast;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 638.89 Td
+(AI Scheduling) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 649.39 Td
+(AI utility steam/power demand forecasting and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 638.89 Td
+(scheduling.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 649.39 Td
+(Lower utility cost; reliability.) Tj
+ET
+
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2104 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(7. Operations Support) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(2 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(Online AI keeps process simulation aligned with plant reality and provides intelligent assistants inside engineering) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(workbooks.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem OnLine) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(Live ML Soft Sensors;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(Anomaly AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(Continuous data reconciliation + AI anomaly) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(detection on live plant streams.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Closes simulation-to-plant) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(gap.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem Simulation) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(Workbook) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(LLM Excel Assistant) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(AI recommends parameters, explains results,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(generates formulas inside workbook.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Faster engineering studies.) Tj
+ET
+
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 5201 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(8. Advanced Process Control) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(7 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI elevates DMC, nonlinear MPC, and soft sensors with automated tuning, deep learning models, and natural-language) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(advisory.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem DMC3) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(AI MPC Tuning; ML Model) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(Adaptation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(Auto-tunes controller; adapts step models from) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(plant data.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Sustained APC benefit) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(capture.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem Virtual) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(Advisor \(EVA\) for DMC3) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(LLM Advisor) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(Natural-language Q&A on APC performance,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(root cause, and tuning.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Lower APC engineer load.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 622.39 m 559.28 622.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 637.39 Td
+(EnPharChem DMC3) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(Builder) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 637.39 Td
+(AI System Identification) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 637.39 Td
+(NN-based ARX/NARX identification; auto) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(step-test design.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 637.39 Td
+(Faster controller) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(commissioning.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 593.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 608.89 Td
+(EnPharChem Inferential) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(Qualities) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 608.89 Td
+(Deep-Learning Soft) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 598.39 Td
+(Sensors) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 608.89 Td
+(CNN/LSTM soft sensors for online product) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(quality.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 608.89 Td
+(Reduced lab dependency.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 565.39 m 559.28 565.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 580.39 Td
+(EnPharChem Nonlinear) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 569.89 Td
+(Controller) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 580.39 Td
+(Neural NMPC) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 580.39 Td
+(NN-based nonlinear MPC for strongly) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 569.89 Td
+(nonlinear units.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 580.39 Td
+(Tighter quality control.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 536.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 536.89 m 559.28 536.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 551.89 Td
+(EnPharChem Transition) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 541.39 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 551.89 Td
+(Reinforcement Learning) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 541.39 Td
+(Transitions) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 551.89 Td
+(RL learns optimal grade-changeover) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 541.39 Td
+(trajectories.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 551.89 Td
+(Less off-spec product.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 508.39 m 559.28 508.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 523.39 Td
+(EnPharChem Watch) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 512.89 Td
+(Performance Monitor) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 523.39 Td
+(AI KPI Anomaly Detection) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 523.39 Td
+(Detects controller degradation, valve issues,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 512.89 Td
+(and CV drift.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 523.39 Td
+(Sustained APC service) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 512.89 Td
+(factor.) Tj
+ET
+
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 1486 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(9. Dynamic Optimization) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+510.26 780.89 Td
+(1 module) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(Closed-loop AI/RL optimization runs against live plant economics to capture real-time benefits.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 680.89 m 559.28 680.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem GDOT) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(Reinforcement Learning;) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(NN Surrogates; RTO+ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(Real-time optimization with AI surrogates of) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 695.89 Td
+(process units; RL closed-loop economic) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 685.39 Td
+(optimization.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Continuous margin uplift) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(across the unit.) Tj
+ET
+
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 6095 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(10. Manufacturing Execution Systems) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(8 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI enhances historian intelligence, batch deviation detection, and material balance reconciliation.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 691.39 m 559.28 691.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 695.89 Td
+(InfoPlus.21) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(AI Tag Anomaly; ML Data) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(Quality) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(Auto-flags drifting tags, frozen signals, and bad) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 695.89 Td
+(data quality.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Reliable downstream) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(analytics.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 662.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 662.89 m 559.28 662.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 677.89 Td
+(EnPharChem Production) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 667.39 Td
+(Record Manager) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 677.89 Td
+(AI Batch Deviation) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 667.39 Td
+(Detection) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 677.89 Td
+(Detects parameter excursions in eBRs;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 667.39 Td
+(auto-classifies deviations.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 677.89 Td
+(Faster QA release.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 634.39 m 559.28 634.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 649.39 Td
+(enPharChemONE) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 638.89 Td
+(Process Explorer) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 649.39 Td
+(AI Trend Anomalies; LLM) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 638.89 Td
+(Search) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 649.39 Td
+(Natural-language search of historian; AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 638.89 Td
+(anomaly highlights.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 649.39 Td
+(Faster troubleshooting.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 605.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 605.89 m 559.28 605.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 620.89 Td
+(EnPharChem Production) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 610.39 Td
+(Execution Manager) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 620.89 Td
+(AI Workflow Optimization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 620.89 Td
+(AI recommends order sequencing and crew) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 610.39 Td
+(assignment.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 620.89 Td
+(Higher OEE.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 566.89 m 559.28 566.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 592.39 Td
+(EnPharChem Unified) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 581.89 Td
+(Reconciliation &) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 571.39 Td
+(Accounting) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 592.39 Td
+(ML Reconciliation; AI Gross) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 581.89 Td
+(Error) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 592.39 Td
+(Improves data reconciliation via ML weights;) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 581.89 Td
+(auto gross-error detection.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 592.39 Td
+(Closer mass balance) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 581.89 Td
+(closure.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 538.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 538.39 m 559.28 538.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 553.39 Td
+(EnPharChem Unified) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 542.89 Td
+(Movements) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 553.39 Td
+(AI Tank Scheduling) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 553.39 Td
+(Optimizes tank-to-tank movements with AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 542.89 Td
+(scheduler.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 553.39 Td
+(Reduced demurrage and) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 542.89 Td
+(contamination.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 499.39 m 559.28 499.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 524.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 514.39 Td
+(Operations) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 503.89 Td
+(Reconciliation) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 524.89 Td
+(ML Yield Accounting) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 524.89 Td
+(AI yield accounting and material balance) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 514.39 Td
+(closure.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 524.89 Td
+(Trustworthy operations) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 514.39 Td
+(KPIs.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 470.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 470.89 m 559.28 470.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 485.89 Td
+(EnPharChem Tank and) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 475.39 Td
+(Operations Manager) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 485.89 Td
+(AI Tank-Level Forecasting) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 485.89 Td
+(Predicts tank levels and ullage; AI alarming.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 485.89 Td
+(Avoids overflow/run-dry) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 475.39 Td
+(events.) Tj
+ET
+
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 7555 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(11. Petroleum Supply Chain) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+500.76 780.89 Td
+(11 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI augments LP/NLP planning with warm-starts, validation, and LLM advisors that explain planning model results to) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(schedulers.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem Unified) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 683.89 Td
+(PIMS) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(AI Warm-Start; ML Model) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(Validation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(AI seeds LP/NLP solvers; ML detects) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(unrealistic vectors.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(Faster, more reliable plans.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem Unified) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(Scheduling) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(AI/RL Scheduler) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(RL learns near-optimal crude/product) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(schedules.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Better vessel-tank-unit) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 655.39 Td
+(alignment.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 622.39 m 559.28 622.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 637.39 Td
+(EnPharChem Unified) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(Multisite) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 637.39 Td
+(AI Multi-Site Coordination) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 637.39 Td
+(AI coordinates multi-refinery plans under) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(shared constraints.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 637.39 Td
+(Network-level margin gain.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 593.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 608.89 Td
+(EnPharChem EVA for) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(Unified PIMS) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 608.89 Td
+(LLM Planning Advisor) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 608.89 Td
+(Natural-language explanation of PIMS results) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(and trade-offs.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 608.89 Td
+(Faster planner onboarding.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 565.39 m 559.28 565.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 580.39 Td
+(EnPharChem Verify for) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 569.89 Td
+(Planning) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 580.39 Td
+(AI Model QA) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 580.39 Td
+(ML detects stale yields, broken bounds, and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 569.89 Td
+(structural issues.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 580.39 Td
+(Higher plan-vs-actual) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 569.89 Td
+(fidelity.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 536.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 536.89 m 559.28 536.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 551.89 Td
+(EnPharChem PIMS-AO) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 551.89 Td
+(Advanced AI Optimization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 551.89 Td
+(AI successive-LP heuristics and integer-cut) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 541.39 Td
+(suggestions.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 551.89 Td
+(Better optimum on tough) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 541.39 Td
+(cases.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 508.39 m 559.28 508.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 523.39 Td
+(EnPharChem Assay) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 512.89 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 523.39 Td
+(AI Assay Characterization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 523.39 Td
+(Auto-builds crude assays from sparse lab data.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 523.39 Td
+(Faster new-crude) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 512.89 Td
+(qualification.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 479.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 479.89 m 559.28 479.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 494.89 Td
+(EnPharChem Petroleum) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 484.39 Td
+(Scheduler) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 494.89 Td
+(AI Operations Scheduler) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 494.89 Td
+(Detailed scheduling with AI conflict resolution.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 494.89 Td
+(Reduced demurrage and) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 484.39 Td
+(giveaway.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 451.39 m 559.28 451.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 466.39 Td
+(EnPharChem Refinery) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 455.89 Td
+(Multi-Blend Optimizer) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 466.39 Td
+(ML Blend Quality Prediction) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 466.39 Td
+(NN blend property models for non-linear quality) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 455.89 Td
+(interactions.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 466.39 Td
+(Less giveaway, more spec) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 455.89 Td
+(compliance.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 422.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 422.89 m 559.28 422.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 437.89 Td
+(EnPharChem Petroleum) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 427.39 Td
+(Supply Chain Planner) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 437.89 Td
+(AI E2E Planning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 437.89 Td
+(AI-supported crude-to-product chain planning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 427.39 Td
+(under uncertainty.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 437.89 Td
+(Resilient supply chain) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 427.39 Td
+(plans.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 383.89 m 559.28 383.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 409.39 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 398.89 Td
+(Collaborative Demand) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 388.39 Td
+(Manager) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 409.39 Td
+(LSTM Demand Forecasting) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 409.39 Td
+(AI demand sensing for petroleum products.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 409.39 Td
+(Better S&OP accuracy.) Tj
+ET
+
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 4588 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(12. Supply Chain Management) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(6 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI/ML powers demand forecasting, multi-echelon inventory optimization, and KPI insight generation for chemical supply) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(chains.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 668.89 m 559.28 668.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(enPharChemONE) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 683.89 Td
+(Supply Chain) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 673.39 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(AI Integrated SCM) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(AI orchestration across) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(plan/source/make/deliver.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(End-to-end SCM resilience.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 640.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 640.39 m 559.28 640.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 655.39 Td
+(EnPharChem Scheduler) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 644.89 Td
+(Explorer) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 655.39 Td
+(AI/RL Scheduling) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(RL-based plant scheduling with constraint) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 644.89 Td
+(learning.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 655.39 Td
+(Higher throughput and) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 644.89 Td
+(OTIF.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 601.39 m 559.28 601.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 616.39 Td
+(Collaborative Demand) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 605.89 Td
+(Manager \(SCM\)) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 626.89 Td
+(LSTM/Prophet/Bayesian) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 616.39 Td
+(Demand) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(Hierarchical demand forecasting with) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 616.39 Td
+(collaboration.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(Improved forecast) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 616.39 Td
+(accuracy.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 572.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 572.89 m 559.28 572.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 587.89 Td
+(EnPharChem Supply) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 577.39 Td
+(Chain Planner) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 587.89 Td
+(AI Multi-Echelon) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 577.39 Td
+(Optimization) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 587.89 Td
+(AI inventory and replenishment optimization.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 587.89 Td
+(Lower working capital.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 544.39 m 559.28 544.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 559.39 Td
+(EnPharChem Plant) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 548.89 Td
+(Scheduler Family) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 559.39 Td
+(AI Scheduling) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 559.39 Td
+(AI sequence-dependent scheduling.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 559.39 Td
+(Reduced changeover loss.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 515.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 515.89 m 559.28 515.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 530.89 Td
+(EnPharChem SCM) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 520.39 Td
+(Insights) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 530.89 Td
+(AI KPI Anomaly; LLM) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 520.39 Td
+(Insights) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 530.89 Td
+(Auto-narrated SCM insights and AI anomaly) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 520.39 Td
+(flags.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 530.89 Td
+(Faster managerial action.) Tj
+ET
+
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 3556 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(13. Asset Performance Management) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+505.76 780.89 Td
+(4 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(Native AI/ML is the heart of APM: pattern recognition for failure prediction, multivariate analytics, and chemometric data) Tj
+ET
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 734.39 Td
+(analysis.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 707.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 710.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 710.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 710.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 710.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 679.39 m 559.28 679.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 694.39 Td
+(EnPharChem Mtell) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 694.39 Td
+(ML Pattern Recognition) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 683.89 Td
+(\(Failure Agents\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 694.39 Td
+(Learns failure signatures and predicts) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 683.89 Td
+(equipment breakdowns weeks ahead.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 694.39 Td
+(20-40% maintenance cost) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 683.89 Td
+(reduction.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 650.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 650.89 m 559.28 650.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 665.89 Td
+(EnPharChem ProMV) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 665.89 Td
+(PCA/PLS Multivariate) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 655.39 Td
+(Analytics) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 665.89 Td
+(Multivariate statistical process and batch) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 655.39 Td
+(monitoring with contribution plots.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 665.89 Td
+(Early quality and process) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 655.39 Td
+(deviation alarms.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 622.39 m 559.28 622.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 637.39 Td
+(EnPharChem Process) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 626.89 Td
+(Pulse) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 637.39 Td
+(Real-Time Anomaly AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 637.39 Td
+(Live anomaly detection across operating) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 626.89 Td
+(envelopes.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 637.39 Td
+(Prevented unplanned) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 626.89 Td
+(shutdowns.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 593.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 608.89 Td
+(EnPharChem) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 598.39 Td
+(Unscrambler) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 608.89 Td
+(Chemometrics; Neural) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 598.39 Td
+(Networks; DOE) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 608.89 Td
+(Multivariate calibration, classification, and) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 598.39 Td
+(design of experiments.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 608.89 Td
+(Faster R&D, better PAT) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 598.39 Td
+(models.) Tj
+ET
+
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 1495 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(14. Industrial Data Fabric) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+510.26 780.89 Td
+(1 module) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI gives industrial data context: semantic enrichment, NLP-based metadata, and ML data-quality scoring.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 680.89 m 559.28 680.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem Inmation) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(NLP Metadata; AI Semantic) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(Enrichment; ML Quality) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(AI auto-tags industrial data, builds contextual) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 695.89 Td
+(graphs, and scores data quality.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Trustworthy data) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(foundation for all AI use) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 685.39 Td
+(cases.) Tj
+ET
+
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Length 10155 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(15. Digital Grid Management) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F1 9 Tf
+500.76 780.89 Td
+(14 modules) Tj
+ET
+0.051 0.431 0.992 rg
+36.00 760.89 523.28 1.00 re f
+BT
+0.278 0.333 0.412 rg
+/F3 9.5 Tf
+36.00 746.39 Td
+(AI underpins modern grid: forecasting, DER orchestration, outage prediction, FLISR/VVO automation, and storm resilience.) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 719.89 523.28 16.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+41.00 722.39 Td
+(Module) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+145.66 722.39 Td
+(AI / ML Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+260.78 722.39 Td
+(AI Use Case) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9 Tf
+449.16 722.39 Td
+(Business Outcome) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 691.39 m 559.28 691.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 706.39 Td
+(EnPharChem Microgrid) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 695.89 Td
+(Management System) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 706.39 Td
+(RL Microgrid Control; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 695.89 Td
+(EMS) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 706.39 Td
+(RL agent optimizes microgrid dispatch with) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 695.89 Td
+(PV/wind/BESS forecasts.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 706.39 Td
+(Lower energy cost and) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 695.89 Td
+(higher reliability.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 662.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 662.89 m 559.28 662.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 677.89 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 667.39 Td
+(Monarch SCADA) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 677.89 Td
+(AI Alarm Management; ML) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 667.39 Td
+(Anomaly) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 677.89 Td
+(AI alarm rationalization; ML SCADA anomaly) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 667.39 Td
+(detection.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 677.89 Td
+(Reduced operator) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 667.39 Td
+(overload.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 634.39 m 559.28 634.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 649.39 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 638.89 Td
+(Generation Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 649.39 Td
+(AI Dispatch; Renewables) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 638.89 Td
+(Forecast) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 649.39 Td
+(AI economic dispatch with wind/solar) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 638.89 Td
+(forecasting.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 649.39 Td
+(Lower marginal generation) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 638.89 Td
+(cost.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 605.89 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 605.89 m 559.28 605.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 620.89 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 610.39 Td
+(Energy Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 620.89 Td
+(Deep-Learning State) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 610.39 Td
+(Estimation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 620.89 Td
+(AI EMS state estimation and contingency) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 610.39 Td
+(analysis.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 620.89 Td
+(Higher transmission) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 610.39 Td
+(reliability.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 566.89 m 559.28 566.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 592.39 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 581.89 Td
+(Advanced Distribution) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 571.39 Td
+(Mgmt) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 592.39 Td
+(AI FLISR; ML VVO; Outage) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 581.89 Td
+(AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 592.39 Td
+(AI-driven fault location/isolation/service) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 581.89 Td
+(restoration; volt/var optimization.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 592.39 Td
+(Lower SAIDI/SAIFI.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 538.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 538.39 m 559.28 538.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 553.39 Td
+(EnPharChem OSI DER) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 542.89 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 553.39 Td
+(AI DER Forecasting; RL) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 542.89 Td
+(Aggregation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 553.39 Td
+(AI forecasts and orchestrates distributed) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 542.89 Td
+(energy resources.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 553.39 Td
+(Higher DER hosting) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 542.89 Td
+(capacity.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 509.89 m 559.28 509.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 524.89 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 514.39 Td
+(CHRONUS Historian) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 524.89 Td
+(AI Grid Analytics) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 524.89 Td
+(AI analytics on grid historian \(event detection,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 514.39 Td
+(classification\).) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 524.89 Td
+(Operational intelligence for) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 514.39 Td
+(grids.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 470.89 523.28 39.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 470.89 m 559.28 470.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 496.39 Td
+(EnPharChem OSI) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 485.89 Td
+(Continua Pipeline) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 475.39 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 496.39 Td
+(ML Leak Detection; AI) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 485.89 Td
+(Batch Tracking) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 496.39 Td
+(AI leak detection and batch tracking on) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 485.89 Td
+(pipelines.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 496.39 Td
+(Faster leak response,) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 485.89 Td
+(better integrity.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 431.89 m 559.28 431.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 457.39 Td
+(EnPharChem Cimphony) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 446.89 Td
+(Network Model) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 436.39 Td
+(Management) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 457.39 Td
+(AI CIM Validation) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 457.39 Td
+(AI validates CIM network models for) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 446.89 Td
+(consistency.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 457.39 Td
+(Cleaner model handoff to) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 446.89 Td
+(operations.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 403.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 403.39 m 559.28 403.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 418.39 Td
+(EnPharChem Grid Apps) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 418.39 Td
+(ML DLR; AI Hosting) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 407.89 Td
+(Capacity; LSTM Load) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 418.39 Td
+(Dynamic line rating, hosting-capacity ML, AI) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 407.89 Td
+(load forecasting.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 418.39 Td
+(More headroom on existing) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 407.89 Td
+(assets.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 374.89 m 559.28 374.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 389.89 Td
+(EnPharChem Grid) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 379.39 Td
+(Reporter) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 389.89 Td
+(LLM Regulatory Reports) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 389.89 Td
+(LLM-generated regulatory and operational) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 379.39 Td
+(reports.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 389.89 Td
+(Compliance with less effort.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 346.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 346.39 m 559.28 346.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 361.39 Td
+(EnPharChem DER) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 350.89 Td
+(Connect) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 361.39 Td
+(AI DER Orchestration) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 361.39 Td
+(AI DER interconnection and communications) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 350.89 Td
+(optimization.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 361.39 Td
+(Faster DER onboarding.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 317.89 m 559.28 317.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 332.89 Td
+(EnPharChem Network) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 322.39 Td
+(Maps) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 332.89 Td
+(AI Geospatial Analytics) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 332.89 Td
+(AI geospatial analytics across grid assets.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 332.89 Td
+(Smarter network planning.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 289.39 523.28 28.50 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 289.39 m 559.28 289.39 l S
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 304.39 Td
+(EnPharChem Resilience) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 8.5 Tf
+41.00 293.89 Td
+(Portal) Tj
+ET
+BT
+0.031 0.569 0.698 rg
+/F1 8.5 Tf
+145.66 304.39 Td
+(AI Storm/Outage Prediction) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 304.39 Td
+(AI storm-impact forecasting and outage) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 8.5 Tf
+260.78 293.89 Td
+(prediction.) Tj
+ET
+BT
+0.020 0.588 0.412 rg
+/F1 8.5 Tf
+449.16 304.39 Td
+(Higher grid resilience.) Tj
+ET
+
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 36 0 R >>
+endobj
+38 0 obj
+<< /Length 4490 >>
+stream
+0.051 0.157 0.278 rg
+36.00 769.89 523.28 32.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 13 Tf
+48.00 777.89 Td
+(Cross-cutting AI / ML Technique Index) Tj
+ET
+0.051 0.157 0.278 rg
+36.00 737.89 523.28 18.00 re f
+BT
+1.000 1.000 1.000 rg
+/F2 9.5 Tf
+42.00 741.14 Td
+(Technique) Tj
+ET
+BT
+1.000 1.000 1.000 rg
+/F2 9.5 Tf
+198.98 741.14 Td
+(Description) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 706.89 m 559.28 706.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 722.89 Td
+(Hybrid Physics-ML) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 722.89 Td
+(Combines first-principles equations with neural-net residual learning. Used in HYSYS) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 711.89 Td
+(Hybrid Models, EnPharChem Plus Hybrid Models, APM, ESI.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 675.89 523.28 31.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 675.89 m 559.28 675.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 691.89 Td
+(Surrogate Neural Networks) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 691.89 Td
+(Fast NN replacements for expensive rigorous unit operations \(towers, exchangers,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 680.89 Td
+(reactors\).) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 644.89 m 559.28 644.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 660.89 Td
+(LSTM / Recurrent Networks) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 660.89 Td
+(Time-series forecasting \(demand, equipment health, dynamic process transients,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 649.89 Td
+(economics\).) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 613.89 523.28 31.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 613.89 m 559.28 613.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 629.89 Td
+(Reinforcement Learning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 629.89 Td
+(Sequential decision-making: dispatch, scheduling, grade transitions, RTO, well control,) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 618.89 Td
+(microgrid.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 593.89 m 559.28 593.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 598.89 Td
+(CNN / Deep Learning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 598.89 Td
+(Spatial pattern recognition: seismic interpretation, particle imaging, flare CFD surrogates.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 573.89 523.28 20.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 573.89 m 559.28 573.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 578.89 Td
+(Graph Neural Networks) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 578.89 Td
+(Molecular property prediction; heat-exchanger network synthesis.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 553.89 m 559.28 553.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 558.89 Td
+(Multivariate Statistics \(PCA/PLS\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 558.89 Td
+(Batch and continuous-process monitoring \(ProMV, Unscrambler\).) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 533.89 523.28 20.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 533.89 m 559.28 533.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 538.89 Td
+(Anomaly Detection) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 538.89 Td
+(Catches drift, gross errors, sensor failures, abnormal operation.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 513.89 m 559.28 513.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 518.89 Td
+(LLMs \(Large Language Models\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 518.89 Td
+(Documentation generation, NL Q&A assistants, regulatory reports, EVA-style advisors.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 482.89 523.28 31.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 482.89 m 559.28 482.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 498.89 Td
+(Bayesian Optimization / Active) Tj
+ET
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 487.89 Td
+(Learning) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 498.89 Td
+(Picks the next most-informative simulation case or experiment.) Tj
+ET
+0.796 0.835 0.882 RG
+0.40 w
+36.00 462.89 m 559.28 462.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 467.89 Td
+(Symbolic Regression) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 467.89 Td
+(Discovers analytical equations from data inside custom modelers.) Tj
+ET
+0.957 0.969 0.984 rg
+36.00 442.89 523.28 20.00 re f
+0.796 0.835 0.882 RG
+0.40 w
+36.00 442.89 m 559.28 442.89 l S
+BT
+0.051 0.157 0.278 rg
+/F1 9 Tf
+42.00 447.89 Td
+(Generative AI \(GANs/Diffusion\)) Tj
+ET
+BT
+0.118 0.161 0.231 rg
+/F1 9 Tf
+198.98 447.89 Td
+(Generative plant layouts, scenario synthesis.) Tj
+ET
+BT
+0.580 0.639 0.722 rg
+/F3 8 Tf
+130.38 414.89 Td
+(EnPharChem AI Use Cases  |  Generated May 12, 2026  |  Confidential - Training & Reference) Tj
+ET
+
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 38 0 R >>
+endobj
+xref
+0 40
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000233 00000 n 
+0000000330 00000 n 
+0000000432 00000 n 
+0000000537 00000 n 
+0000005356 00000 n 
+0000005508 00000 n 
+0000020178 00000 n 
+0000020330 00000 n 
+0000033039 00000 n 
+0000033193 00000 n 
+0000038695 00000 n 
+0000038849 00000 n 
+0000044353 00000 n 
+0000044507 00000 n 
+0000052080 00000 n 
+0000052234 00000 n 
+0000055013 00000 n 
+0000055167 00000 n 
+0000057324 00000 n 
+0000057478 00000 n 
+0000062732 00000 n 
+0000062886 00000 n 
+0000064425 00000 n 
+0000064579 00000 n 
+0000070727 00000 n 
+0000070881 00000 n 
+0000078489 00000 n 
+0000078643 00000 n 
+0000083284 00000 n 
+0000083438 00000 n 
+0000087047 00000 n 
+0000087201 00000 n 
+0000088749 00000 n 
+0000088903 00000 n 
+0000099112 00000 n 
+0000099266 00000 n 
+0000103809 00000 n 
+trailer
+<< /Size 40 /Root 1 0 R >>
+startxref
+103963
+%%EOF

@@ -7,7 +7,7 @@ $results = $results ?? [];
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/enpharchem/dashboard">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="/enpharchem/simulations">Simulations</a></li>
-        <li class="breadcrumb-item"><a href="/enpharchem/simulations/<?= (int)$simulation['id'] ?>"><?= htmlspecialchars($simulation['name']) ?></a></li>
+        <li class="breadcrumb-item"><a href="/enpharchem/simulations/view?id=<?= (int)$simulation['id'] ?>"><?= htmlspecialchars($simulation['name']) ?></a></li>
         <li class="breadcrumb-item active">Results</li>
     </ol>
 </nav>

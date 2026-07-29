@@ -181,7 +181,7 @@ $recentSimulations = $recentSimulations ?? [];
                         <tbody>
                             <?php foreach ($recentProjects as $proj): ?>
                             <tr>
-                                <td><a href="/enpharchem/projects/<?= (int)$proj['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($proj['name']) ?></a></td>
+                                <td><a href="/enpharchem/projects/view?id=<?= (int)$proj['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($proj['name']) ?></a></td>
                                 <td><span class="badge badge-status-<?= htmlspecialchars($proj['status'] ?? 'active') ?>"><?= htmlspecialchars(ucfirst($proj['status'] ?? 'active')) ?></span></td>
                                 <td style="font-size:.85rem;color:#6c757d;"><?= htmlspecialchars($proj['updated_at'] ?? '') ?></td>
                             </tr>
@@ -220,7 +220,7 @@ $recentSimulations = $recentSimulations ?? [];
                         <tbody>
                             <?php foreach ($recentSimulations as $sim): ?>
                             <tr>
-                                <td><a href="/enpharchem/simulations/<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($sim['name']) ?></a></td>
+                                <td><a href="/enpharchem/simulations/view?id=<?= (int)$sim['id'] ?>" class="text-decoration-none" style="color:var(--epc-accent);"><?= htmlspecialchars($sim['name']) ?></a></td>
                                 <td style="font-size:.85rem;"><?= htmlspecialchars($sim['module_name'] ?? '') ?></td>
                                 <td><span class="badge badge-status-<?= htmlspecialchars($sim['status'] ?? 'draft') ?>"><?= htmlspecialchars(ucfirst($sim['status'] ?? 'draft')) ?></span></td>
                             </tr>

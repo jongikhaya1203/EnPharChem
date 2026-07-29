@@ -9,6 +9,14 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="text-light mb-0"><i class="fas fa-graduation-cap me-2" style="color: var(--epc-accent);"></i>Training Courses</h2>
     <div class="d-flex gap-2">
+        <div class="btn-group" role="group" aria-label="AI Use Cases PDF">
+            <a href="/enpharchem/training/ai-use-cases" class="btn btn-outline-info" target="_blank" title="Open AI Use Cases PDF in browser">
+                <i class="fas fa-brain me-1"></i>AI Use Cases PDF
+            </a>
+            <a href="/enpharchem/training/ai-use-cases?download=1" class="btn btn-outline-info" title="Download AI Use Cases PDF">
+                <i class="fas fa-download"></i>
+            </a>
+        </div>
         <a href="/enpharchem/training/my-certificates" class="btn btn-outline-warning">
             <i class="fas fa-certificate me-1"></i>My Certificates
         </a>
