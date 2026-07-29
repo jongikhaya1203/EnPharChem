@@ -104,6 +104,26 @@ class MarketingDocsController extends BaseController {
     }
 
     /**
+     * Business Process Map - streams a real generated PDF mapping each business
+     * process to its use cases, the job titles/roles that run it, and a worked
+     * example. Content is editorial (lib/BusinessProcessMap.php), not DB-driven.
+     */
+    public function businessProcessMap() {
+        require_once APP_ROOT . '/lib/BusinessProcessPdfBuilder.php';
+        $binary = BusinessProcessPdfBuilder::build();
+        $this->streamPdf($binary, 'EnPharChem-Business-Process-Map.pdf', 'business-process-map.pdf');
+    }
+
+    /** Screen-readable HTML edition of the business process map. */
+    public function businessProcessMapHtml() {
+        require_once APP_ROOT . '/lib/BusinessProcessMap.php';
+        $processes = BusinessProcessMap::processes();
+        $roleLegend = BusinessProcessMap::roleLegend();
+        include VIEWS_PATH . '/marketing-docs/business-process-map.php';
+        exit;
+    }
+
+    /**
      * Send a generated PDF to the browser, caching a copy under assets/pdfs/.
      * ?download=1 forces a save dialog instead of inline display.
      */
@@ -293,6 +313,17 @@ class MarketingDocsController extends BaseController {
                 'category' => 'User Documentation',
                 'target_audience' => 'Process Engineers, Operators, Application Engineers, Training Leads',
                 'file_url' => '/enpharchem/marketing/how-to-manual',
+                'status' => 'published',
+                'download_count' => 0,
+                'created_by' => $this->user['id'],
+            ],
+            [
+                'title' => 'EnPharChem Business Process Map - Processes, Use Cases & Roles',
+                'description' => 'Maps each business process on the platform to the use cases it serves, the job titles and platform roles that carry it out, and a worked example. Includes a platform-role legend and a process summary matrix.',
+                'material_type' => 'whitepaper',
+                'category' => 'Business & Solution',
+                'target_audience' => 'Solution Consultants, Business Analysts, Department Heads, Buyers, Onboarding Leads',
+                'file_url' => '/enpharchem/marketing/business-process-map',
                 'status' => 'published',
                 'download_count' => 0,
                 'created_by' => $this->user['id'],

@@ -137,6 +137,8 @@ return [
     'marketing/module-catalogue/html' => ['controller' => 'MarketingDocsController', 'action' => 'moduleCatalogueHtml'],
     'marketing/how-to-manual' => ['controller' => 'MarketingDocsController', 'action' => 'howToManual'],
     'marketing/how-to-manual/html' => ['controller' => 'MarketingDocsController', 'action' => 'howToManualHtml'],
+    'marketing/business-process-map' => ['controller' => 'MarketingDocsController', 'action' => 'businessProcessMap'],
+    'marketing/business-process-map/html' => ['controller' => 'MarketingDocsController', 'action' => 'businessProcessMapHtml'],
     'marketing/seed-materials' => ['controller' => 'MarketingDocsController', 'action' => 'seedMaterials'],
     'marketing/seed-module-docs' => ['controller' => 'MarketingDocsController', 'action' => 'seedModuleDocs'],
 

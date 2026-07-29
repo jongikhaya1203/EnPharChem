@@ -78,6 +78,15 @@
                         'html'   => '/enpharchem/marketing/how-to-manual/html',
                     ],
                     [
+                        'title'  => 'Business Process Map',
+                        'desc'   => 'Business processes mapped to use cases, job titles/roles and a worked example each.',
+                        'icon'   => 'bi-diagram-3',
+                        'colour' => '#6f42c1',
+                        'url'    => '/enpharchem/marketing/business-process-map',
+                        'format' => 'Generated PDF',
+                        'html'   => '/enpharchem/marketing/business-process-map/html',
+                    ],
+                    [
                         'title'  => 'Product Brochure',
                         'desc'   => 'Marketing brochure showcasing the platform and its module categories.',
                         'icon'   => 'bi-megaphone',
