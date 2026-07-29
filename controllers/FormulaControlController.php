@@ -6,6 +6,12 @@
 
 class FormulaControlController extends BaseController {
 
+    public function __construct() {
+        parent::__construct();
+        // Control-panel tool; keep it behind the administrator gate.
+        $this->requireRole(['admin', 'superuser']);
+    }
+
     public function index() {
         $this->view('control-panel/formula-control/index', [
             'pageTitle' => 'Formulae Control Sheets',

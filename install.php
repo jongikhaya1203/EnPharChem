@@ -1,8 +1,25 @@
 <?php
 /**
  * EnPharChem Platform - Installation Script
- * Run this once to set up the database
+ * Run this once to set up the database.
+ *
+ * SAFETY GATE: disabled by default. This script creates the database and seeds
+ * a default administrator, so leaving it reachable is a credential-disclosure
+ * risk. To run first-time setup, enable it deliberately and run from the CLI:
+ *
+ *     ENPHARCHEM_ALLOW_INSTALL=1 php install.php
+ *
+ * then unset the variable again. The .htaccess rule additionally blocks direct
+ * web access to this file.
  */
+if (getenv('ENPHARCHEM_ALLOW_INSTALL') !== '1') {
+    http_response_code(403);
+    header('Content-Type: text/plain; charset=utf-8');
+    exit("EnPharChem installer is disabled.\n\n"
+       . "Enable it only for first-time setup by running:\n"
+       . "    ENPHARCHEM_ALLOW_INSTALL=1 php install.php\n"
+       . "then unset ENPHARCHEM_ALLOW_INSTALL again.\n");
+}
 
 $host = 'localhost';
 $port = 3311;

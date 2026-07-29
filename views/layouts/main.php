@@ -423,9 +423,6 @@ $_dashSubtitle = $_branding['dashboard_subtitle'] ?? '';
                 <i class="fas fa-chevron-down" style="font-size:.6rem;margin-left:.2rem;"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="/enpharchem/profile"><i class="fas fa-user"></i>Profile</a></li>
-                <li><a class="dropdown-item" href="/enpharchem/settings"><i class="fas fa-cog"></i>Settings</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="/enpharchem/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
             </ul>
         </div>

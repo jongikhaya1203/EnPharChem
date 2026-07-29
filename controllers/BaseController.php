@@ -56,7 +56,12 @@ class BaseController {
 
     protected function requireRole($roles) {
         if (!is_array($roles)) $roles = [$roles];
-        if (!in_array($this->user['role'], $roles)) {
+        // Not authenticated at all -> send to login rather than a bare 403.
+        if (empty($this->user)) {
+            header('Location: ' . APP_URL . '/login');
+            exit;
+        }
+        if (!in_array($this->user['role'] ?? '', $roles, true)) {
             http_response_code(403);
             include VIEWS_PATH . '/errors/403.php';
             exit;

@@ -6,6 +6,13 @@
 
 class ControlPanelController extends BaseController {
 
+    public function __construct() {
+        parent::__construct();
+        // The Control Panel manages users, AD, CMS, licensing and sample data.
+        // Restrict it to administrators; self-registered engineers must not reach it.
+        $this->requireRole(['admin', 'superuser']);
+    }
+
     /**
      * Main control panel dashboard
      */
