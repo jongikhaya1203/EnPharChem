@@ -107,8 +107,6 @@ $recentActivity = $recentActivity ?? [];
                     <a href="/enpharchem/admin/users" class="btn btn-outline-primary text-start"><i class="fas fa-users-cog me-2"></i>Manage Users</a>
                     <a href="/enpharchem/admin/modules" class="btn btn-outline-primary text-start"><i class="fas fa-cubes me-2"></i>Manage Modules</a>
                     <a href="/enpharchem/admin/settings" class="btn btn-outline-primary text-start"><i class="fas fa-wrench me-2"></i>System Settings</a>
-                    <a href="/enpharchem/admin/logs" class="btn btn-outline-secondary text-start"><i class="fas fa-file-alt me-2"></i>View Logs</a>
-                    <a href="/enpharchem/admin/backup" class="btn btn-outline-secondary text-start"><i class="fas fa-download me-2"></i>Database Backup</a>
                 </div>
             </div>
         </div>

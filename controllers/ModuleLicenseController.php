@@ -6,6 +6,12 @@
 
 class ModuleLicenseController extends BaseController {
 
+    public function __construct() {
+        parent::__construct();
+        // Waiving module licences is an administrative act; block non-admins.
+        $this->requireRole(['admin', 'superuser']);
+    }
+
     public function index() {
         // Ensure license_waived column exists
         try {

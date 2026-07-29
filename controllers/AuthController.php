@@ -24,9 +24,12 @@ class AuthController extends BaseController {
                 );
 
                 if ($user && password_verify($password, $user['password_hash'])) {
+                    // Rotate the session id on privilege change to prevent fixation.
+                    session_regenerate_id(true);
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_role'] = $user['role'];
                     $_SESSION['user_name'] = $user['first_name'] . ' ' . $user['last_name'];
+                    $_SESSION['created_at'] = time();   // start the absolute-lifetime clock
 
                     $this->db->update('users', ['last_login' => date('Y-m-d H:i:s')], 'id = ?', [$user['id']]);
 
@@ -91,6 +94,13 @@ class AuthController extends BaseController {
     }
 
     public function logout() {
+        // Clear session data, then drop the session cookie itself.
+        $_SESSION = [];
+        if (ini_get('session.use_cookies')) {
+            $p = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $p['path'], $p['domain'], $p['secure'], $p['httponly']);
+        }
         session_destroy();
         header('Location: ' . APP_URL . '/login');
         exit;
