@@ -5,11 +5,38 @@
  * Benchmarked against AspenTech EPC Software
  */
 
-session_start();
-
-// Load configuration
+// Load configuration first so the session can be hardened with SESSION_LIFETIME
+// and the correct cookie flags before it is started.
 require_once __DIR__ . '/config/app.php';
 require_once __DIR__ . '/config/database.php';
+
+// --- Session hardening -------------------------------------------------------
+// Only mark the cookie Secure when the request is actually over HTTPS, so plain
+// local/XAMPP HTTP installs keep working.
+$httpsOn = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+    || (($_SERVER['SERVER_PORT'] ?? null) == 443)
+    || (strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https');
+ini_set('session.use_strict_mode', '1');   // reject attacker-supplied session ids
+ini_set('session.use_only_cookies', '1');
+ini_set('session.gc_maxlifetime', (string) SESSION_LIFETIME);
+session_set_cookie_params([
+    'lifetime' => SESSION_LIFETIME,
+    'path'     => '/',
+    'httponly' => true,                      // not reachable from JavaScript
+    'secure'   => $httpsOn,
+    'samesite' => 'Lax',                     // blocks cross-site cookie sending
+]);
+session_start();
+
+// Absolute session lifetime: expire sessions older than SESSION_LIFETIME.
+if (isset($_SESSION['created_at']) && (time() - $_SESSION['created_at']) > SESSION_LIFETIME) {
+    $_SESSION = [];
+    session_destroy();
+    session_start();
+}
+if (!isset($_SESSION['created_at'])) {
+    $_SESSION['created_at'] = time();
+}
 
 // Autoload controllers and models
 spl_autoload_register(function ($class) {

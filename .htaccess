@@ -18,3 +18,12 @@ RewriteRule ^(.*)$ index.php [QSA,L]
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# Block direct web access to maintenance / setup scripts. These have no place
+# being reachable from a browser on a live install (reset_admin.php can create
+# or reset an administrator without authentication). First-time setup runs from
+# the CLI: `php install.php` with ENPHARCHEM_ALLOW_INSTALL=1.
+<FilesMatch "^(reset_admin|test_db|setup_superuser|install)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -113,7 +113,6 @@
                         <input class="form-check-input" type="checkbox" id="remember" name="remember">
                         <label class="form-check-label" for="remember">Remember me</label>
                     </div>
-                    <a href="/enpharchem/forgot-password" style="font-size:.85rem;color:#0dcaf0;text-decoration:none;">Forgot password?</a>
                 </div>
 
                 <button type="submit" class="btn btn-login"><i class="fas fa-sign-in-alt me-2"></i>Sign In</button>
