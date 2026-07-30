@@ -1,4 +1,9 @@
 <!-- Training Courses -->
+<?php
+// Seeding rebuilds the whole training catalogue and clears certificates, so the
+// controls are only shown to the roles TrainingController::seedTraining allows.
+$canSeedTraining = in_array($_SESSION['user_role'] ?? ($user['role'] ?? ''), ['admin', 'superuser'], true);
+?>
 <nav aria-label="breadcrumb" class="mb-4">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/enpharchem/dashboard" class="text-decoration-none" style="color: var(--epc-accent);">Dashboard</a></li>
@@ -20,11 +25,13 @@
         <a href="/enpharchem/training/my-certificates" class="btn btn-outline-warning">
             <i class="fas fa-certificate me-1"></i>My Certificates
         </a>
+        <?php if ($canSeedTraining): ?>
         <form method="POST" action="/enpharchem/training/seed" class="d-inline">
             <button type="submit" class="btn btn-success" onclick="this.innerHTML='<i class=\'fas fa-spinner fa-spin me-1\'></i>Seeding...'; this.disabled=true; this.form.submit();">
                 <i class="fas fa-database me-1"></i>Seed All Training Material
             </button>
         </form>
+        <?php endif; ?>
     </div>
 </div>
 
@@ -146,12 +153,16 @@
         <div class="card-body text-center py-5">
             <i class="fas fa-graduation-cap text-secondary" style="font-size: 4rem;"></i>
             <h4 class="text-light mt-3">No Training Courses Available</h4>
-            <p class="text-secondary mb-4">Click "Seed All Training Material" to load 60 courses with lessons and assessments.</p>
-            <form method="POST" action="/enpharchem/training/seed">
-                <button type="submit" class="btn btn-success btn-lg">
-                    <i class="fas fa-database me-2"></i>Seed Training Data (60 Courses, 300+ Lessons, 600+ Questions)
-                </button>
-            </form>
+            <?php if ($canSeedTraining): ?>
+                <p class="text-secondary mb-4">Click "Seed All Training Material" to load 60 courses with lessons and assessments.</p>
+                <form method="POST" action="/enpharchem/training/seed">
+                    <button type="submit" class="btn btn-success btn-lg">
+                        <i class="fas fa-database me-2"></i>Seed Training Data (60 Courses, 300+ Lessons, 600+ Questions)
+                    </button>
+                </form>
+            <?php else: ?>
+                <p class="text-secondary mb-0">No courses have been published yet. Please contact your administrator.</p>
+            <?php endif; ?>
         </div>
     </div>
 <?php else: ?>

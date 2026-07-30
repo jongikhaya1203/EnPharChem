@@ -12,7 +12,8 @@ class ProjectController extends BaseController {
     public function index() {
         $projects = $this->db->fetchAll(
             "SELECT p.*,
-                    (SELECT COUNT(*) FROM simulations s WHERE s.project_id = p.id) as simulation_count
+                    (SELECT COUNT(*) FROM simulations s
+                      WHERE s.project_id = p.id AND s.user_id = p.user_id) as simulation_count
              FROM projects p
              WHERE p.user_id = ?
              ORDER BY p.updated_at DESC",
@@ -78,9 +79,9 @@ class ProjectController extends BaseController {
             "SELECT s.*, m.name as module_name, m.slug as module_slug
              FROM simulations s
              JOIN modules m ON s.module_id = m.id
-             WHERE s.project_id = ?
+             WHERE s.project_id = ? AND s.user_id = ?
              ORDER BY s.updated_at DESC",
-            [$id]
+            [$id, $this->user['id']]
         );
 
         $this->view('projects/view', [

@@ -368,6 +368,9 @@ class TrainingController extends BaseController {
      * Seed ALL training data: 60 courses, 300+ lessons, 600+ questions
      */
     public function seedTraining() {
+        // Reseeding wipes every user's certificates and assessment attempts, so
+        // it must never be reachable by ordinary learners.
+        $this->requireRole(['admin', 'superuser']);
         if (!$this->isPost()) $this->redirect('training');
 
         set_time_limit(300);

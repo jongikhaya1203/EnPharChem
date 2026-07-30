@@ -1,5 +1,15 @@
 # EnPharChem - Git Ignore
 .claude/
+
+# Deployment secrets - DEPLOYMENT.md promises these are never committed.
+# The example template stays tracked; the real .env never is.
+.env
+.env.*
+!.env.example
+# Private signing keys, anywhere in the tree (deploy/keys has its own rules too)
+*_private.pem
+*.key
+
 test_db.php
 reset_admin.php
 setup_superuser.php

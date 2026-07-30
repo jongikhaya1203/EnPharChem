@@ -8,7 +8,10 @@ class AdminController extends BaseController {
 
     public function __construct() {
         parent::__construct();
-        $this->requireRole(['admin']);
+        // superuser is the highest role in the users.role ENUM and the sidebar
+        // shows it the Administration links, so it gets the same access as admin
+        // (matching the Control Panel / Licensing controllers).
+        $this->requireRole(['admin', 'superuser']);
     }
 
     public function index() {

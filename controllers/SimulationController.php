@@ -57,20 +57,37 @@ class SimulationController extends BaseController {
             if (empty($name) || empty($postProjectId) || empty($postModuleId)) {
                 $error = 'Simulation name, project, and module are required.';
             } else {
-                $this->db->insert('simulations', [
-                    'user_id' => $this->user['id'],
-                    'project_id' => $postProjectId,
-                    'module_id' => $postModuleId,
-                    'name' => $name,
-                    'description' => $description,
-                    'status' => 'draft',
-                    'input_data' => $inputData,
-                    'output_data' => '{}',
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                ]);
+                // The ids arrive from the form, so they are caller-controlled: the
+                // project must be one of this user's own, and the module must exist
+                // and be active. Without this a simulation can be attached to
+                // another user's project, where it then shows on their project page.
+                $ownedProject = $this->db->fetch(
+                    "SELECT id FROM projects WHERE id = ? AND user_id = ?",
+                    [$postProjectId, $this->user['id']]
+                );
+                $activeModule = $this->db->fetch(
+                    "SELECT id FROM modules WHERE id = ? AND is_active = 1",
+                    [$postModuleId]
+                );
 
-                $this->redirect('simulations');
+                if (!$ownedProject || !$activeModule) {
+                    $error = 'Select one of your own projects and an active module.';
+                } else {
+                    $this->db->insert('simulations', [
+                        'user_id' => $this->user['id'],
+                        'project_id' => $ownedProject['id'],
+                        'module_id' => $activeModule['id'],
+                        'name' => $name,
+                        'description' => $description,
+                        'status' => 'draft',
+                        'input_data' => $inputData,
+                        'output_data' => '{}',
+                        'created_at' => date('Y-m-d H:i:s'),
+                        'updated_at' => date('Y-m-d H:i:s'),
+                    ]);
+
+                    $this->redirect('simulations');
+                }
             }
         }
 

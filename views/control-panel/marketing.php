@@ -168,7 +168,9 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="text-light mb-0"><i class="fas fa-bullhorn me-2" style="color: var(--epc-accent);"></i>Marketing Material</h2>
     <div class="d-flex gap-2">
-        <a href="/enpharchem/marketing/seed-materials" class="btn btn-info btn-sm"><i class="fas fa-magic me-1"></i>Load EnPharChem Docs</a>
+        <form method="POST" action="/enpharchem/marketing/seed-materials" class="d-inline">
+            <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-magic me-1"></i>Load EnPharChem Docs</button>
+        </form>
         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#createMaterialModal">
             <i class="fas fa-plus me-1"></i>Create Material
         </button>
@@ -273,7 +275,9 @@
                     <i class="fas fa-bullhorn text-secondary" style="font-size: 3rem;opacity:.4;"></i>
                     <p class="text-secondary mt-3">No marketing materials found.</p>
                     <div class="d-flex justify-content-center gap-3 mt-3">
-                        <a href="/enpharchem/marketing/seed-materials" class="btn btn-primary"><i class="fas fa-magic me-1"></i>Load EnPharChem Marketing Docs</a>
+                        <form method="POST" action="/enpharchem/marketing/seed-materials" class="d-inline">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-magic me-1"></i>Load EnPharChem Marketing Docs</button>
+                        </form>
                         <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#createMaterialModal"><i class="fas fa-plus me-1"></i>Create Custom</button>
                     </div>
                 </div>

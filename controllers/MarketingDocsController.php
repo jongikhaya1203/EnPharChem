@@ -260,6 +260,14 @@ class MarketingDocsController extends BaseController {
     }
 
     public function seedMaterials() {
+        // Seeding writes to marketing_materials (and re-creates the table), so it
+        // is an administrative, state-changing action: admin-only and POST-only.
+        $this->requireRole(['admin', 'superuser']);
+        if (!$this->isPost()) {
+            $this->redirect('control-panel/marketing');
+            return;
+        }
+
         // Insert marketing material records into the database
         $materials = [
             [
