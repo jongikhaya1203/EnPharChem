@@ -124,6 +124,30 @@ class MarketingDocsController extends BaseController {
     }
 
     /**
+     * PetroSA GTL Problem Statement - streams a real generated PDF stating the
+     * operating problem per module area for a gas-to-liquids refinery, with
+     * worked use cases and how to perform and analyse each. Content is editorial
+     * (lib/PetroSAProblemStatement.php), not DB-driven.
+     */
+    public function petroSaProblemStatement() {
+        require_once APP_ROOT . '/lib/PetroSAProblemStatementPdfBuilder.php';
+        $binary = PetroSAProblemStatementPdfBuilder::build();
+        $this->streamPdf($binary, 'EnPharChem-PetroSA-GTL-Problem-Statement.pdf',
+            'petrosa-problem-statement.pdf');
+    }
+
+    /** Screen-readable HTML edition of the PetroSA GTL problem statement. */
+    public function petroSaProblemStatementHtml() {
+        require_once APP_ROOT . '/lib/PetroSAProblemStatement.php';
+        $context         = PetroSAProblemStatement::context();
+        $corePstatements = PetroSAProblemStatement::coreProblems();
+        $modulesContent  = PetroSAProblemStatement::modules();
+        $disclaimer      = PetroSAProblemStatement::disclaimer();
+        include VIEWS_PATH . '/marketing-docs/petrosa-problem-statement.php';
+        exit;
+    }
+
+    /**
      * Send a generated PDF to the browser, caching a copy under assets/pdfs/.
      * ?download=1 forces a save dialog instead of inline display.
      */
@@ -332,6 +356,17 @@ class MarketingDocsController extends BaseController {
                 'category' => 'Business & Solution',
                 'target_audience' => 'Solution Consultants, Business Analysts, Department Heads, Buyers, Onboarding Leads',
                 'file_url' => '/enpharchem/marketing/business-process-map',
+                'status' => 'published',
+                'download_count' => 0,
+                'created_by' => $this->user['id'],
+            ],
+            [
+                'title' => 'PetroSA GTL Refinery Problem Statement & Use Case Handbook',
+                'description' => 'Customer-facing problem statement for a gas-to-liquids refinery: the GTL value chain, six core problems, and one problem statement per module area with worked use cases plus how to perform and analyse each. Acceptance figures are illustrative pending verified plant data.',
+                'material_type' => 'whitepaper',
+                'category' => 'Business & Solution',
+                'target_audience' => 'Refinery Management, Process & Production Engineers, Planning and Optimisation Teams, Solution Consultants',
+                'file_url' => '/enpharchem/marketing/petrosa-problem-statement',
                 'status' => 'published',
                 'download_count' => 0,
                 'created_by' => $this->user['id'],

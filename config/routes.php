@@ -139,6 +139,8 @@ return [
     'marketing/how-to-manual/html' => ['controller' => 'MarketingDocsController', 'action' => 'howToManualHtml'],
     'marketing/business-process-map' => ['controller' => 'MarketingDocsController', 'action' => 'businessProcessMap'],
     'marketing/business-process-map/html' => ['controller' => 'MarketingDocsController', 'action' => 'businessProcessMapHtml'],
+    'marketing/petrosa-problem-statement' => ['controller' => 'MarketingDocsController', 'action' => 'petroSaProblemStatement'],
+    'marketing/petrosa-problem-statement/html' => ['controller' => 'MarketingDocsController', 'action' => 'petroSaProblemStatementHtml'],
     'marketing/seed-materials' => ['controller' => 'MarketingDocsController', 'action' => 'seedMaterials'],
     'marketing/seed-module-docs' => ['controller' => 'MarketingDocsController', 'action' => 'seedModuleDocs'],
 

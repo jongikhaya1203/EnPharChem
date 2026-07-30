@@ -87,6 +87,15 @@
                         'html'   => '/enpharchem/marketing/business-process-map/html',
                     ],
                     [
+                        'title'  => 'PetroSA GTL Problem Statement',
+                        'desc'   => 'Problem statement per module area for a gas-to-liquids refinery, with use cases and how to perform and analyse each.',
+                        'icon'   => 'bi-clipboard2-data',
+                        'colour' => '#fd7e14',
+                        'url'    => '/enpharchem/marketing/petrosa-problem-statement',
+                        'format' => 'Generated PDF',
+                        'html'   => '/enpharchem/marketing/petrosa-problem-statement/html',
+                    ],
+                    [
                         'title'  => 'Product Brochure',
                         'desc'   => 'Marketing brochure showcasing the platform and its module categories.',
                         'icon'   => 'bi-megaphone',
