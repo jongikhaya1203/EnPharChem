@@ -27,6 +27,7 @@ $canSeedTraining = in_array($_SESSION['user_role'] ?? ($user['role'] ?? ''), ['a
         </a>
         <?php if ($canSeedTraining): ?>
         <form method="POST" action="/enpharchem/training/seed" class="d-inline">
+            <?= Csrf::field() ?>
             <button type="submit" class="btn btn-success" onclick="this.innerHTML='<i class=\'fas fa-spinner fa-spin me-1\'></i>Seeding...'; this.disabled=true; this.form.submit();">
                 <i class="fas fa-database me-1"></i>Seed All Training Material
             </button>
@@ -156,6 +157,7 @@ $canSeedTraining = in_array($_SESSION['user_role'] ?? ($user['role'] ?? ''), ['a
             <?php if ($canSeedTraining): ?>
                 <p class="text-secondary mb-4">Click "Seed All Training Material" to load 60 courses with lessons and assessments.</p>
                 <form method="POST" action="/enpharchem/training/seed">
+                    <?= Csrf::field() ?>
                     <button type="submit" class="btn btn-success btn-lg">
                         <i class="fas fa-database me-2"></i>Seed Training Data (60 Courses, 300+ Lessons, 600+ Questions)
                     </button>

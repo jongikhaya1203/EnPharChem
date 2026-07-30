@@ -19,6 +19,7 @@
             </div>
             <div class="col-md-5 text-md-end mt-3 mt-md-0">
                 <form method="POST" action="/enpharchem/training/seed" class="d-inline">
+                    <?= Csrf::field() ?>
                     <button type="submit" class="btn btn-success me-2" onclick="this.innerHTML='<i class=\'bi bi-hourglass-split me-1\'></i>Seeding...'; this.disabled=true; this.form.submit();">
                         <i class="bi bi-database-fill-gear me-1"></i>Seed Training Data
                     </button>
@@ -138,6 +139,7 @@
                                 <td>
                                     <div class="d-flex gap-1">
                                         <form method="POST" class="d-inline">
+                                            <?= Csrf::field() ?>
                                             <input type="hidden" name="action" value="toggle_course">
                                             <input type="hidden" name="course_id" value="<?= htmlspecialchars($course['id'] ?? '') ?>">
                                             <button type="submit" class="btn btn-sm btn-outline-warning" title="Toggle Status">
@@ -145,6 +147,7 @@
                                             </button>
                                         </form>
                                         <form method="POST" class="d-inline">
+                                            <?= Csrf::field() ?>
                                             <input type="hidden" name="action" value="delete_course">
                                             <input type="hidden" name="course_id" value="<?= htmlspecialchars($course['id'] ?? '') ?>">
                                             <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete" onclick="return confirm('Delete this course?')">
@@ -173,6 +176,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create_course">
                 <div class="modal-body">
                     <div class="row g-3">
@@ -298,6 +302,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create_lesson">
                 <div class="modal-body">
                     <div class="mb-3">

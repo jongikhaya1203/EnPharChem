@@ -92,6 +92,7 @@
             <?php endif; ?>
 
             <form method="POST" action="/enpharchem/login">
+                <?= Csrf::field() ?>
                 <div class="mb-3">
                     <label for="username" class="form-label">Username or Email</label>
                     <div class="input-group">

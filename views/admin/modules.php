@@ -89,6 +89,7 @@ $modules = $modules ?? [];
                                     </button>
                                     <!-- Toggle Active/Inactive -->
                                     <form method="POST" class="d-inline">
+                                        <?= Csrf::field() ?>
                                         <input type="hidden" name="module_id" value="<?= $modId ?>">
                                         <?php if ($isActive): ?>
                                             <input type="hidden" name="action" value="deactivate">
@@ -137,6 +138,7 @@ $modules = $modules ?? [];
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="update_module">
                 <input type="hidden" name="module_id" id="editModuleId">
                 <div class="modal-body">

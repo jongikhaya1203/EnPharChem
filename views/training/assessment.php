@@ -59,6 +59,7 @@
 </div>
 
 <form id="assessmentForm" method="POST" action="/enpharchem/training/assessment">
+    <?= Csrf::field() ?>
     <input type="hidden" name="course_id" value="<?= $course['id'] ?>">
     <input type="hidden" name="started_at" value="<?= date('Y-m-d H:i:s') ?>">
     <input type="hidden" name="answers" id="answersJson" value="{}">

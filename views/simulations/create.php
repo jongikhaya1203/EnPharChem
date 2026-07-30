@@ -53,6 +53,7 @@ $project = $project ?? null;
         <?php endif; ?>
 
         <form method="POST" action="/enpharchem/simulations/create">
+            <?= Csrf::field() ?>
             <?php if ($module): ?>
             <input type="hidden" name="module_id" value="<?= (int)($module['id'] ?? 0) ?>">
             <?php endif; ?>

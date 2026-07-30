@@ -82,6 +82,7 @@ $category = $category ?? ['name' => $module['category_name'] ?? 'Category', 'slu
             <div class="card-header py-3"><i class="fas fa-play-circle me-2"></i>Create / Configure Simulation</div>
             <div class="card-body">
                 <form method="POST" action="/enpharchem/simulations/create">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="module_slug" value="<?= htmlspecialchars($module['slug'] ?? '') ?>">
                     <input type="hidden" name="category_slug" value="<?= htmlspecialchars($category['slug']) ?>">
 

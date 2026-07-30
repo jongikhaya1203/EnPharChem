@@ -22,6 +22,7 @@ $formAction = $isEditing
 </h2>
 
 <form method="POST" action="<?= $formAction ?>">
+    <?= Csrf::field() ?>
     <input type="hidden" name="action" value="save">
 
     <div class="row g-4">

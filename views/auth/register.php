@@ -81,6 +81,7 @@
             <?php endif; ?>
 
             <form method="POST" action="/enpharchem/register">
+                <?= Csrf::field() ?>
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="first_name" class="form-label">First Name</label>

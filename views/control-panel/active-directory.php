@@ -89,6 +89,7 @@
                                 <td class="text-secondary small"><?= htmlspecialchars($group['created_at'] ?? '') ?></td>
                                 <td>
                                     <form method="POST" class="d-inline">
+                                        <?= Csrf::field() ?>
                                         <input type="hidden" name="action" value="delete_group">
                                         <input type="hidden" name="group_id" value="<?= htmlspecialchars($group['id'] ?? '') ?>">
                                         <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this group?')">
@@ -116,6 +117,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create_group">
                 <div class="modal-body">
                     <div class="mb-3">
@@ -209,6 +211,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create_user">
                 <div class="modal-body">
                     <div class="row g-3">

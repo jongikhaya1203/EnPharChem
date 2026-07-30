@@ -43,6 +43,7 @@
                             <a href="/enpharchem/projects/view?id=<?= (int)$project['id'] ?>" class="btn btn-sm btn-outline-primary me-1" title="View"><i class="fas fa-eye"></i></a>
                             <a href="/enpharchem/projects/edit?id=<?= (int)$project['id'] ?>" class="btn btn-sm btn-outline-secondary me-1" title="Edit"><i class="fas fa-edit"></i></a>
                             <form method="POST" action="/enpharchem/projects/delete" class="d-inline" onsubmit="return confirm('Delete this project?');">
+                                <?= Csrf::field() ?>
                                 <input type="hidden" name="id" value="<?= (int)$project['id'] ?>">
                                 <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete"><i class="fas fa-trash"></i></button>
                             </form>

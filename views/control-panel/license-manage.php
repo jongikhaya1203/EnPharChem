@@ -107,6 +107,7 @@
         <div class="d-flex gap-2 flex-wrap">
             <?php if ($license['status'] === 'active'): ?>
                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="action" value="suspend_license">
                     <button type="submit" class="btn btn-warning btn-sm" onclick="return confirm('Suspend this license?')">
                         <i class="fas fa-pause me-1"></i>Suspend License
@@ -114,6 +115,7 @@
                 </form>
             <?php elseif ($license['status'] === 'suspended'): ?>
                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="action" value="activate_license">
                     <button type="submit" class="btn btn-success btn-sm">
                         <i class="fas fa-play me-1"></i>Activate License
@@ -123,6 +125,7 @@
 
             <?php if ($license['status'] !== 'revoked'): ?>
                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="action" value="revoke_license">
                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Revoke this license? This cannot be easily undone.')">
                         <i class="fas fa-ban me-1"></i>Revoke License
@@ -133,6 +136,7 @@
             <div class="vr mx-1"></div>
 
             <form method="POST" action="/enpharchem/control-panel/licensing/bulk" class="d-inline">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="license_id" value="<?= $license['id'] ?>">
                 <input type="hidden" name="action" value="grant_by_tier">
                 <button type="submit" class="btn btn-outline-info btn-sm" onclick="return confirm('This will revoke existing grants and re-grant based on the license tier (<?= $license['license_type'] ?>). Continue?')">
@@ -141,6 +145,7 @@
             </form>
 
             <form method="POST" action="/enpharchem/control-panel/licensing/bulk" class="d-inline">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="license_id" value="<?= $license['id'] ?>">
                 <input type="hidden" name="action" value="grant_all">
                 <button type="submit" class="btn btn-outline-success btn-sm" onclick="return confirm('Grant ALL modules to this license?')">
@@ -149,6 +154,7 @@
             </form>
 
             <form method="POST" action="/enpharchem/control-panel/licensing/bulk" class="d-inline">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="license_id" value="<?= $license['id'] ?>">
                 <input type="hidden" name="action" value="revoke_all">
                 <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Revoke ALL modules from this license?')">
@@ -203,6 +209,7 @@
                             <!-- Category-level actions -->
                             <div class="d-flex gap-2 p-3 border-bottom" style="border-color: rgba(255,255,255,.06) !important; background: rgba(255,255,255,.02);">
                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                                    <?= Csrf::field() ?>
                                     <input type="hidden" name="action" value="grant_all_category">
                                     <input type="hidden" name="category_id" value="<?= $cat['id'] ?>">
                                     <button type="submit" class="btn btn-sm btn-outline-success" onclick="return confirm('Grant all modules in <?= htmlspecialchars($cat['name']) ?>?')">
@@ -211,6 +218,7 @@
                                 </form>
                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline"
                                       onsubmit="var r=prompt('Deny reason for all modules in this category:','Category-level denial'); if(!r){return false;} this.querySelector('[name=deny_reason]').value=r;">
+                                    <?= Csrf::field() ?>
                                     <input type="hidden" name="action" value="deny_all_category">
                                     <input type="hidden" name="category_id" value="<?= $cat['id'] ?>">
                                     <input type="hidden" name="deny_reason" value="">
@@ -270,6 +278,7 @@
                                                             <?php if ($mStatus === 'not_assigned' || $mStatus === 'pending' || $mStatus === 'denied' || $mStatus === 'revoked'): ?>
                                                                 <!-- Grant button -->
                                                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                                                                    <?= Csrf::field() ?>
                                                                     <input type="hidden" name="action" value="grant_module">
                                                                     <input type="hidden" name="module_id" value="<?= $mod['id'] ?>">
                                                                     <button type="submit" class="btn btn-sm btn-success" title="Grant this module">
@@ -282,6 +291,7 @@
                                                                 <!-- Deny button -->
                                                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline"
                                                                       onsubmit="var r=prompt('Reason for denying <?= htmlspecialchars(addslashes($mod['name'])) ?>:'); if(!r){return false;} this.querySelector('[name=deny_reason]').value=r;">
+                                                                    <?= Csrf::field() ?>
                                                                     <input type="hidden" name="action" value="deny_module">
                                                                     <input type="hidden" name="module_id" value="<?= $mod['id'] ?>">
                                                                     <input type="hidden" name="deny_reason" value="">
@@ -294,6 +304,7 @@
                                                             <?php if ($mStatus === 'granted'): ?>
                                                                 <!-- Revoke button -->
                                                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $license['id'] ?>" class="d-inline">
+                                                                    <?= Csrf::field() ?>
                                                                     <input type="hidden" name="action" value="revoke_module">
                                                                     <input type="hidden" name="module_id" value="<?= $mod['id'] ?>">
                                                                     <button type="submit" class="btn btn-sm btn-outline-danger" title="Revoke this module" onclick="return confirm('Revoke access to <?= htmlspecialchars(addslashes($mod['name'])) ?>?')">

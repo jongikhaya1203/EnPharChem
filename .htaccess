@@ -1,6 +1,13 @@
 RewriteEngine On
 RewriteBase /enpharchem/
 
+# Block direct browser access to application internals. Every request is meant
+# to arrive through index.php, which is where authentication, authorisation and
+# the CSRF check live. These are real files on disk, so the front-controller
+# rule below (which only fires for paths that do NOT exist) would not catch
+# them: a direct POST to a view or controller would bypass every check.
+RewriteRule ^(controllers|models|views|lib|config|database|deploy)/ - [F,L]
+
 # Redirect to index.php if not a real file or directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

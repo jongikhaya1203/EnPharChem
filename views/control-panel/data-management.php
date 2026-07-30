@@ -104,6 +104,7 @@
                 </dl>
                 <div class="mt-auto">
                     <form method="POST" action="/enpharchem/control-panel/load-sample-data">
+                        <?= Csrf::field() ?>
                         <button type="submit" class="btn btn-success btn-lg w-100 mb-2">
                             <i class="bi bi-cloud-arrow-down-fill me-2"></i>Load Sample Data
                         </button>
@@ -134,6 +135,7 @@
                 </ul>
                 <div class="mt-auto">
                     <form method="POST" action="/enpharchem/control-panel/reset-sample-data">
+                        <?= Csrf::field() ?>
                         <button type="submit" class="btn btn-danger btn-lg w-100 mb-2" onclick="return confirm('Are you sure? This cannot be undone!')">
                             <i class="bi bi-trash3-fill me-2"></i>Reset Sample Data
                         </button>

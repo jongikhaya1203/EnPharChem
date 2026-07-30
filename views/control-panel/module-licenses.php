@@ -81,12 +81,14 @@
             </div>
             <div class="d-flex gap-2">
                 <form method="POST" class="d-inline">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="action" value="grant_all">
                     <button type="submit" class="btn btn-success" onclick="return confirm('Grant license for ALL modules? This will hide the License Required badge on every module.')">
                         <i class="fas fa-unlock me-1"></i>Grant All Licenses
                     </button>
                 </form>
                 <form method="POST" class="d-inline">
+                    <?= Csrf::field() ?>
                     <input type="hidden" name="action" value="revoke_all">
                     <button type="submit" class="btn btn-warning" onclick="return confirm('Revoke license for ALL modules? This will show License Required badge on every module.')">
                         <i class="fas fa-lock me-1"></i>Revoke All Licenses
@@ -126,6 +128,7 @@
             </div>
             <!-- Category Actions -->
             <form method="POST" class="d-inline">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="grant_category">
                 <input type="hidden" name="category_id" value="<?= $cat['id'] ?>">
                 <button type="submit" class="btn btn-sm btn-success" title="Grant all in category" onclick="return confirm('Grant license for all modules in <?= htmlspecialchars(addslashes($cat['name']), ENT_QUOTES) ?>?')">
@@ -133,6 +136,7 @@
                 </button>
             </form>
             <form method="POST" class="d-inline">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="revoke_category">
                 <input type="hidden" name="category_id" value="<?= $cat['id'] ?>">
                 <button type="submit" class="btn btn-sm btn-outline-warning" title="Revoke all in category" onclick="return confirm('Revoke license for all modules in <?= htmlspecialchars(addslashes($cat['name']), ENT_QUOTES) ?>?')">
@@ -184,6 +188,7 @@
                         </td>
                         <td>
                             <form method="POST" class="d-inline">
+                                <?= Csrf::field() ?>
                                 <input type="hidden" name="module_id" value="<?= $mod['id'] ?>">
                                 <?php if ($waived): ?>
                                     <input type="hidden" name="action" value="revoke_module">

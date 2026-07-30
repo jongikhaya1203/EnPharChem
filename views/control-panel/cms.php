@@ -23,6 +23,7 @@
     </div>
     <div class="card-body">
         <form method="POST" enctype="multipart/form-data">
+            <?= Csrf::field() ?>
             <input type="hidden" name="action" value="save_branding">
 
             <div class="row g-4">
@@ -375,6 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             <i class="bi bi-pencil"></i>
                                         </a>
                                         <form method="POST" class="d-inline">
+                                            <?= Csrf::field() ?>
                                             <input type="hidden" name="action" value="toggle_status">
                                             <input type="hidden" name="page_id" value="<?= htmlspecialchars($page['id'] ?? '') ?>">
                                             <button type="submit" class="btn btn-sm btn-outline-warning" title="Toggle Status">
@@ -382,6 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             </button>
                                         </form>
                                         <form method="POST" class="d-inline">
+                                            <?= Csrf::field() ?>
                                             <input type="hidden" name="action" value="delete">
                                             <input type="hidden" name="page_id" value="<?= htmlspecialchars($page['id'] ?? '') ?>">
                                             <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete" onclick="return confirm('Are you sure you want to delete this page?')">
@@ -410,6 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create">
                 <div class="modal-body">
                     <div class="mb-3">

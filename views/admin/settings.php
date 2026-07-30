@@ -26,6 +26,7 @@
             <div class="card-header py-3"><i class="fas fa-cog me-2"></i>General Settings</div>
             <div class="card-body">
                 <form method="POST" action="/enpharchem/admin/settings">
+                    <?= Csrf::field() ?>
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label">Platform Name</label>

@@ -171,6 +171,9 @@ $reason = $ls['reason'] ?? '';
 (function(){
 "use strict";
 const BASE = "/enpharchem";
+// index.php rejects any POST without a valid CSRF token; the solver and the
+// licence-request call both post, so they send it in the X-CSRF-Token header.
+const CSRF = (document.querySelector('meta[name="csrf-token"]') || {}).content || "";
 const svg = document.getElementById("canvas");
 const SVGNS = "http://www.w3.org/2000/svg";
 
@@ -518,7 +521,7 @@ async function run(){
     btn.disabled=true; btn.innerHTML='<span class="spinner-border spinner-border-sm me-1"></span>Solving…';
     try{
         const payload=Object.assign({}, model, {model:document.getElementById("thermoModel").value});
-        const res=await fetch(BASE+"/flowsheet/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+        const res=await fetch(BASE+"/flowsheet/run",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":CSRF},body:JSON.stringify(payload)});
         const data=await res.json();
         if(res.status===403 && data.needs_license){ showLicenseBlock(data); return; }
         if(!data.ok){ alert("Solver: "+(data.error||"unknown error")); return; }
@@ -530,7 +533,7 @@ async function run(){
 async function requestLicense(btn){
     if(btn){ btn.disabled=true; btn.innerHTML='<span class="spinner-border spinner-border-sm me-1"></span>Requesting…'; }
     try{
-        const r=await fetch(BASE+"/flowsheet/request-license",{method:"POST"});
+        const r=await fetch(BASE+"/flowsheet/request-license",{method:"POST",headers:{"X-CSRF-Token":CSRF}});
         const d=await r.json();
         if(btn){ btn.disabled=false; }
         if(d.ok){ if(btn){ btn.innerHTML='<i class="fas fa-check me-1"></i>Requested'; btn.classList.replace('btn-warning','btn-success'); } alert(d.message||"Request submitted."); }

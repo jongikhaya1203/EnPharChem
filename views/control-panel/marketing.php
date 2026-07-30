@@ -169,6 +169,7 @@
     <h2 class="text-light mb-0"><i class="fas fa-bullhorn me-2" style="color: var(--epc-accent);"></i>Marketing Material</h2>
     <div class="d-flex gap-2">
         <form method="POST" action="/enpharchem/marketing/seed-materials" class="d-inline">
+            <?= Csrf::field() ?>
             <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-magic me-1"></i>Load EnPharChem Docs</button>
         </form>
         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#createMaterialModal">
@@ -249,6 +250,7 @@
                         <div class="d-flex gap-2 mt-auto">
                             <?php if ($mStatus !== 'approved' && $mStatus !== 'published'): ?>
                                 <form method="POST" class="flex-fill">
+                                    <?= Csrf::field() ?>
                                     <input type="hidden" name="action" value="approve">
                                     <input type="hidden" name="material_id" value="<?= htmlspecialchars($material['id'] ?? '') ?>">
                                     <button type="submit" class="btn btn-sm btn-outline-success w-100">
@@ -257,6 +259,7 @@
                                 </form>
                             <?php endif; ?>
                             <form method="POST" class="flex-fill">
+                                <?= Csrf::field() ?>
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="material_id" value="<?= htmlspecialchars($material['id'] ?? '') ?>">
                                 <button type="submit" class="btn btn-sm btn-outline-danger w-100" onclick="return confirm('Are you sure you want to delete this material?')">
@@ -276,6 +279,7 @@
                     <p class="text-secondary mt-3">No marketing materials found.</p>
                     <div class="d-flex justify-content-center gap-3 mt-3">
                         <form method="POST" action="/enpharchem/marketing/seed-materials" class="d-inline">
+                            <?= Csrf::field() ?>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-magic me-1"></i>Load EnPharChem Marketing Docs</button>
                         </form>
                         <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#createMaterialModal"><i class="fas fa-plus me-1"></i>Create Custom</button>
@@ -295,6 +299,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST">
+                <?= Csrf::field() ?>
                 <input type="hidden" name="action" value="create">
                 <div class="modal-body">
                     <div class="row g-3">

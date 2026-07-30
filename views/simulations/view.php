@@ -20,6 +20,7 @@ $simulation = $simulation ?? ['id' => 0, 'name' => '', 'description' => '', 'sta
     <div class="d-flex gap-2">
         <?php if ($simulation['status'] === 'draft'): ?>
         <form method="POST" action="/enpharchem/simulations/run" class="d-inline">
+            <?= Csrf::field() ?>
             <input type="hidden" name="id" value="<?= (int)$simulation['id'] ?>">
             <button type="submit" class="btn btn-success"><i class="fas fa-play me-1"></i>Run Simulation</button>
         </form>

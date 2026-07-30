@@ -203,6 +203,7 @@
                                             </a>
                                             <?php if ($lic['status'] === 'active'): ?>
                                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $lic['id'] ?>" class="d-inline">
+                                                    <?= Csrf::field() ?>
                                                     <input type="hidden" name="action" value="suspend_license">
                                                     <button type="submit" class="btn btn-sm btn-outline-warning" title="Suspend" onclick="return confirm('Suspend this license?')">
                                                         <i class="fas fa-pause"></i>
@@ -210,6 +211,7 @@
                                                 </form>
                                             <?php elseif ($lic['status'] === 'suspended'): ?>
                                                 <form method="POST" action="/enpharchem/control-panel/licensing/manage?id=<?= $lic['id'] ?>" class="d-inline">
+                                                    <?= Csrf::field() ?>
                                                     <input type="hidden" name="action" value="activate_license">
                                                     <button type="submit" class="btn btn-sm btn-outline-success" title="Activate">
                                                         <i class="fas fa-play"></i>
@@ -274,6 +276,7 @@
                                         <?php if ($req['status'] === 'pending'): ?>
                                         <div class="d-flex gap-1">
                                             <form method="POST" action="/enpharchem/control-panel/licensing/requests" class="d-inline">
+                                                <?= Csrf::field() ?>
                                                 <input type="hidden" name="action" value="approve">
                                                 <input type="hidden" name="request_id" value="<?= $req['id'] ?>">
                                                 <input type="hidden" name="review_notes" value="">
@@ -283,6 +286,7 @@
                                             </form>
                                             <form method="POST" action="/enpharchem/control-panel/licensing/requests" class="d-inline"
                                                   onsubmit="var n=prompt('Deny reason:'); if(!n){return false;} this.querySelector('[name=review_notes]').value=n;">
+                                                <?= Csrf::field() ?>
                                                 <input type="hidden" name="action" value="deny">
                                                 <input type="hidden" name="request_id" value="<?= $req['id'] ?>">
                                                 <input type="hidden" name="review_notes" value="">
@@ -313,6 +317,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="background: var(--epc-card-bg); border-color: rgba(255,255,255,.1);">
             <form method="POST" action="/enpharchem/control-panel/licensing/issue">
+                <?= Csrf::field() ?>
                 <div class="modal-header border-bottom" style="border-color: rgba(255,255,255,.08) !important;">
                     <h5 class="modal-title"><i class="fas fa-plus-circle me-2" style="color: var(--epc-accent);"></i>Issue New License</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>

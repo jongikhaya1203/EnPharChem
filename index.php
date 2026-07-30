@@ -52,6 +52,8 @@ spl_autoload_register(function ($class) {
     }
 });
 
+require_once __DIR__ . '/lib/Csrf.php';
+
 // Load routes
 $routes = require_once __DIR__ . '/config/routes.php';
 
@@ -65,6 +67,26 @@ $path = trim($path, '/');
 $publicRoutes = ['login', 'register'];
 if (!in_array($path, $publicRoutes) && !isset($_SESSION['user_id'])) {
     header('Location: ' . APP_URL . '/login');
+    exit;
+}
+
+// --- CSRF: single choke point for every state-changing request ---------------
+// Enforced here rather than per handler so a new POST action is protected by
+// default. Runs after the auth check above, so a POST on an expired session
+// lands on the login page instead of an unexplained block page. GET/HEAD are
+// not gated — actions that mutate state must use POST.
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !Csrf::check()) {
+    http_response_code(403);
+    if (Csrf::clientWantsJson()) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'ok'      => false,
+            'success' => false,
+            'error'   => 'CSRF token missing or invalid. Reload the page and try again.',
+        ]);
+    } else {
+        include VIEWS_PATH . '/errors/csrf.php';
+    }
     exit;
 }
 

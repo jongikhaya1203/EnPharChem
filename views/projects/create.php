@@ -17,6 +17,7 @@
         <?php endif; ?>
 
         <form method="POST" action="/enpharchem/projects/create">
+            <?= Csrf::field() ?>
             <div class="mb-3">
                 <label for="name" class="form-label">Project Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="name" name="name"

@@ -26,6 +26,10 @@ class AuthController extends BaseController {
                 if ($user && password_verify($password, $user['password_hash'])) {
                     // Rotate the session id on privilege change to prevent fixation.
                     session_regenerate_id(true);
+                    // Rotate the CSRF token too: session data survives
+                    // regenerate_id, so a token minted for the anonymous
+                    // pre-login session would otherwise stay valid afterwards.
+                    Csrf::rotate();
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_role'] = $user['role'];
                     $_SESSION['user_name'] = $user['first_name'] . ' ' . $user['last_name'];

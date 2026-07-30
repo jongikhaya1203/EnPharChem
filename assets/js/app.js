@@ -104,6 +104,21 @@ function initTooltips() {
 }
 
 /* ============================================================
+   CSRF
+   ============================================================ */
+/* index.php rejects any POST without a valid token, so every fetch/XHR that
+   posts must send it. The token comes from the <meta> tag in the layout. */
+function csrfToken() {
+    var el = document.querySelector('meta[name="csrf-token"]');
+    return el ? el.getAttribute('content') : '';
+}
+
+/* Headers for a JSON POST, including the CSRF token. */
+function jsonPostHeaders() {
+    return { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken() };
+}
+
+/* ============================================================
    SIMULATION HELPERS
    ============================================================ */
 function runSimulation(simulationId) {
@@ -113,7 +128,7 @@ function runSimulation(simulationId) {
 
     fetch('/enpharchem/api/simulations', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: jsonPostHeaders(),
         body: JSON.stringify({ action: 'run', simulation_id: simulationId })
     })
     .then(function(response) { return response.json(); })
